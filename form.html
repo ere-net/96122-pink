@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <title>Конкурс на самое безбашеное путешествие с Пинк</title>
+        <!-- <link rel="stylesheet" href="css/style.css"> -->
+    </head>
+    <body>
+        <header class="page-header">
+            <div class="container clearfix">
+                <div class="header-top">
+                    <figure class="logo">
+                        Pink
+                    </figure>
+                    <nav class="main-menu">
+                        <ul>
+                            <li><a href="index.html">Информация</a></li>
+                            <li><a href="blog.html">Блог</a></li>
+                            <li><a href="#">Отзывы</a></li>
+                            <li><a href="form.html">Конкурс</a></li>
+                        </ul>
+                    </nav>
+                    <h1>Конкурс на самое безбашеное путешествие с Пинк</h1>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="container clearfix">
+                <p>Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! Пожалуйста, заполните форму ниже:</p>
+                <form class="travel-form" action="/echo" method="post" enctype="multipart/form-data">
+                    <div class="white">
+                        <label for="name">Имя: *</label>
+                        <input type="text" name="name" id="name" placeholder="Введите ваше имя" required>
+                        <label for="surname">Фамилия: *</label>
+                        <input type="text" name="surname" id="surname" placeholder="Укажите фамилию" required>
+                        <label for="second">Отчество:</label>
+                        <input type="text" name="second" id="second" placeholder="Ну и отчество тоже">
+                    </div>
+                    <div class="grey">
+                        <h2>С каким приложением путешествовали? *</h2>
+                        <input type="radio" name="app" value="ios" id="ios" checked required>
+                        <label for="ios">Pink для iOS</label>
+                        <input type="radio" name="app" value="android" id="android" required>
+                        <label for="android">Pink на Android</label>
+                        <input type="radio" name="app" value="windows" id="windows" required>
+                        <label for="windows">Windows Phone</label>
+                    </div>
+                    <div class="white">
+                        <h2>Когда вы путешествовали? *</h2>
+                        <input type="date" name="date" id="date" required>
+                        <label for="date">Дата выезда</label>
+                        <input type="number" name="duration" id="duration" placeholder="10 дней" required>
+                        <label for="duration">Продолжительность</label>
+                        <input type="date" name="return" id="return" required readonly>
+                        <label for="return">Дата возвращения</label>
+                    </div>
+                    <div class="grey">
+                        <h2>Количество попутчиков *</h2>
+                        <input type="number" name="people" id="people" placeholder="2 чел">
+                        <div class="traveler">
+                            <div class="number">
+                                <label for="number1">№</label>
+                                <input type="text" name="number" id="number1" placeholder="1" required readonly>
+                            </div>
+                            <div class="info">
+                                <label for="name1">Имя: *</label>
+                                <input type="text" name="name1" id="name1" placeholder="Введите ваше имя" required>
+                                <label for="nickname1">Прозвище:</label>
+                                <input type="text" name="nickname1" id="nickname1" placeholder="Ну как же без этого!">
+                            </div>
+                        </div>
+                        <div class="traveler">
+                            <div class="number">
+                                <label for="number2">№</label>
+                                <input type="text" name="number" id="number2" placeholder="2" required readonly>
+                            </div>
+                            <div class="info">
+                                <label for="name2">Имя: *</label>
+                                <input type="text" name="name2" id="name2" placeholder="Введите ваше имя" required>
+                                <label for="nickname2">Прозвище:</label>
+                                <input type="text" name="nickname2" id="nickname2" placeholder="Ну как же без этого!">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="white">
+                        <h2>Ваши безбашенные достижения в путешествии</h2>
+                        <input type="checkbox" name="achieve" value="achieve1" id="achieve1" checked>
+                        <label for="achieve1">Сделал селфи с акулой</label>
+                        <input type="checkbox" name="achieve" value="achieve2" id="achieve2" checked>
+                        <label for="achieve2">Обгорел на пляже</label>
+                        <input type="checkbox" name="achieve" value="achieve3" id="achieve3">
+                        <label for="achieve3">Видел Чака Норриса</label>
+                        <input type="checkbox" name="achieve" value="achieve4" id="achieve4">
+                        <label for="achieve4">Накупил сувениров</label>
+                        <input type="checkbox" name="achieve" value="achieve5" id="achieve5" checked>
+                        <label for="achieve5">Удержал башню</label>
+                        <input type="checkbox" name="achieve" value="achieve6" id="achieve6">
+                        <label for="achieve6">Разгромил отель</label>
+                    </div>
+                    <div class="grey">
+                        <h2>Ваши фотографии из поездки *</h2>
+                        <input type="file" name="photo" required>
+                        <figure class="gallery">
+                            <div class="photo">
+                                <img src="http://placehold.it/67x68" alt="" width="67" height="68">
+                                <span>img-1.jpg</span>
+                            </div>
+                            <div class="photo">
+                                <img src="http://placehold.it/67x68" alt="" width="67" height="68">
+                                <span>img-2.jpg</span>
+                            </div>
+                            <div class="photo">
+                                <img src="http://placehold.it/67x68" alt="" width="67" height="68">
+                                <span>img-3.jpg</span>
+                            </div>
+                            <div class="photo">
+                                <img src="http://placehold.it/67x68" alt="" width="67" height="68">
+                                <span>img-4.jpg</span>
+                            </div>
+                            <div class="photo">
+                                <img src="http://placehold.it/67x68" alt="" width="67" height="68">
+                                <span>img-5.jpg</span>
+                            </div>
+                            <div class="photo">
+                                <img src="http://placehold.it/67x68" alt="" width="67" height="68">
+                                <span>img-6.jpg</span>
+                            </div>
+                            <div class="photo">
+                                <img src="http://placehold.it/67x68" alt="" width="67" height="68">
+                                <span>img-7.jpg</span>
+                            </div>
+                            <div class="photo">
+                                <img src="http://placehold.it/67x68" alt="" width="67" height="68">
+                                <span>img-8.jpg</span>
+                            </div>
+                        </figure>
+                    </div>
+                    <button type="submit" class="btn btn-send">Отправить форму</button>
+                    <p>* — обязательные поля</p>
+                </form>
+            </div>
+        </main>
+        <footer class="page-footer">
+            <div class="container clearfix">
+                <div class="footer-logo">
+                    <a href="#">Pink</a>
+                </div>
+                <div class="footer-share">
+                    <a href="#" class="social social-tw">Twitter</a>
+                    <a href="#" class="social social-fb">Facebook</a>
+                    <a href="#" class="social social-pl">Play</a>
+                </div>
+                <div class="footer-copyright">
+                    <a href="#">Разработано</a>
+                </div>
+            </div>
+        </footer>
+        <div class="popup popup-success">
+            <div class="popup-title">
+                Ваша заявка отправлена
+            </div>
+            <p>Спасибо за ваше участие, ваша заявка уже поступила к нам.
+                В ближайшее время мы рассмотрим ее и оповестим вас.</p>
+            <div class="popup-button">
+                <a href="#" class="btn">Закрыть окно</a>
+            </div>
+        </div>
+        <div class="popup popup-failure">
+            <div class="popup-title">
+                Что-то пошло не так!
+            </div>
+            <p>Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+            <div class="popup-button">
+                <a href="#" class="btn">Ok</a>
+            </div>
+        </div>
+    <!-- <script src="js/script.js"></script> -->
+
+    </body>
+</html>

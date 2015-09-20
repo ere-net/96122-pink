@@ -1,15 +1,168 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <title>HTML Academy: pink</title>
-    <!-- <link rel="stylesheet" href="css/style.css"> -->
-  </head>
-  <body>
-
-    <p>Репозиторий создан для обучения на интенсивном онлайн-курсе «<a href="https://htmlacademy.ru/advanced_intensive">Продвинутый HTML и CSS</a>».</p>
-
+    <head>
+        <meta charset="utf-8">
+        <title>HTML Academy: pink</title>
+        <!-- <link rel="stylesheet" href="css/style.css"> -->
+    </head>
+    <body>
+        <header class="page-header index-header">
+            <div class="container clearfix">
+                <div class="header-top">
+                    <figure class="logo">
+                        Pink
+                    </figure>
+                    <nav class="main-menu">
+                        <ul>
+                            <li><a href="index.html">Информация</a></li>
+                            <li><a href="blog.html">Блог</a></li>
+                            <li><a href="#">Отзывы</a></li>
+                            <li><a href="form.html">Конкурс</a></li>
+                        </ul>
+                    </nav>
+                    <h1>Взгляните на жизнь иначе!</h1>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="container clearfix">
+                <section class="download">
+                    <a href="#">Скачать приложение</a>
+                    <figure>
+                        <img src="http://placehold.it/46x57" alt="" width="46" height="57">
+                        <img src="http://placehold.it/46x57" alt="" width="46" height="57">
+                        <img src="http://placehold.it/46x57" alt="" width="46" height="57">
+                    </figure>
+                    <p>Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
+                </section>
+                <section class="app-info">
+                    <div class="offer">
+                        <p>Устали от серости мегаполиса?</p>
+                        <p>Нам есть, что вам предложить!</p>
+                    </div>
+                    <div class="profit">
+                        <h2>Поднимает настроение</h2>
+                        <p>Приложение позволит вам победить осеннюю хандру и деперессию буквально в несколько кликов!</p>
+                        <h2>Меняет мир вокруг</h2>
+                        <p>Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+                        <h2>Заводит новых друзей</h2>
+                        <p>Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых</p>
+                    </div>
+                </section>
+                <section class="review">
+                    <div class="slider">
+                        <input type="radio" id="btn-review1" name="review-toggle" checked>
+                        <input type="radio" id="btn-review2" name="review-toggle">
+                        <input type="radio" id="btn-review3" name="review-toggle">
+                        <div class="slider-controls">
+                            <label for="btn-review1"></label>
+                            <label for="btn-review2"></label>
+                            <label for="btn-review3"></label>
+                        </div>
+                        <div class="slider-items slider-review">
+                            <div class="slider-item">
+                                <div class="review-author">Николай Петров</div>
+                                <q class="review-text">Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи!
+                                    А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!</q>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="price">
+                    <div class="slider">
+                        <input type="radio" id="btn-price1" name="price-toggle">
+                        <input type="radio" id="btn-price2" name="price-toggle" checked>
+                        <input type="radio" id="btn-price3" name="price-toggle">
+                        <div class="slider-controls">
+                            <label for="btn-price1"></label>
+                            <label for="btn-price2"></label>
+                            <label for="btn-price3"></label>
+                        </div>
+                        <div class="slider-items slider-price">
+                            <div class="slider-item">
+                                <table class="price-table">
+                                    <tr>
+                                        <th colspan="2">
+                                            <div class="price-type">База</div>
+                                            <div class="price-usd">1,99 USD</div>
+                                        </th>
+                                    </tr>
+                                    <tr>
+                                        <td>Розовый фильтр</td>
+                                        <td><img src="http://placehold.it/29x29" alt="" width="29" height="29"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Смайлики</td>
+                                        <td><img src="http://placehold.it/29x29" alt="" width="29" height="29"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Комментарии</td>
+                                        <td><img src="http://placehold.it/29x29" alt="" width="29" height="29"></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="slider-item">
+                                <table class="price-table">
+                                    <tr class="price-hit">
+                                        <th colspan="2">
+                                            <div class="price-type">Стандарт</div>
+                                            <div class="price-usd">3,99 USD</div>
+                                        </th>
+                                    </tr>
+                                    <tr>
+                                        <td>Розовый фильтр</td>
+                                        <td><img src="http://placehold.it/29x29" alt="" width="29" height="29"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Смайлики</td>
+                                        <td><img src="http://placehold.it/29x29" alt="" width="29" height="29"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Комментарии</td>
+                                        <td><img src="http://placehold.it/29x29" alt="" width="29" height="29"></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="slider-item">
+                                <table class="price-table">
+                                    <tr>
+                                        <th colspan="2">
+                                            <div class="price-type">Анлим</div>
+                                            <div class="price-usd">9,99 USD</div>
+                                        </th>
+                                    </tr>
+                                    <tr>
+                                        <td>Розовый фильтр</td>
+                                        <td><img src="http://placehold.it/29x29" alt="" width="29" height="29"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Смайлики</td>
+                                        <td><img src="http://placehold.it/29x29" alt="" width="29" height="29"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Комментарии</td>
+                                        <td><img src="http://placehold.it/29x29" alt="" width="29" height="29"></td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="contacts">
+                    <div class="contacts-info">
+                        <h1>Остались вопросы? Свяжитесь с нами!</h1>
+                        <h2>Звоните:</h2>
+                        <p>+7 (812) 555-66-66</p>
+                        <h2>Пишите:</h2>
+                        <p><a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a></p>
+                        <h2>Приезжайте в гости:</h2>
+                        <p>ул. Большая Конюшенная, 19/8</p>
+                    </div>
+                </section>
+            </div>
+        </main>
     <!-- <script src="js/script.js"></script> -->
 
-  </body>
+    </body>
 </html>
+
