@@ -1,96 +1,85 @@
 <!DOCTYPE html>
 <html lang="ru">
-    <head>
-        <meta charset="utf-8">
-        <title>Блог путешественников, пользователей Пинк</title>
-        <!-- <link rel="stylesheet" href="css/style.css"> -->
-    </head>
+  <head>
+    <meta charset="utf-8">
+    <title>Блог путешественников, пользователей Пинк</title>
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
+  </head>
 
-    <body>
-        <header class="page-header">
-            <div class="page-header__logo-wrap">
-                <a href="/" class="page-header__logo-link">
-                    <img src="img/logo.png" alt="Pink">
-                </a>
-            </div>
-            <div class="page-header__nav-wrap">
-                <nav class="main-nav">
-                    <ul class="main-nav__list">
-                        <li class="main-nav__item"><a href="#">Информация</a></li>
-                        <li class="main-nav__item"><a href="#">Блог</a></li>
-                        <li class="main-nav__item"><a href="#">Отзывы</a></li>
-                        <li class="main-nav__item"><a href="#">Конкурс</a></li>
-                    </ul>
-                    <a href="#" class="main-nav__toggle  main-nav__toggle--close"></a>
-                </nav>
-            </div>
-        </header>
+  <body>
+    <header class="page-header">
+      <div class="page-header__inner">
+        <a class="logo" href="/">
+          <img src="" alt="Pink">
+        </a>
+        <nav class="main-nav">
+          <ul class="main-nav__list">
+            <li class="main-nav__item"><a href="#">Информация</a></li>
+            <li class="main-nav__item"><a href="#">Блог</a></li>
+            <li class="main-nav__item"><a href="#">Отзывы</a></li>
+            <li class="main-nav__item"><a href="#">Конкурс</a></li>
+          </ul>
+          <a href="#" class="main-nav__toggle  main-nav__toggle--close"><span></span></a>
+        </nav>
+        <h1 class="page-title">Блог путешественников, пользователей Пинк</h1>
+      </div>
+    </header>
 
-        <div class="content">
-            <section class="page-title">
-                <div class="page-title__inner">
-                    <h1>Блог путешественников, пользователей Пинк</h1>
-                </div>
-            </section>
-
-            <div class="blog">
-                <article class="blog-post">
-                    <a href="post.html" class="blog-post__link"><h1 class="blog-post__title">Антон и Надя в Тайланде</h1></a>
-                    <div class="blog-post__date">Опубликовано: 6 месяцев назад</div>
-                    <p class="blog-post__text">Читайте рассказ о том, как семейная пара посещала Тайланд, стараясь максимально избегать избитых туристических мест и районов.</p>
-                </article>
-                <article class="blog-post">
-                    <a href="#" class="blog-post__link"><h1 class="blog-post__title">Гастрольный тур «Кубанских борщеваров»</h1></a>
-                    <div class="blog-post__date">Опубликовано: 5 лет назад</div>
-                    <p class="blog-post__text">Возрождение культурных традиций уже не за горами. Фолк-металл-рэп-группа из столицы Кубани провела весь год в гастролях по России и ближнему (а также среднему) зарубежью.</p>
-                </article>
-                <article class="blog-post">
-                    <a href="#" class="blog-post__link"><h1 class="blog-post__title">Чета Болонских в Париже</h1></a>
-                    <div class="blog-post__date">Опубликовано: 100 лет назад</div>
-                    <p class="blog-post__text">Невероятные приключения русских во Франции. Интриги, предательства, погони и, разумеется, убийства. Читайте криминально-исторический трактат в двух томах.</p>
-                </article>
-                <article class="blog-post">
-                    <a href="#" class="blog-post__link"><h1 class="blog-post__title">Путешествие на яхте сеньора Христофора</h1></a>
-                    <div class="blog-post__date">Опубликовано: 523 года назад</div>
-                    <p class="blog-post__text">Группа испанцев отдыхала на яхте, но они даже не представляли, какие открытия ждут их впереди и чем это обернется для всего человечества!</p>
-                </article>
-                <div class="blog-paginator">
-                    <ul class="blog-paginator__list">
-                        <li class="blog-paginator__item-active">
-                            <a href="#">1</a>
-                        </li>
-                        <li class="blog-paginator__item">
-                            <a href="#">2</a>
-                        </li>
-                        <li class="blog-paginator__item">
-                            <a href="#">3</a>
-                        </li>
-                        <li class="blog-paginator__item">
-                            <a href="#">4</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+    <main class="content">
+      <section class="blog">
+        <article class="blog-post">
+          <h1 class="blog-post__title"><a href="#" class="blog-post__link">Антон и Надя в Тайланде</a></h1>
+          <time class="blog-post__date" datetime="">Опубликовано: 6 месяцев назад</time>
+          <div class="blog-post__text"><p>Читайте рассказ о том, как семейная пара посещала Тайланд, стараясь максимально избегать избитых туристических мест и районов.</p></div>
+        </article>
+        <article class="blog-post">
+          <h1 class="blog-post__title"><a href="#" class="blog-post__link">Гастрольный тур «Кубанских борщеваров»</a></h1>
+          <time class="blog-post__date" datetime="">Опубликовано: 5 лет назад</time>
+          <div class="blog-post__text"><p>Возрождение культурных традиций уже не за горами. Фолк-металл-рэп-группа из столицы Кубани провела весь год в гастролях по России и ближнему (а также среднему) зарубежью.</p></div>
+        </article>
+        <article class="blog-post">
+          <h1 class="blog-post__title"><a href="#" class="blog-post__link">Чета Болонских в Париже</a></h1>
+          <time class="blog-post__date" datetime="">Опубликовано: 100 лет назад</time>
+          <div class="blog-post__text"><p>Невероятные приключения русских во Франции. Интриги, предательства, погони и, разумеется, убийства. Читайте криминально-исторический трактат в двух томах.</p></div>
+        </article>
+        <article class="blog-post">
+          <h1 class="blog-post__title"><a href="#" class="blog-post__link">Путешествие на яхте сеньора Христофора</a></h1>
+          <time class="blog-post__date" datetime="">Опубликовано: 523 года назад</time>
+          <div class="blog-post__text"><p>Группа испанцев отдыхала на яхте, но они даже не представляли, какие открытия ждут их впереди и чем это обернется для всего человечества!</p></div>
+        </article>
+        <div class="num-pagination">
+          <a class="num-pagination__item-active" href="#">1</a>
+          <a class="num-pagination__item" href="#">2</a>
+          <a class="num-pagination__item" href="#">3</a>
+          <a class="num-pagination__item" href="#">4</a>
         </div>
+      </section>
+    </main>
 
-        <footer class="page-footer">
-            <div class="page-footer__inner">
-                <div class="logo">
-                    <a href="#"><img src="img/logo.png" alt="PINK"></a>
-                </div>
-                <div class="page-footer__social">
-                    <div class="social-links">
-                        <a href="#" class="social-links__item-tw">Мы в Twitter</a>
-                        <a href="#" class="social-links__item-fb">Мы ны Facebook</a>
-                        <a href="#" class="social-links__item-yt">Мы на Youtube</a>
-                    </div>
-                </div>
-                <div class="page-footer__copyright">
-                    <a href="#">Разработано</a>
-                </div>
-            </div>
-        </footer>
-    <!-- <script src="js/script.js"></script> -->
+    <footer class="page-footer">
+      <div class="page-footer__inner">
+        <a class="logo" href="/">
+          <img src="" alt="Pink">
+        </a>
+        <div class="page-footer__social">
+          <ul class="social-links">
+            <li>
+              <a href="#" class="social-links__item-tw">Мы в Twitter</a>
+            </li>
+            <li>
+              <a href="#" class="social-links__item-fb">Мы ны Facebook</a>
+            </li>
+            <li>
+              <a href="#" class="social-links__item-yt">Мы на Youtube</a>
+            </li>
+          </ul>
+        </div>
+        <div class="page-footer__copyright">
+          <a href="#">Разработано</a>
+        </div>
+      </div>
+    </footer>
+  <!-- <script src="js/script.js"></script> -->
 
-    </body>
+  </body>
 </html>
