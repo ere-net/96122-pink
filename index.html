@@ -3,14 +3,14 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: pink</title>
-    <!-- <link rel="stylesheet" href="css/style.css"> -->
+    <link rel="stylesheet" href="css/style.css">
   </head>
 
   <body>
-    <header class="page-header page-header--index">
-      <div class="page-header__inner">
+    <header class="page-header">
+      <div class="page-header__inner  page-header__inner--index">
         <a class="logo" href="/">
-          <img src="" alt="Pink">
+          <img src="img/logo.png" alt="Pink">
         </a>
         <nav class="main-nav">
           <ul class="main-nav__list">
@@ -19,26 +19,26 @@
             <li class="main-nav__item"><a href="#">Отзывы</a></li>
             <li class="main-nav__item"><a href="#">Конкурс</a></li>
           </ul>
-          <a href="#" class="main-nav__toggle  main-nav__toggle--close"><span></span></a>
+          <a class="main-nav__toggle" href="#"><span></span></a>
         </nav>
         <h1 class="page-title">Взгляните на жизнь иначе!</h1>
-        <div class="download-app">
-          <a class="btn btn--transparent" href="#">Скачать приложение</a>
-          <div class="download-app__logos">
-            <ul class="download-app__list">
-              <li class="download-app__item">
-                <img src="http://placehold.it/46x57" alt="" width="46" height="57">
-              </li>
-              <li class="download-app__item">
-                <img src="http://placehold.it/46x57" alt="" width="46" height="57">
-              </li>
-              <li class="download-app__item">
-                <img src="http://placehold.it/46x57" alt="" width="46" height="57">
-              </li>
-            </ul>
-          </div>
-          <div class="download-app__descr">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</div>
+      </div>
+      <div class="download-app">
+        <a class="btn btn--transparent" href="#">Скачать приложение</a>
+        <div class="download-app__logos">
+          <ul class="download-app__list">
+            <li class="download-app__item">
+              <img src="img/logo_apple.png" alt="Apple" width="46" height="57">
+            </li>
+            <li class="download-app__item">
+              <img src="img/logo_android.png" alt="Android" width="42" height="47">
+            </li>
+            <li class="download-app__item">
+              <img src="img/logo_microsoft.png" alt="Microsoft" width="44" height="42">
+            </li>
+          </ul>
         </div>
+        <div class="download-app__descr">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</div>
       </div>
     </header>
 
@@ -49,20 +49,22 @@
           <span>Устали от серости мегаполиса?</span>
           <span>Нам есть, что вам предложить!</span>
         </h1>
-        <ul class="promo__list">
-          <li class="promo__item">
-            <h2 class="promo__item-title">Поднимает настроение</h2>
-            <div class="promo__item-descr"><p>Приложение позволит вам победить осеннюю хандру и деперессию буквально в несколько кликов!</p></div>
-          </li>
-          <li class="promo__item">
-            <h2 class="promo__item-title">Меняет мир вокруг</h2>
-            <div class="promo__item-descr"><p>Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p></div>
-          </li>
-          <li class="promo__item">
-            <h2 class="promo__item-title">Заводит новых друзей</h2>
-            <div class="promo__item-descr"><p>Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых</p></div>
-          </li>
-        </ul>
+        <div class="promo__inner">
+          <ul class="promo__list">
+            <li class="promo__item">
+              <h2 class="promo__item-title">Поднимает настроение</h2>
+              <div class="promo__item-descr"><p>Приложение позволит вам победить осеннюю хандру и деперессию буквально в несколько кликов!</p></div>
+            </li>
+            <li class="promo__item">
+              <h2 class="promo__item-title">Меняет мир вокруг</h2>
+              <div class="promo__item-descr"><p>Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p></div>
+            </li>
+            <li class="promo__item">
+              <h2 class="promo__item-title">Заводит новых друзей</h2>
+              <div class="promo__item-descr"><p>Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых</p></div>
+            </li>
+          </ul>
+        </div>
       </section>
 
       <section class="reviews">
@@ -73,9 +75,9 @@
               А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!&raquo;</p></div>
           </blockquote>
           <div class="slider-pagination">
-            <span class="slider-pagination__active"></span>
-            <span></span>
-            <span></span>
+            <span class="slider-pagination__item  slider-pagination__item--active"></span>
+            <span class="slider-pagination__item"></span>
+            <span class="slider-pagination__item"></span>
           </div>
         </div>
       </section>
@@ -83,45 +85,45 @@
       <section class="price">
         <table class="price__table">
           <tr>
-            <th>
+            <!--<th>
               <strong class="price__price-type">База</strong>
               <span class="price__price-usd">1,99 USD</span>
-            </th>
+            </th>-->
             <th class="price__hit">
               <strong class="price__price-type">Стандарт</strong>
               <span class="price__price-usd">3,99 USD</span>
             </th>
-            <th>
+            <!--<th>
               <strong class="price__price-type">Анлим</strong>
               <span class="price__price-usd">9,99 USD</span>
-            </th>
+            </th>-->
           </tr>
           <tr>
-            <td>Розовый фильтр <span>Да</span></td>
-            <td>Розовый фильтр <span>Да</span></td>
-            <td>Розовый фильтр <span>Да</span></td>
+            <td>Розовый фильтр <span class="price__yes">Да</span></td>
+            <!--<td>Розовый фильтр <span class="price__yes">Да</span></td>
+            <td>Розовый фильтр <span class="price__yes">Да</span></td>-->
           </tr>
           <tr>
-            <td>Смайлики <span>Нет</span></td>
-            <td>Смайлики <span>Да</span></td>
-            <td>Смайлики <span>Да</span></td>
+            <td>Смайлики <span class="price__no">Нет</span></td>
+            <!--<td>Смайлики <span class="price__yes">Да</span></td>
+            <td>Смайлики <span class="price__yes">Да</span></td>-->
           </tr>
           <tr>
-            <td>Комментарии <span>Нет</span></td>
-            <td>Комментарии <span>Нет</span></td>
-            <td>Комментарии <span>Да</span></td>
+            <td>Комментарии <span class="price__no">Нет</span></td>
+            <!--<td>Комментарии <span class="price__no">Нет</span></td>
+            <td>Комментарии <span class="price__yes">Да</span></td>-->
           </tr>
         </table>
         <div class="slider-pagination">
-          <span></span>
-          <span class="slider-pagination__active"></span>
-          <span></span>
+          <span class="slider-pagination__item"></span>
+          <span class="slider-pagination__item  slider-pagination__item--active"></span>
+          <span class="slider-pagination__item"></span>
         </div>
       </section>
 
       <section class="contacts">
-        <h1 class="second-title">Остались вопросы? Свяжитесь с нами!</h1>
         <div class="contacts__inner">
+          <h1 class="second-title">Остались вопросы? Свяжитесь с нами!</h1>
           <ul class="contacts__list">
             <li class="contacts__item">
               <strong class="contacts__item-title">Звоните:</strong>
@@ -140,6 +142,14 @@
       </section>
     </main>
   <!-- <script src="js/script.js"></script> -->
+
+  <!-- <script>
+    var toggler = document.getElementById('toggler');
+    toggler.onclick = function(e){
+    e.preventDefault();
+    toggler.classList.toggle('main-nav__toggle--close');
+  }
+  </script>-->
 
   </body>
 </html>

@@ -1,0 +1,63 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  width: 320px;
+  font: $font-regular #{$text-size}/#{$line-height} $font;
+  color: $text-color;
+  background-color: $bg-color;
+  margin: 0 auto;
+ }
+
+h1 {
+  font: $font-light #{$text-size--headings}/#{$line-height--headings} $font;
+  color: $text-color;
+}
+
+.page-title {
+  margin: 19px 0 29px;
+  font: $font-light #{$text-size--headings}/#{$line-height--headings} $font;
+  text-align: center;
+  color: $white;
+}
+
+.second-title {
+  margin: 0;
+  margin-bottom: 40px;
+  font: $font-light #{$text-size--headings}/#{$line-height--headings} $font;
+  text-align: center;
+  color: $text-color;
+
+  span {
+    display: block;
+    margin-bottom: 30px;
+  }
+}
+
+.btn {
+  display: block;
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+  color: $white;
+
+  &--transparent {
+    padding: 14px 0;
+    font: $font-bold 18px/18px $font;
+    background-color: transparent;
+    border: 3px solid $white;
+    border-radius: 25px;
+  }
+}
+
+.logo {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  z-index: 50;
+}

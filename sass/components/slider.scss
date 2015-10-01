@@ -1,0 +1,53 @@
+.slider {
+  text-align: center;
+  
+  &--reviews {
+
+  }
+
+  &__item {
+    margin: 0;
+  }
+
+  &__author {
+    margin-bottom: 20px;
+    font: $font-bold 18px/21px $font;
+    color: $black;
+  }
+
+  &__text {
+    font: $font-regular 14px/30px $font;
+    color: $text-color;
+
+    p {
+      margin: 0;
+    }
+  }
+}
+
+.slider-pagination {
+  margin: 5px 0;
+  padding-top: 15px;
+  text-align: center;
+
+  &__item {
+    display: inline-block;
+    vertical-align: middle;
+    width: 6px;
+    height: 6px;
+    margin-right: 19px;
+    border-radius: 50%;
+    background-color: $text-color;
+    opacity: 0.3;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &--active {
+      background-color: $bg-color;
+      box-shadow: 0 0 0 3px $text-color;
+      opacity: 1;
+    }
+  }
+}
