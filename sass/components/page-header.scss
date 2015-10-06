@@ -1,14 +1,14 @@
 .page-header {
   position: relative;
   padding-top: 66px;
-  background: $bg-color--dark url("#{$dir}/bg_header.jpg") no-repeat 50% top;
+  background: $bg-color--dark url("../img/bg_header.jpg") no-repeat 50% top;
 
   &__inner {
     padding: 0 20px;
 
     &--index {
       padding-bottom: 285px;
-      background: url("#{$dir}/bg_header--hand.png") no-repeat left -15px bottom -28px;
+      background: url("../img/bg_header--hand.png") no-repeat left -15px bottom -28px;
     }
   }
 }
@@ -34,7 +34,7 @@
       display: block;
       width: 100%;
       padding: 20px;
-      font: $font-bold 18px/32px $font;
+      font: 800 18px/1.78em $font;
       text-align: center;
       text-decoration: none;
       text-transform: uppercase;
@@ -136,6 +136,6 @@
   }
 
   &__descr {
-    font: $font-light 14px/24px $font;
+    font: 300 14px/1.75em $font;
   }
 }

@@ -1,7 +1,9 @@
 @import "variables";
-@import "fonts";
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,800,400italic&subset=latin,cyrillic);
+@import "components/mixins";
 @import "components/base";
 @import "components/page-header";
+@import "components/logo";
 @import "components/promo";
 @import "components/reviews";
 @import "components/slider";

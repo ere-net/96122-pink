@@ -27,7 +27,7 @@
 
     td {
       padding: 18px;
-      font: $font-regular 14px/30px $font;
+      font: 400 14px/2.15em $font;
       text-transform: uppercase;
       border: 2px solid #e5e5e5;
       background-color: $white;
@@ -36,35 +36,29 @@
   }
 
   &__no {
+    @include text-replacement;
     width: 26px;
     height: 26px;
-    border: 0;
-    font: 0/0 a;
-    text-shadow: none;
-    color: transparent;
-    background: url("#{$dir}/icon_no.png") no-repeat 0 0;
+    background: url("../img/icon_no.png") no-repeat 0 0;
   }
 
   &__yes {
+    @include text-replacement;
     width: 29px;
     height: 22px;
-    border: 0;
-    font: 0/0 a;
-    text-shadow: none;
-    color: transparent;
-    background: url("#{$dir}/icon_yes.png") no-repeat 0 0;
+    background: url("../img/icon_yes.png") no-repeat 0 0;
   }
 
   &__price-type {
     display: block;
-    font: $font-bold 18px/30px $font;
+    font: 800 18px/1.75em $font;
     text-transform: uppercase;
     color: $white;
   }
 
   &__price-usd {
     display: block;
-    font: $font-light 24px/30px $font;
+    font: 300 24px/1.25em $font;
     text-transform: uppercase;
     color: $white;
   }
@@ -76,7 +70,7 @@
     z-index: 50;
     width: 74px;
     height: 73px;
-    background: url("#{$dir}/flag_hit.png") no-repeat top left;
+    background: url("../img/flag_hit.png") no-repeat top left;
   }
 
 }

@@ -11,16 +11,20 @@
 
   &__author {
     margin-bottom: 20px;
-    font: $font-bold 18px/21px $font;
+    font: 800 18px/1.2em $font;
     color: $black;
   }
 
   &__text {
-    font: $font-regular 14px/30px $font;
+    font: 400 14px/2.15em $font;
     color: $text-color;
 
-    p {
-      margin: 0;
+    &:before {
+      content: '\00ab';
+    }
+
+    &:after {
+      content: '\00bb';
     }
   }
 }

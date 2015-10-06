@@ -6,10 +6,10 @@
   &__inner {
     position: relative;
     padding: 85px 20px 280px 20px;
-    background: $bg-color--light url("#{$dir}/bg_promo.png") no-repeat 50% 100%;
+    background: $bg-color--light url("../img/bg_promo.png") no-repeat 50% 100%;
 
     &:before {
-      content: "";
+      content: '';
       position: absolute;
       top: 0;
       left: 0;
@@ -32,12 +32,12 @@
   &__item-title {
     margin: 0;
     margin-bottom: 18px;
-    font: $font-bold 18px/24px $font;
+    font: 800 18px/1.35em $font;
     color: $black;
   }
 
   &__item-descr {
-    font: $font-regular 14px/24px $font;
+    font: 400 14px/1.75em $font;
     color: $text-color;
   }
 
