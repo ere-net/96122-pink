@@ -32,17 +32,16 @@
   &__item-title {
     margin: 0;
     margin-bottom: 18px;
-    font: 800 18px/1.35em $font;
+    font: 800 #{$text-size--h2}/1.35em $font;
     color: $black;
   }
 
   &__item-descr {
-    font: 400 14px/1.75em $font;
+    font: 400 #{$text-size}/1.75em $font;
     color: $text-color;
   }
 
   &__item-descr p {
     margin: 0;
   }
-
 }

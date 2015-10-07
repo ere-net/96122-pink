@@ -3,4 +3,10 @@
   left: 20px;
   top: 20px;
   z-index: 50;
+
+    &--glasses {
+      position: relative;
+      left: 0;
+      top: 0;
+    }
 }

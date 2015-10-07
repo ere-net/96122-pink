@@ -1,12 +1,30 @@
 @import "variables";
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,800,400italic&subset=latin,cyrillic);
 @import "components/mixins";
+
 @import "components/base";
-@import "components/page-header";
+@import "components/typo";
+
+@import "components/btn";
+@import "components/contacts";
+@import "components/download-app";
+@import "components/form";
 @import "components/logo";
+@import "components/main-nav";
+@import "components/modal";
+@import "components/page-footer";
+@import "components/page-header";
+@import "components/page-title";
+@import "components/price";
 @import "components/promo";
 @import "components/reviews";
+@import "components/second-title";
 @import "components/slider";
-@import "components/price";
-@import "components/contacts";
+@import "components/social-links";
+
+
+
+
+
+
+
 

@@ -1,0 +1,25 @@
+.modal {   //module4-task1  comming soon
+  display: none;
+
+  &--success {
+
+  }
+
+  &--failure {
+  }
+
+  &__title {
+  }
+
+  &__text {
+
+    p {
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  &__button {
+
+  }
+}

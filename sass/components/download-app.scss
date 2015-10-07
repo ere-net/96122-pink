@@ -1,0 +1,30 @@
+.download-app {
+  padding: 28px 20px 30px;
+  text-align: center;
+  background-color: $bg-color--dark;
+  color: $white;
+
+  &__logos {
+    padding: 32px 0 22px 0;
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__item {
+    display: inline-block;
+    vertical-align: bottom;
+    margin-right: 35px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__descr {
+    font: 300 14px/1.75em $font;
+  }
+}

@@ -27,7 +27,7 @@
 
     td {
       padding: 18px;
-      font: 400 14px/2.15em $font;
+      font: 400 #{$text-size}/2.15em $font;
       text-transform: uppercase;
       border: 2px solid #e5e5e5;
       background-color: $white;
@@ -72,5 +72,4 @@
     height: 73px;
     background: url("../img/flag_hit.png") no-repeat top left;
   }
-
 }

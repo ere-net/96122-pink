@@ -6,17 +6,21 @@
   }
 
   &__item {
+    display: flex;
+    flex-direction: column;
     margin: 0;
   }
 
   &__author {
+    order: 1;
     margin-bottom: 20px;
-    font: 800 18px/1.2em $font;
+    font: 800 #{$text-size--h2}/1.2em $font;
     color: $black;
   }
 
-  &__text {
-    font: 400 14px/2.15em $font;
+  p {
+    order: 2;
+    font: 400 #{$text-size}/2.15em $font;
     color: $text-color;
 
     &:before {

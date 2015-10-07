@@ -1,0 +1,12 @@
+.second-title {
+  margin: 0;
+  margin-bottom: 40px;
+  font: 300 #{$text-size--h1}/1.2em $font;
+  text-align: center;
+  color: $text-color;
+
+  &__text {
+    display: block;
+    margin-bottom: 30px;
+  }
+}

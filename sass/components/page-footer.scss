@@ -1,0 +1,33 @@
+.page-footer {  //module4-task1  comming soon
+  position: relative;
+  background-color: $bg-color;
+  text-align: center;
+
+  &__inner {
+    padding: 0 20px 45px;
+  }
+
+  &__social {
+    margin-top: 40px;
+  }
+
+  &__copyright {
+    margin-top: 40px;
+
+    a {
+      position: relative;
+      text-decoration: none;
+
+      &:after {
+        content: '';
+        position: absolute;
+        width: 27px;
+        height: 34px;
+        background: $bg-color url('../img/logo_ha.png') no-repeat 0 0;
+      }
+    }
+  }
+}
+
+
+

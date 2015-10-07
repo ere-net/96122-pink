@@ -1,0 +1,14 @@
+.form { //module4-task1  comming soon
+  padding: 50px 0 10px;
+  background-color: $bg-color;
+
+  &__descr{
+    padding: 0 20px 15px;
+    font: 400 #{$text-size}/2.15em $font;
+    text-align: center;
+
+    p {
+      margin: 0;
+    }
+  }
+}
