@@ -1,5 +1,6 @@
-.page-footer {  //module4-task1  comming soon
+.page-footer {
   position: relative;
+  padding-top: 35px;
   background-color: $bg-color;
   text-align: center;
 
@@ -16,14 +17,17 @@
 
     a {
       position: relative;
+      padding-right: 42px;
+      color: $text-color;
       text-decoration: none;
 
       &:after {
         content: '';
         position: absolute;
-        width: 27px;
+        top: -5px;
+        width: 100%;
         height: 34px;
-        background: $bg-color url('../img/logo_ha.png') no-repeat 0 0;
+        background: $bg-color url('../img/logo_ha.png') no-repeat 15px 0;
       }
     }
   }

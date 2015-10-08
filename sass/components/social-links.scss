@@ -1,4 +1,4 @@
-.social-links { //module4-task1  comming soon
+.social-links {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -6,7 +6,7 @@
   li {
     display: inline-block;
     vertical-align: top;
-    margin-right: 9px;
+    margin-right: 14px;
 
     &:last-child {
       margin-right: 0;
@@ -17,8 +17,7 @@
     display: block;
     width: 45px;
     height: 45px;
-    font-size: 0;
-    line-height: 0;
+    @include text-replacement;
     text-decoration: none;
     background-color: $bg-color;
     box-shadow: 0 0 0 3px $border-grey;
@@ -26,14 +25,14 @@
   }
 
   &__item-tw {
-    background: $bg-color url('../img/icon_tw.png') no-repeat 50% 50%;   //svg  comming soon
+    background: $bg-color url('../img/icon_tw.png') no-repeat 50% 50%;   //module6 svg  comming soon
   }
 
   &__item-fb {
-    background: $bg-color url('../img/icon_fb.png') no-repeat 50% 50%;   //svg  comming soon
+    background: $bg-color url('../img/icon_fb.png') no-repeat 50% 50%;   //module6 svg  comming soon
   }
 
   &__item-yt {
-    background: $bg-color url('../img/icon_yt.png') no-repeat 50% 50%;   //svg  comming soon
+    background: $bg-color url('../img/icon_yt.png') no-repeat 50% 50%;   //module6 svg  comming soon
   }
 }

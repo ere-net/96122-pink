@@ -1,16 +1,27 @@
 .btn {
   display: block;
   width: 100%;
+  padding: 22px 0;
+  font: 800 18px/1.2em $font;
   text-align: center;
   text-decoration: none;
+  text-transform: uppercase;
   color: $white;
+  background-color: $btn;
+  border: 0;
+  border-radius: 2px;
+  cursor: pointer;
 
   &--transparent {
     padding: 14px 0;
-    font: 800 18px/1.2em $font;
+    text-transform: none;
     background-color: transparent;
     border: 3px solid $white;
     border-radius: 25px;
+  }
+
+  &--form-send {
+
   }
 
   &--send {

@@ -14,7 +14,8 @@ body {
   font: 400 #{$text-size}/1.9em $font;
   color: $text-color;
   background-color: $bg-color;
-  margin: 0;
+  margin: 0 auto;
+  counter-reset: travellers;
  }
 
 img {

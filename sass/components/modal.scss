@@ -1,25 +1,46 @@
-.modal {   //module4-task1  comming soon
+.modal {
   display: none;
+  padding: 45px 0 0;
+  background-color: $bg-color;
+  text-align: center;
+  box-shadow: 0 0 15px 7px rgba(0,1,1,0.15);
+  outline: 1px solid green;
 
   &--success {
 
   }
 
   &--failure {
+
   }
 
   &__title {
+    padding: 0 20px 30px;
+    font: 800 #{$text-size--h2}/1.33em $font;
+    color: $black;
   }
 
   &__text {
+    padding-bottom: 35px;
 
     p {
       margin: 0;
-      padding: 0;
+      padding: 0 20px;
+      font: 400 #{$text-size}/1.71em $font;
+      color: $text-color;
     }
   }
 
   &__button {
 
+    &--success {
+      padding: 48px 20px 52px;
+      background-color: $bg-color--light;
+    }
+
+    &--failure {
+      padding: 23px 20px 50px;
+      background-color: $bg-color;
+    }
   }
 }
