@@ -1,0 +1,47 @@
+.promo {
+  padding-top: 45px;
+  text-align: center;
+  background-color: $bg-color;
+
+  &__inner {
+    position: relative;
+    padding: 85px 20px 280px 20px;
+    background: $bg-color--light url("../img/bg_promo.png") no-repeat 50% 100%;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 30px;
+      background-image: linear-gradient(to bottom right, $bg-color 50%, $bg-color--light 50%);
+    }
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__item {
+    margin-bottom: 40px;
+  }
+
+  &__item-title {
+    margin: 0;
+    margin-bottom: 18px;
+    font: 800 #{$text-size--h2}/1.35em $font;
+    color: $black;
+  }
+
+  &__item-descr {
+    font: 400 #{$text-size}/1.75em $font;
+    color: $text-color;
+  }
+
+  &__item-descr p {
+    margin: 0;
+  }
+}

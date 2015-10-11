@@ -1,0 +1,61 @@
+.slider {
+  text-align: center;
+  
+  &--reviews {
+
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+  }
+
+  &__author {
+    order: 1;
+    margin-bottom: 20px;
+    font: 800 #{$text-size--h2}/1.2em $font;
+    color: $black;
+  }
+
+  p {
+    order: 2;
+    font: 400 #{$text-size}/2.15em $font;
+    color: $text-color;
+
+    &:before {
+      content: '\00ab';
+    }
+
+    &:after {
+      content: '\00bb';
+    }
+  }
+}
+
+.slider-pagination {
+  margin: 5px 0;
+  padding-top: 15px;
+  text-align: center;
+
+  &__item {
+    display: inline-block;
+    vertical-align: middle;
+    width: 6px;
+    height: 6px;
+    margin-right: 19px;
+    border-radius: 50%;
+    background-color: $text-color;
+    opacity: 0.3;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &--active {
+      background-color: $bg-color;
+      box-shadow: 0 0 0 3px $text-color;
+      opacity: 1;
+    }
+  }
+}

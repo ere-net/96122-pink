@@ -1,0 +1,68 @@
+.post {
+  padding: 12px 20px 0;
+  background-color: $bg-color;
+
+  &__content {
+    padding-top: 28px;
+    
+    h2 {
+      margin: 0 0 20px;
+      padding: 0;
+      font: 800 #{$text-size--h2}/1.7em $font;
+      color: $text-color;
+      text-transform: uppercase;
+    }
+    
+    p {
+      margin: 0;
+      padding: 0 0 29px;
+      font: 400 #{$text-size}/1.9em $font;
+      color: $text-color;
+    }
+
+    a {
+      font: 400 #{$text-size}/1.9em $font;
+      color: $pink;
+      text-decoration: underline;
+    }
+    
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      color: $pink;
+
+      li {
+        position: relative;
+        padding: 0 0 27px 21px;
+        font: 400 #{$text-size}/1.9em $font;
+        color: $text-color;
+
+        &:before {
+          content: '';
+          position: absolute;
+          top: 10px;
+          left: 0;
+          width: 6px;
+          height: 7px;
+          background-color: $pink;
+          border-radius: 50%;
+        }
+      }
+    }
+
+    blockquote {
+      margin: 0 0 35px;
+      padding-left: 20px;
+      font: 400 #{$text-size}/1.9em $font;
+      color: $text-color;
+      border-left: 2px solid $pink;
+    }
+
+    cite {
+      display: block;
+      font: 400 #{$text-size}/1.9em $font;
+      color: #8a8a8a;
+    }
+  }
+}

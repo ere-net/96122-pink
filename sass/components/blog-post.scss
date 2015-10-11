@@ -1,0 +1,46 @@
+.blog-post {
+  padding-bottom: 22px;
+  border-bottom: 1px solid $border-grey;
+
+  &__title {
+    padding: 22px 0 7px;
+    font: 800 #{$text-size--h2}/1.5em $font;
+    color: $text-color;
+    
+    a {
+      text-decoration: none;
+      color: $text-color;
+    }
+  }
+
+  &__date {
+    display: block;
+    padding-bottom: 19px;
+    font: 400 12px/1.5em $font;
+    color: $pink;
+    text-transform: uppercase;
+  }
+
+  &__text p {
+    font: 400 #{$text-size}/1.93em $font;
+    color: $text-color;
+  }
+
+  &:last-of-type {
+    border-bottom: none;
+  }
+
+  &--header {
+    padding-bottom: 24px;
+    text-align: center;
+
+    .blog-post__title {
+      padding: 22px 0 23px;
+      font: 800 30px/1.2em $font;
+    }
+
+    .blog-post__text p {
+      font: 400 16px/1.69em $font;
+    }
+  }
+}

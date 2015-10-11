@@ -1,0 +1,14 @@
+.page-header {
+  position: relative;
+  padding-top: 66px;
+  background: $bg-color--dark url("../img/bg_header.jpg") no-repeat 50% top;
+
+  &__inner {
+    padding: 12px 20px 25px;
+
+    &--index {
+      padding: 0 20px 285px;
+      background: url("../img/bg_header--hand.png") no-repeat left -15px bottom -28px;
+    }
+  }
+}
