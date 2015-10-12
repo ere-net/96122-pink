@@ -5,8 +5,8 @@
 
   &__inner {
     position: relative;
-    padding: 85px 20px 280px 20px;
-    background: $bg-color--light url("../img/bg_promo.png") no-repeat 50% 100%;
+    padding: 85px 20px 287px 20px;
+    background: $bg-color--light url("../img/screen-mobile-3.png") no-repeat 50% 100%;
 
     &:before {
       content: '';
@@ -15,6 +15,7 @@
       left: 0;
       width: 100%;
       height: 30px;
+      //background-image: url("../img/triangle-white.svg") no-repeat 0 0;
       background-image: linear-gradient(to bottom right, $bg-color 50%, $bg-color--light 50%);
     }
   }
@@ -26,22 +27,37 @@
   }
 
   &__item {
-    margin-bottom: 40px;
+    padding-bottom: 31px;
   }
 
   &__item-title {
     margin: 0;
-    margin-bottom: 18px;
+    margin-bottom: 12px;
     font: 800 #{$text-size--h2}/1.35em $font;
     color: $black;
   }
 
-  &__item-descr {
-    font: 400 #{$text-size}/1.75em $font;
-    color: $text-color;
-  }
-
   &__item-descr p {
     margin: 0;
+    font: 400 #{$text-size}/1.71em $font;
+    color: $text-color;
+  }
+}
+
+// Планшетная версия
+
+@media (min-width: $screen_md) {
+
+  .promo {
+    text-align: left;
+
+    &__inner {
+      padding: 85px 40px 7px 350px;
+      background: $bg-color--light url("../img/iphone-screen-tablet-3@1x.png") no-repeat 40px 100%;
+    }
+
+    &__item {
+      padding-bottom: 35px;
+    }
   }
 }

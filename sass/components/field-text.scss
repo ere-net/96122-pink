@@ -15,6 +15,14 @@
     color: $text-color;
     @include placeholder($text-color);
 
+    &:hover {
+      border: 2px solid $border-dark;
+    }
+
+    &:focus {
+      border: 2px solid $pink;
+    }
+
     &[readonly] {
       background-color: $bg-color--light;
     }

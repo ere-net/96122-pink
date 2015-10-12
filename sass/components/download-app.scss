@@ -5,7 +5,7 @@
   color: $white;
 
   &__logos {
-    padding: 32px 0 22px 0;
+    padding: 32px 0 22px;
   }
 
   &__list {
@@ -25,6 +25,28 @@
   }
 
   &__descr {
-    font: 300 14px/1.75em $font;
+    font: 300 #{$text-size}/1.75em $font;
+  }
+}
+
+// Планшетная версия
+
+@media (min-width: $screen_md) {
+
+  .download-app {
+    position: absolute;
+    top: 378px;
+    left: 6%;
+    width: 300px;
+    padding: 0;
+    background-color: transparent;
+
+    &__logos {
+      padding: 45px 0 36px;
+    }
+
+    &__descr {
+      font: 300 18px/1.33em $font;
+    }
   }
 }

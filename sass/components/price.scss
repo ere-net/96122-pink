@@ -37,16 +37,18 @@
 
   &__no {
     @include text-replacement;
-    width: 26px;
-    height: 26px;
-    background: url("../img/icon_no.png") no-repeat 0 0;
+    float: right;
+    width: 27px;
+    height: 27px;
+    background: url("../img/no.svg") no-repeat 0 0;
   }
 
   &__yes {
     @include text-replacement;
-    width: 29px;
+    float: right;
+    width: 30px;
     height: 22px;
-    background: url("../img/icon_yes.png") no-repeat 0 0;
+    background: url("../img/yes.svg") no-repeat 0 0;
   }
 
   &__price-type {
@@ -71,5 +73,14 @@
     width: 74px;
     height: 73px;
     background: url("../img/flag_hit.png") no-repeat top left;
+  }
+}
+
+// Планшетная версия
+
+@media (min-width: $screen_md) {
+
+  .price .slider-pagination {
+    display: none;
   }
 }
