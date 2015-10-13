@@ -2,6 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Конкурс на самое безбашеное путешествие с Пинк</title>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,800,400italic&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/style.css">
@@ -29,7 +30,8 @@
     <main class="content">
       <form class="form" action="/echo" method="post" enctype="multipart/form-data">
         <div class="form__descr">
-          <p>Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! <!-- Пожалуйста, заполните форму ниже:--></p>
+          <p>Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!
+            <span>Пожалуйста, заполните форму ниже:</span></p>
         </div>
 
         <fieldset class="form__fieldset  form__fieldset--username">
@@ -149,48 +151,50 @@
           <label class="form__upload">
             <input type="file" name="" multiple required>Загрузить фото
           </label>
-          <ul class="form__gallery">
-            <li class="form__photo">
-              <div class="form__delete-photo"></div>
-              <img src="img/photo.png" alt="" width="67" height="68">
-              <span class="form__photo-name">img-1.jpg</span>
-            </li>
-            <li class="form__photo">
-              <div class="form__delete-photo"></div>
-              <img src="img/photo.png" alt="" width="67" height="68">
-              <span class="form__photo-name">img-2.jpg</span>
-            </li>
-            <li class="form__photo">
-              <div class="form__delete-photo"></div>
-              <img src="img/photo.png" alt="" width="67" height="68">
-              <span class="form__photo-name">img-3.jpg</span>
-            </li>
-            <li class="form__photo">
-              <div class="form__delete-photo"></div>
-              <img src="img/photo.png" alt="" width="67" height="68">
-              <span class="form__photo-name">img-4.jpg</span>
-            </li>
-            <li class="form__photo">
-              <div class="form__delete-photo"></div>
-              <img src="img/photo.png" alt="" width="67" height="68">
-              <span class="form__photo-name">img-5.jpg</span>
-            </li>
-            <li class="form__photo">
-              <div class="form__delete-photo"></div>
-              <img src="img/photo.png" alt="" width="67" height="68">
-              <span class="form__photo-name">img-6.jpg</span>
-            </li>
-            <li class="form__photo">
-              <div class="form__delete-photo"></div>
-              <img src="img/photo.png" alt="" width="67" height="68">
-              <span class="form__photo-name">img-7.jpg</span>
-            </li>
-            <li class="form__photo">
-              <div class="form__delete-photo"></div>
-              <img src="img/photo.png" alt="" width="67" height="68">
-              <span class="form__photo-name">img-8.jpg</span>
-            </li>
-          </ul>
+          <div class="form__gallery">
+            <ul class="form__gallery-list">
+              <li class="form__photo">
+                <div class="form__delete-photo"></div>
+                <img src="img/photo.png" alt="" width="67" height="68">
+                <span class="form__photo-name">img-1.jpg</span>
+              </li>
+              <li class="form__photo">
+                <div class="form__delete-photo"></div>
+                <img src="img/photo.png" alt="" width="67" height="68">
+                <span class="form__photo-name">img-2.jpg</span>
+              </li>
+              <li class="form__photo">
+                <div class="form__delete-photo"></div>
+                <img src="img/photo.png" alt="" width="67" height="68">
+                <span class="form__photo-name">img-3.jpg</span>
+              </li>
+              <li class="form__photo">
+                <div class="form__delete-photo"></div>
+                <img src="img/photo.png" alt="" width="67" height="68">
+                <span class="form__photo-name">img-4.jpg</span>
+              </li>
+              <li class="form__photo">
+                <div class="form__delete-photo"></div>
+                <img src="img/photo.png" alt="" width="67" height="68">
+                <span class="form__photo-name">img-5.jpg</span>
+              </li>
+              <li class="form__photo">
+                <div class="form__delete-photo"></div>
+                <img src="img/photo.png" alt="" width="67" height="68">
+                <span class="form__photo-name">img-6.jpg</span>
+              </li>
+              <li class="form__photo">
+                <div class="form__delete-photo"></div>
+                <img src="img/photo.png" alt="" width="67" height="68">
+                <span class="form__photo-name">img-7.jpg</span>
+              </li>
+              <li class="form__photo">
+                <div class="form__delete-photo"></div>
+                <img src="img/photo.png" alt="" width="67" height="68">
+                <span class="form__photo-name">img-8.jpg</span>
+              </li>
+            </ul>
+          </div>
         </fieldset>
 
         <fieldset class="form__fieldset  form__fieldset--submit">
