@@ -12,12 +12,31 @@
   border-radius: 2px;
   cursor: pointer;
 
+  &:hover {
+    background-color: darken(saturate($btn, 7%), 5%); //!
+  }
+
+  &:active {
+    background-color: darken(saturate($btn, 7%), 5%); //!
+    color: fade_out($white, 0.7);
+  }
+
   &--transparent {
     padding: 14px 0;
     text-transform: none;
     background-color: transparent;
     border: 3px solid $white;
     border-radius: 25px;
+
+    &:hover {
+      background-color: $bg-color;
+      color: $pink;
+    }
+
+    &:active {
+      background-color: $bg-color;
+      color: fade_out($pink, 0.7);
+    }
   }
 
   &--form-send {

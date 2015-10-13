@@ -20,8 +20,17 @@
     @include text-replacement;
     text-decoration: none;
     background-color: $bg-color;
-    box-shadow: 0 0 0 3px $border-grey;
+    box-shadow: 0 0 0 3px fade_out($border-dark, 0.9);
     border-radius: 50%;
+
+    &:hover {
+      box-shadow: 0 0 0 3px $border-dark;
+    }
+
+    &:active {
+      box-shadow: 0 0 0 3px $border-dark;
+      opacity: 0.3;
+    }
   }
 
   &__item-tw {

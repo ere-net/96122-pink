@@ -1,0 +1,35 @@
+.slider-pagination {
+  margin: 5px 0;
+  padding-top: 15px;
+  text-align: center;
+
+  &__item {
+    display: inline-block;
+    vertical-align: middle;
+    width: 6px;
+    height: 6px;
+    margin-right: 19px;
+    border-radius: 50%;
+    background-color: $text-color;
+    opacity: 0.3;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &--active {
+      background-color: $bg-color;
+      box-shadow: 0 0 0 3px $text-color;
+      opacity: 1;
+    }
+  }
+}
+
+// Планшетная версия
+
+@media (min-width: $screen_md) {
+
+  .slider-pagination {
+    padding-top: 7px;
+  }
+}

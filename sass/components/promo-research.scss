@@ -1,0 +1,61 @@
+.promo-research {
+  display: none;
+}
+
+// Планшетная версия
+
+@media (min-width: $screen_md) {
+
+  .promo-research {
+    display: flex;
+    align-items: center;
+    padding: 57px 40px 26px 40px;
+    background-color: $bg-color;
+
+    &__clock {
+      position: relative;
+      flex-shrink: 0;
+      width: 262px;
+      height: 302px;
+      background: url("../img/timer.svg") no-repeat 0 0;
+      background-size: 262px 302px;
+    }
+
+    &__hours {
+      position: absolute;
+      top: 64px;
+      left: 24px;
+      width: 214px;
+      height: 214px;
+      padding: 40px 20px;
+      box-shadow: inset 0 0 0 11px $pink;
+      border-radius: 50%;
+      font: 800 105px/1.2em $font;
+      text-align: center;
+      color: $pink;
+    }
+
+    &__info {
+      padding-left: 48px;
+    }
+
+    &__title {
+      padding: 0 40px 20px 0;
+      font: 800 30px/1.2em $font;
+      color: $black;
+    }
+
+    &__descr p {
+      margin: 0;
+      padding-bottom: 20px;
+      font: 400 #{$text-size}/1.71em $font;
+      color: $text-color;
+    }
+
+    &__more a {
+      font: 400 #{$text-size}/1.71em $font;
+      color: $pink;
+      text-decoration: underline;
+    }
+  }
+}

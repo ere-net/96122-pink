@@ -2,6 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: pink</title>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,800,400italic&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/style.css">
@@ -11,7 +12,7 @@
     <header class="page-header">
       <div class="page-header__inner  page-header__inner--index">
         <a class="logo" href="/">
-          <img src="img/logo.png" alt="Pink">
+          <img src="img/logotype-white-mobile.svg" alt="Pink">  <!--module6 svg  comming soon-->
         </a>
         <nav class="main-nav">
           <ul class="main-nav__list">
@@ -22,20 +23,20 @@
           </ul>
           <a class="main-nav__toggle" href="#"><span></span></a>
         </nav>
-        <h1 class="page-title">Взгляните на жизнь иначе!</h1>
+        <h1 class="page-title">Взгляните на&nbsp;жизнь иначе!</h1>
       </div>
       <div class="download-app">
         <a class="btn btn--transparent" href="#">Скачать приложение</a>
         <div class="download-app__logos">
           <ul class="download-app__list">
             <li class="download-app__item">
-              <img src="img/logo_apple.png" alt="Apple" width="46" height="57">
+              <img src="img/apple-logo.svg" alt="Apple" width="46" height="57">
             </li>
             <li class="download-app__item">
-              <img src="img/logo_android.png" alt="Android" width="42" height="47">
+              <img src="img/android-logo.svg" alt="Android" width="42" height="47">
             </li>
             <li class="download-app__item">
-              <img src="img/logo_microsoft.png" alt="Microsoft" width="44" height="42">
+              <img src="img/microsoft-logo.svg" alt="Microsoft" width="44" height="42">
             </li>
           </ul>
         </div>
@@ -48,7 +49,7 @@
       <section class="promo">
         <h1 class="second-title">
           <span class="second-title__text">Устали от серости мегаполиса?</span>
-          <span class="second-title__text">Нам есть, что вам предложить!</span>
+          <span class="second-title__text">Нам есть, что вам<br> предложить!</span>
         </h1>
         <div class="promo__inner">
           <ul class="promo__list">
@@ -68,12 +69,28 @@
         </div>
       </section>
 
+      <section class="promo-research">
+        <div class="promo-research__clock">
+          <div class="promo-research__hours">24</div>
+        </div>
+        <div class="promo-research__info">
+          <div class="promo-research__title">Эффект на&nbsp;24&nbsp;часа!</div>
+          <div class="promo-research__descr">
+            <p>Британские ученые провели исследования и&nbsp;доказали, что положительный эффект от&nbsp;использования приложения длится целые сутки!</p>
+          </div>
+          <div class="promo-research__more"><a href="#">Узнать больше об исследовании</a></div>
+        </div>
+      </section>
+
       <section class="reviews">
         <div class="slider  slider--reviews">
           <blockquote class="slider__item">
             <p>Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи!
               А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!</p>
-            <footer class="slider__author">Николай Петров</footer>
+            <footer class="slider__author">
+              Николай Петров
+              <span class="slider__author-about">25 лет, водитель трамвая</span>
+            </footer>
           </blockquote>
           <div class="slider-pagination">
             <span class="slider-pagination__item  slider-pagination__item--active"></span>
@@ -86,33 +103,33 @@
       <section class="price">
         <table class="price__table">
           <tr>
-            <!--<th>
+            <th>
               <strong class="price__price-type">База</strong>
               <span class="price__price-usd">1,99 USD</span>
-            </th>-->
+            </th>
             <th class="price__hit">
               <strong class="price__price-type">Стандарт</strong>
               <span class="price__price-usd">3,99 USD</span>
             </th>
-            <!--<th>
+            <th>
               <strong class="price__price-type">Анлим</strong>
               <span class="price__price-usd">9,99 USD</span>
-            </th>-->
+            </th>
           </tr>
           <tr>
             <td>Розовый фильтр <span class="price__yes">Да</span></td>
-            <!--<td>Розовый фильтр <span class="price__yes">Да</span></td>
-            <td>Розовый фильтр <span class="price__yes">Да</span></td>-->
+            <td>Розовый фильтр <span class="price__yes">Да</span></td>
+            <td>Розовый фильтр <span class="price__yes">Да</span></td>
           </tr>
           <tr>
             <td>Смайлики <span class="price__no">Нет</span></td>
-            <!--<td>Смайлики <span class="price__yes">Да</span></td>
-            <td>Смайлики <span class="price__yes">Да</span></td>-->
+            <td>Смайлики <span class="price__yes">Да</span></td>
+            <td>Смайлики <span class="price__yes">Да</span></td>
           </tr>
           <tr>
             <td>Комментарии <span class="price__no">Нет</span></td>
-            <!--<td>Комментарии <span class="price__no">Нет</span></td>
-            <td>Комментарии <span class="price__yes">Да</span></td>-->
+            <td>Комментарии <span class="price__no">Нет</span></td>
+            <td>Комментарии <span class="price__yes">Да</span></td>
           </tr>
         </table>
         <div class="slider-pagination">
@@ -123,23 +140,46 @@
       </section>
     </main>
 
-    <footer class="contacts">
-      <div class="contacts__inner">
-        <h1 class="second-title">Остались вопросы? Свяжитесь с нами!</h1>
-        <ul class="contacts__list">
-          <li class="contacts__item">
-            <strong class="contacts__item-title">Звоните:</strong>
-            <a class="contacts__item-text" href="tel:+78125556666">+7 (812) 555-66-66</a>
-          </li>
-          <li class="contacts__item">
-            <strong class="contacts__item-title">Пишите:</strong>
-            <a class="contacts__item-text" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
-          </li>
-          <li class="contacts__item">
-            <strong class="contacts__item-title">Приезжайте в гости:</strong>
-            <span class="contacts__item-text">ул. Большая Конюшенная, 19/8</span>
-          </li>
-        </ul>
+    <footer class="main-footer">
+      <div class="contacts">
+        <div class="contacts__inner">
+          <h1 class="second-title">Остались вопросы?<br> Свяжитесь с нами!</h1>
+          <ul class="contacts__list">
+            <li class="contacts__item">
+              <strong class="contacts__item-title">Звоните:</strong>
+              <a class="contacts__item-text" href="tel:+78125556666">+7 (812) 555-66-66</a>
+            </li>
+            <li class="contacts__item">
+              <strong class="contacts__item-title">Пишите:</strong>
+              <a class="contacts__item-text  contacts__item-text--link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+            </li>
+            <li class="contacts__item">
+              <strong class="contacts__item-title">Приезжайте в гости:</strong>
+              <span class="contacts__item-text">ул. Большая Конюшенная, 19/8</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="page-footer  page-footer--index">
+        <a class="logo  logo--glasses" href="/">
+          <img src="img/logo--glasses.png" alt="Pink">
+        </a>
+        <div class="page-footer__social">
+          <ul class="social-links">
+            <li>
+              <a href="#" class="social-links__item-tw">Мы в Twitter</a>
+            </li>
+            <li>
+              <a href="#" class="social-links__item-fb">Мы ны Facebook</a>
+            </li>
+            <li>
+              <a href="#" class="social-links__item-yt">Мы на Youtube</a>
+            </li>
+          </ul>
+        </div>
+        <div class="page-footer__copyright">
+          <a href="#">Разработано</a>
+        </div>
       </div>
     </footer>
 

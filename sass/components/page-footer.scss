@@ -1,12 +1,9 @@
 .page-footer {
-  position: relative;
-  padding-top: 35px;
+  display: flex;
+  flex-direction: column;
+  padding: 35px 20px 45px;
   background-color: $bg-color;
   text-align: center;
-
-  &__inner {
-    padding: 0 20px 45px;
-  }
 
   &__social {
     margin-top: 40px;
@@ -25,13 +22,42 @@
         content: '';
         position: absolute;
         top: -5px;
-        width: 100%;
+        width: 43px;
         height: 34px;
         background: $bg-color url('../img/logo_ha.png') no-repeat 15px 0;
       }
     }
   }
+
+  &--index {
+    display: none;
+  }
 }
 
+// Планшетная версия
+
+@media (min-width: $screen_md) {
+
+  .page-footer {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 43px 40px 39px;
+
+    &--index {
+      display: flex;
+    }
+
+    &__social {
+      margin-top: 0;
+    }
+
+    &__copyright {
+      width: 180px;
+      margin-top: 0;
+      text-align: right;
+    }
+  }
+}
 
 

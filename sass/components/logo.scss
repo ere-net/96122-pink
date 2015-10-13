@@ -10,3 +10,19 @@
       top: 0;
     }
 }
+
+// Планшетная версия
+
+@media (min-width: $screen_md) {
+
+  .logo {
+    left: 40px;
+    top: 40px;
+
+    &--glasses {
+      top: -10px;
+      width: 180px;
+      text-align: left;
+    }
+  }
+}
