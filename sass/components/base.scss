@@ -11,6 +11,7 @@ html {
 
 body {
   min-width: 320px;
+  max-width: 1200px;
   font: 400 #{$text-size}/1.9em $font;
   color: $text-color;
   background-color: $bg-color;

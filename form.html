@@ -35,171 +35,185 @@
         </div>
 
         <fieldset class="form__fieldset  form__fieldset--username">
-          <label class="field-text">
-            <span class="field-text__name">Имя: *</span>
-            <input type="text" name="" placeholder="Введите ваше имя" required>
-          </label>
-          <label class="field-text">
-            <span class="field-text__name">Фамилия: *</span>
-            <input type="text" name="" placeholder="Укажите фамилию" required>
-          </label>
-          <label class="field-text">
-            <span class="field-text__name">Отчество:</span>
-            <input type="text" name="" placeholder="Ну и отчество тоже">
-          </label>
+          <div class="form__fieldset-inner">
+            <label class="field-text">
+              <span class="field-text__name">Имя: *</span>
+              <input type="text" name="" placeholder="Введите ваше имя" required>
+            </label>
+            <label class="field-text">
+              <span class="field-text__name">Фамилия: *</span>
+              <input type="text" name="" placeholder="Укажите фамилию" required>
+            </label>
+            <label class="field-text">
+              <span class="field-text__name">Отчество:</span>
+              <input type="text" name="" placeholder="Ну и отчество тоже">
+            </label>
+          </div>
         </fieldset>
 
         <fieldset class="form__fieldset form__fieldset--app">
           <legend class="form__legend">С каким приложением путешествовали? *</legend>
-          <label class="field-radio">
-            <input type="radio" name="app" value="" checked required>
-            <span class="field-radio__name">Pink для iOS</span>
-          </label>
-          <label class="field-radio">
-            <input type="radio" name="app" value="" required>
-            <span class="field-radio__name">Pink на Android</span>
-          </label>
-          <label class="field-radio">
-            <input type="radio" name="app" value="" required>
-            <span class="field-radio__name">Windows Phone</span>
-          </label>
+          <div class="form__fieldset-inner">
+            <label class="field-radio">
+              <input type="radio" name="app" value="" checked required>
+              <span class="field-radio__name">Pink для iOS</span>
+            </label>
+            <label class="field-radio">
+              <input type="radio" name="app" value="" required>
+              <span class="field-radio__name">Pink на Android</span>
+            </label>
+            <label class="field-radio">
+              <input type="radio" name="app" value="" required>
+              <span class="field-radio__name">Windows Phone</span>
+            </label>
+          </div>
         </fieldset>
 
         <fieldset class="form__fieldset  form__fieldset--when">
           <legend class="form__legend">Когда вы путешествовали? *</legend>
-          <label class="field-text">
-            <input type="text" name="" placeholder="1 апреля 2015" required>
-            <span class="field-text__name  field-text__name--center">Дата выезда</span>
-          </label>
-          <label class="field-text  field-text--num">
-            <input type="text" name="" placeholder="10 дней" required>
-            <span class="field-text__minus"></span>
-            <span class="field-text__name  field-text__name--center">Продолжительность</span>
-            <span class="field-text__plus"></span>
-          </label>
-          <label class="field-text">
-            <input type="text" name="" placeholder="1 апреля 2015" required readonly>
-            <span class="field-text__name  field-text__name--center">Дата возвращения</span>
-          </label>
+          <div class="form__fieldset-inner">
+            <label class="field-text">
+              <input type="text" name="" placeholder="1 апреля 2015" required>
+              <span class="field-text__name  field-text__name--center">Дата выезда</span>
+            </label>
+            <label class="field-text  field-text--num">
+              <input type="text" name="" placeholder="10 дней" required>
+              <span class="field-text__minus"></span>
+              <span class="field-text__name  field-text__name--center">Продолжительность</span>
+              <span class="field-text__plus"></span>
+            </label>
+            <label class="field-text">
+              <input type="text" name="" placeholder="1 апреля 2015" required readonly>
+              <span class="field-text__name  field-text__name--center">Дата возвращения</span>
+            </label>
+          </div>
         </fieldset>
 
         <fieldset class="form__fieldset  form__fieldset--travellers">
           <legend class="form__legend">Количество попутчиков *</legend>
-          <label class="field-text  field-text--num">
-            <input type="text" name="" placeholder="2 чел" required>
-            <span class="field-text__minus"></span>
-            <span class="field-text__plus"></span>
-          </label>
-          <ol class="form__person">
-            <li>
-              <div class="form__traveller-info">
-                <label class="field-text">
-                  <span class="field-text__name">Имя: *</span>
-                  <input type="text" name="" placeholder="Введите ваше имя" required>
-                </label>
-                <label class="field-text">
-                  <span class="field-text__name">Прозвище:</span>
-                  <input type="text" name="" placeholder="Ну как же без этого!">
-                </label>
-              </div>
-            </li>
-            <li>
-              <div class="form__traveller-info">
-                <label class="field-text">
-                  <span class="field-text__name">Имя: *</span>
-                  <input type="text" name="" placeholder="Введите ваше имя" required>
-                </label>
-                <label class="field-text">
-                  <span class="field-text__name">Прозвище:</span>
-                  <input type="text" name="" placeholder="Ну как же без этого!">
-                </label>
-              </div>
-            </li>
-          </ol>
+          <div class="form__fieldset-inner">
+            <label class="field-text  field-text--num">
+              <input type="text" name="" placeholder="2 чел" required>
+              <span class="field-text__minus"></span>
+              <span class="field-text__plus"></span>
+            </label>
+            <ol class="form__person">
+              <li>
+                <div class="form__traveller-info">
+                  <label class="field-text">
+                    <span class="field-text__name">Имя: *</span>
+                    <input type="text" name="" placeholder="Введите ваше имя" required>
+                  </label>
+                  <label class="field-text">
+                    <span class="field-text__name">Прозвище:</span>
+                    <input type="text" name="" placeholder="Ну как же без этого!">
+                  </label>
+                </div>
+              </li>
+              <li>
+                <div class="form__traveller-info">
+                  <label class="field-text">
+                    <span class="field-text__name">Имя: *</span>
+                    <input type="text" name="" placeholder="Введите ваше имя" required>
+                  </label>
+                  <label class="field-text">
+                    <span class="field-text__name">Прозвище:</span>
+                    <input type="text" name="" placeholder="Ну как же без этого!">
+                  </label>
+                </div>
+              </li>
+            </ol>
+          </div>
         </fieldset>
 
         <fieldset class="form__fieldset  form__fieldset--achievements">
           <legend class="form__legend">Ваши безбашенные достижения в путешествии</legend>
-          <label class="field-checkbox">
-            <input type="checkbox" name="" value="" checked>
-            <span class="field-checkbox__name">Сделал селфи с акулой</span>
-          </label>
-          <label class="field-checkbox">
-            <input type="checkbox" name="" value="" checked>
-            <span class="field-checkbox__name">Обгорел на пляже</span>
-          </label>
-          <label class="field-checkbox">
-            <input type="checkbox" name="" value="">
-            <span class="field-checkbox__name">Видел Чака Норриса</span>
-          </label>
-          <label class="field-checkbox">
-            <input type="checkbox" name="" value="">
-            <span class="field-checkbox__name">Накупил сувениров</span>
-          </label>
-          <label class="field-checkbox">
-            <input type="checkbox" name="" value="" checked>
-            <span class="field-checkbox__name">Удержал башню</span>
-          </label>
-          <label class="field-checkbox">
-            <input type="checkbox" name="" value="">
-            <span class="field-checkbox__name">Разгромил отель</span>
-          </label>
+          <div class="form__fieldset-inner">
+            <label class="field-checkbox">
+              <input type="checkbox" name="" value="" checked>
+              <span class="field-checkbox__name">Сделал селфи с акулой</span>
+            </label>
+            <label class="field-checkbox">
+              <input type="checkbox" name="" value="" checked>
+              <span class="field-checkbox__name">Обгорел на пляже</span>
+            </label>
+            <label class="field-checkbox">
+              <input type="checkbox" name="" value="">
+              <span class="field-checkbox__name">Видел Чака Норриса</span>
+            </label>
+            <label class="field-checkbox">
+              <input type="checkbox" name="" value="">
+              <span class="field-checkbox__name">Накупил сувениров</span>
+            </label>
+            <label class="field-checkbox">
+              <input type="checkbox" name="" value="" checked>
+              <span class="field-checkbox__name">Удержал башню</span>
+            </label>
+            <label class="field-checkbox">
+              <input type="checkbox" name="" value="">
+              <span class="field-checkbox__name">Разгромил отель</span>
+            </label>
+          </div>
         </fieldset>
 
         <fieldset class="form__fieldset  form__fieldset--photos">
           <legend class="form__legend">Ваши фотографии из поездки *</legend>
-          <label class="form__upload">
-            <input type="file" name="" multiple required>Загрузить фото
-          </label>
-          <div class="form__gallery">
-            <ul class="form__gallery-list">
-              <li class="form__photo">
-                <div class="form__delete-photo"></div>
-                <img src="img/photo.png" alt="" width="67" height="68">
-                <span class="form__photo-name">img-1.jpg</span>
-              </li>
-              <li class="form__photo">
-                <div class="form__delete-photo"></div>
-                <img src="img/photo.png" alt="" width="67" height="68">
-                <span class="form__photo-name">img-2.jpg</span>
-              </li>
-              <li class="form__photo">
-                <div class="form__delete-photo"></div>
-                <img src="img/photo.png" alt="" width="67" height="68">
-                <span class="form__photo-name">img-3.jpg</span>
-              </li>
-              <li class="form__photo">
-                <div class="form__delete-photo"></div>
-                <img src="img/photo.png" alt="" width="67" height="68">
-                <span class="form__photo-name">img-4.jpg</span>
-              </li>
-              <li class="form__photo">
-                <div class="form__delete-photo"></div>
-                <img src="img/photo.png" alt="" width="67" height="68">
-                <span class="form__photo-name">img-5.jpg</span>
-              </li>
-              <li class="form__photo">
-                <div class="form__delete-photo"></div>
-                <img src="img/photo.png" alt="" width="67" height="68">
-                <span class="form__photo-name">img-6.jpg</span>
-              </li>
-              <li class="form__photo">
-                <div class="form__delete-photo"></div>
-                <img src="img/photo.png" alt="" width="67" height="68">
-                <span class="form__photo-name">img-7.jpg</span>
-              </li>
-              <li class="form__photo">
-                <div class="form__delete-photo"></div>
-                <img src="img/photo.png" alt="" width="67" height="68">
-                <span class="form__photo-name">img-8.jpg</span>
-              </li>
-            </ul>
+          <div class="form__fieldset-inner">
+            <label class="form__upload">
+              <input type="file" name="" multiple required>Загрузить фото
+            </label>
+            <div class="form__gallery">
+              <ul class="form__gallery-list">
+                <li class="form__photo">
+                  <div class="form__delete-photo"></div>
+                  <img src="img/photo.png" alt="" width="67" height="68">
+                  <span class="form__photo-name">img-1.jpg</span>
+                </li>
+                <li class="form__photo">
+                  <div class="form__delete-photo"></div>
+                  <img src="img/photo.png" alt="" width="67" height="68">
+                  <span class="form__photo-name">img-2.jpg</span>
+                </li>
+                <li class="form__photo">
+                  <div class="form__delete-photo"></div>
+                  <img src="img/photo.png" alt="" width="67" height="68">
+                  <span class="form__photo-name">img-3.jpg</span>
+                </li>
+                <li class="form__photo">
+                  <div class="form__delete-photo"></div>
+                  <img src="img/photo.png" alt="" width="67" height="68">
+                  <span class="form__photo-name">img-4.jpg</span>
+                </li>
+                <li class="form__photo">
+                  <div class="form__delete-photo"></div>
+                  <img src="img/photo.png" alt="" width="67" height="68">
+                  <span class="form__photo-name">img-5.jpg</span>
+                </li>
+                <li class="form__photo">
+                  <div class="form__delete-photo"></div>
+                  <img src="img/photo.png" alt="" width="67" height="68">
+                  <span class="form__photo-name">img-6.jpg</span>
+                </li>
+                <li class="form__photo">
+                  <div class="form__delete-photo"></div>
+                  <img src="img/photo.png" alt="" width="67" height="68">
+                  <span class="form__photo-name">img-7.jpg</span>
+                </li>
+                <li class="form__photo">
+                  <div class="form__delete-photo"></div>
+                  <img src="img/photo.png" alt="" width="67" height="68">
+                  <span class="form__photo-name">img-8.jpg</span>
+                </li>
+              </ul>
+            </div>
           </div>
         </fieldset>
 
         <fieldset class="form__fieldset  form__fieldset--submit">
-          <button type="submit" class="btn  btn--form-send">Отправить форму</button>
-          <p class="form__rules"><span>*</span> — обязательные поля</p>
+          <div class="form__fieldset-inner">
+            <button type="submit" class="btn  btn--form-send">Отправить форму</button>
+            <p class="form__rules"><span>*</span> — обязательные поля</p>
+          </div>
         </fieldset>
       </form>
     </main>

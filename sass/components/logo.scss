@@ -16,11 +16,12 @@
 @media (min-width: $screen_md) {
 
   .logo {
-    left: 40px;
     top: 40px;
+    left: 40px;
 
     &--glasses {
       top: -10px;
+      left: 0;
       width: 180px;
       text-align: left;
     }

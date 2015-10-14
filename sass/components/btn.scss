@@ -51,3 +51,15 @@
 
   }
 }
+
+// Планшетная версия
+
+@media (min-width: $screen_md) {
+
+  .btn {
+
+    &--form-send {
+      width: 48%;
+    }
+  }
+}
