@@ -1,13 +1,8 @@
 .reviews {
   background-color: $bg-color;
   padding: 48px 20px 30px 20px;
-}
 
-// Планшетная версия
-
-@media (min-width: $screen_md) {
-
-  .reviews {
+  @media (min-width: $screen_md) {
     padding: 48px 40px 30px 40px;
   }
 }

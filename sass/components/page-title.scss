@@ -3,17 +3,15 @@
   font: 300 #{$text-size--h1}/1.2em $font;
   text-align: center;
   color: $white;
-}
 
-// Планшетная версия
-
-@media (min-width: $screen_md) {
-
-  .page-title {
+  @media (min-width: $screen_md) {
     margin: 59px 0 55px;
     font: 300 50px/1.2em $font;
+  }
 
-    &--index {
+  &--index {
+
+    @media (min-width: $screen_md) {
       position: absolute;
       top: 202px;
       left: 6%;

@@ -1,12 +1,7 @@
 .promo-research {
   display: none;
-}
 
-// Планшетная версия
-
-@media (min-width: $screen_md) {
-
-  .promo-research {
+  @media (min-width: $screen_md) {
     display: flex;
     align-items: center;
     padding: 57px 40px 26px 40px;

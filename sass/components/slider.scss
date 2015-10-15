@@ -16,10 +16,23 @@
     margin-bottom: 20px;
     font: 800 #{$text-size--h2}/1.2em $font;
     color: $black;
+
+    @media (min-width: $screen_md) {
+      order: 2;
+      padding-top: 37px;
+      font-size: 20px;
+    }
   }
 
   &__author-about {
     display: none;
+
+    @media (min-width: $screen_md) {
+      display: block;
+      padding-top: 12px;
+      font: 400 #{$text-size}/1.2em $font;
+      color: $text-color;
+    }
   }
 
   p {
@@ -27,38 +40,17 @@
     font: 400 #{$text-size}/2.15em $font;
     color: $text-color;
 
+    @media (min-width: $screen_md) {
+      order: 1;
+      font: 400 18px/1.67em $font;
+    }
+
     &:before {
       content: '\00ab';
     }
 
     &:after {
       content: '\00bb';
-    }
-  }
-}
-
-// Планшетная версия
-
-@media (min-width: $screen_md) {
-
-  .slider {
-
-    &__author {
-      order: 2;
-      padding-top: 37px;
-      font-size: 20px;
-    }
-
-    &__author-about {
-      display: block;
-      padding-top: 12px;
-      font: 400 #{$text-size}/1.2em $font;
-      color: $text-color;
-    }
-
-    p {
-      order: 1;
-      font: 400 18px/1.67em $font;
     }
   }
 }

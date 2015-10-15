@@ -1,35 +1,52 @@
 .slider-pagination {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
   margin: 5px 0;
   padding-top: 15px;
-  text-align: center;
+
+  @media (min-width: $screen_md) {
+    padding-top: 7px;
+  }
 
   &__item {
-    display: inline-block;
-    vertical-align: middle;
-    width: 6px;
-    height: 6px;
-    margin-right: 19px;
-    border-radius: 50%;
-    background-color: $text-color;
-    opacity: 0.3;
+    position: relative;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
 
-    &:last-child {
-      margin-right: 0;
+    &:before {
+      content: "";
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background-color: $text-color;
+      opacity: 0.3;
+    }
+
+    &:hover:before {
+      opacity: 0.6;
+    }
+
+    &:active:before {
+      opacity: 0.1;
     }
 
     &--active {
-      background-color: $bg-color;
-      box-shadow: 0 0 0 3px $text-color;
-      opacity: 1;
+
+      &:before {
+        background-color: $bg-color;
+        box-shadow: 0 0 0 3px $text-color;
+        opacity: 1;
+      }
+
+      &:hover:before,
+      &:active:before {
+        opacity: 1;
+      }
     }
-  }
-}
-
-// Планшетная версия
-
-@media (min-width: $screen_md) {
-
-  .slider-pagination {
-    padding-top: 7px;
   }
 }

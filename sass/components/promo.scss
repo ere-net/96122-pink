@@ -3,13 +3,22 @@
   text-align: center;
   background-color: $bg-color;
 
+  @media (min-width: $screen_md) {
+    text-align: left;
+  }
+
   &__inner {
     position: relative;
     padding: 85px 20px 287px 20px;
-    background: $bg-color--light url("../img/screen-mobile-3.png") no-repeat 50% 100%;
+    background-color: $bg-color--light;
+
+    @media (min-width: $screen_md) {
+      padding: 90px 40px 7px 350px;
+
+    }
 
     &:before {
-      content: '';
+      content: "";
       position: absolute;
       top: 0;
       left: 0;
@@ -17,6 +26,25 @@
       height: 94px;
       background: url("../img/triangle-white.svg") no-repeat 50% 0;
       background-size: 1200px 94px;
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 158px;
+      height: 278px;
+      transform: translate(-50%, 0);
+      background: url("../img/screen-mobile-3.png") no-repeat 50% 100%;
+
+      @media (min-width: $screen_md) {
+        left: 40px;
+        width: 268px;
+        height: 481px;
+        transform: none;
+        background: url("../img/iphone-screen-tablet-3@1x.png") no-repeat 0 100%;
+      }
     }
   }
 
@@ -28,6 +56,10 @@
 
   &__item {
     padding-bottom: 31px;
+
+    @media (min-width: $screen_md) {
+      padding-bottom: 35px;
+    }
   }
 
   &__item-title {
@@ -41,23 +73,5 @@
     margin: 0;
     font: 400 #{$text-size}/1.71em $font;
     color: $text-color;
-  }
-}
-
-// Планшетная версия
-
-@media (min-width: $screen_md) {
-
-  .promo {
-    text-align: left;
-
-    &__inner {
-      padding: 85px 40px 7px 350px;
-      background: $bg-color--light url("../img/iphone-screen-tablet-3@1x.png") no-repeat 40px 100%;
-    }
-
-    &__item {
-      padding-bottom: 35px;
-    }
   }
 }

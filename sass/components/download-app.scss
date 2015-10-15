@@ -4,8 +4,21 @@
   background-color: $bg-color--dark;
   color: $white;
 
+  @media (min-width: $screen_md) {
+    position: absolute;
+    top: 378px;
+    left: 6%;
+    width: 300px;
+    padding: 0;
+    background-color: transparent;
+  }
+
   &__logos {
     padding: 32px 0 22px;
+
+    @media (min-width: $screen_md) {
+      padding: 45px 0 36px;
+    }
   }
 
   &__list {
@@ -26,26 +39,8 @@
 
   &__descr {
     font: 300 #{$text-size}/1.75em $font;
-  }
-}
 
-// Планшетная версия
-
-@media (min-width: $screen_md) {
-
-  .download-app {
-    position: absolute;
-    top: 378px;
-    left: 6%;
-    width: 300px;
-    padding: 0;
-    background-color: transparent;
-
-    &__logos {
-      padding: 45px 0 36px;
-    }
-
-    &__descr {
+    @media (min-width: $screen_md) {
       font: 300 18px/1.33em $font;
     }
   }

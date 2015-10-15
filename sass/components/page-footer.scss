@@ -5,59 +5,56 @@
   background-color: $bg-color;
   text-align: center;
 
+  @media (min-width: $screen_md) {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 43px 40px 39px;
+  }
+
   &__social {
     margin-top: 40px;
+
+    @media (min-width: $screen_md) {
+      margin-top: 0;
+    }
   }
 
   &__copyright {
     margin-top: 40px;
 
+    @media (min-width: $screen_md) {
+      width: 180px;
+      margin-top: 0;
+      text-align: right;
+    }
+
     a {
-      position: relative;
-      padding-right: 42px;
       color: $text-color;
       text-decoration: none;
 
-      &:after {
-        content: '';
-        position: absolute;
-        top: -5px;
-        width: 43px;
-        height: 34px;
-        background: $bg-color url('../img/logo_ha.png') no-repeat 15px 0;
+      &:hover svg {
+        fill: $border-dark;
       }
+
+      &:active svg {
+        fill: fade-out($border-dark,0.7);
+      }
+    }
+
+    svg {
+      display: inline-block;
+      vertical-align: middle;
+      margin-left: 13px;
+      fill: $pink;
     }
   }
 
   &--index {
     display: none;
-  }
-}
 
-// Планшетная версия
-
-@media (min-width: $screen_md) {
-
-  .page-footer {
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    padding: 43px 40px 39px;
-
-    &--index {
+    @media (min-width: $screen_md) {
       display: flex;
     }
-
-    &__social {
-      margin-top: 0;
-    }
-
-    &__copyright {
-      width: 180px;
-      margin-top: 0;
-      text-align: right;
-    }
   }
 }
-
-

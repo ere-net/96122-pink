@@ -1,7 +1,11 @@
 .price {
   position: relative;
-  padding: 90px 0 40px 0;
+  padding: 125px 20px 40px;
   background-color: $bg-color--light;
+
+  @media (min-width: $screen_md) {
+    padding: 115px 40px 68px;
+  }
 
   &:before {
     content: "";
@@ -16,40 +20,83 @@
 
   &__table {
     margin: 0 auto;
-    width: 98%;
+    width: 300%;
     border-collapse: collapse;
+    background-color: $white;
+
+    @media (min-width: $screen_md) {
+      width: 100%;
+    }
 
     th {
       position: relative;
+      overflow: hidden;
       padding: 20px;
-      background-color: $bg-color--dark;
+      background-color: $border-dark;
       text-align: center;
+
+      @media (min-width: $screen_md) {
+        width: 25%;
+
+        &:first-child {
+          background-color: $bg-color--light;
+        }
+      }
     }
 
     td {
+      position: relative;
       padding: 18px;
       font: 400 #{$text-size}/2.15em $font;
-      text-transform: uppercase;
       border: 2px solid #e5e5e5;
-      background-color: $white;
       color: $text-color;
     }
   }
 
+  &__main-column {
+    display: none;
+
+    @media (min-width: $screen_md) {
+      display: table-cell;
+    }
+  }
+
+  &__item {
+    text-transform: uppercase;
+
+    @media (min-width: $screen_md) {
+      display: none;
+    }
+  }
+
   &__no {
+    position: absolute;
     @include text-replacement;
-    float: right;
+    bottom: 17px;
+    right: 19px;
     width: 27px;
     height: 27px;
     background: url("../img/no.svg") no-repeat 0 0;
+
+    @media (min-width: $screen_md) {
+      left: 50%;
+      transform: translate(-50%, 0);
+    }
   }
 
   &__yes {
+    position: absolute;
     @include text-replacement;
-    float: right;
+    bottom: 18px;
+    right: 18px;
     width: 30px;
     height: 22px;
     background: url("../img/yes.svg") no-repeat 0 0;
+
+    @media (min-width: $screen_md) {
+      left: 50%;
+      transform: translate(-50%, 0);
+    }
   }
 
   &__price-type {
@@ -57,6 +104,10 @@
     font: 800 18px/1.75em $font;
     text-transform: uppercase;
     color: $white;
+
+    @media (min-width: $screen_md) {
+      font: 800 16px/1.75em $font;
+    }
   }
 
   &__price-usd {
@@ -64,24 +115,43 @@
     font: 300 24px/1.25em $font;
     text-transform: uppercase;
     color: $white;
+
+    @media (min-width: $screen_md) {
+      font: 300 18px/1.25em $font;
+    }
   }
 
   &__hit{
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 50;
-    width: 74px;
-    height: 73px;
-    background: url("../img/flag_hit.png") no-repeat top left;
+
+    &:before {
+      content: "";
+      position: absolute;
+      width: 100px;
+      height: 30px;
+      top: 5px;
+      left: -25px;
+      transform: rotate(-45deg);
+      background: $pink none repeat scroll 0 0;
+    }
+
+    &:after {
+      content: "С…РёС‚";
+      position: absolute;
+      top: 15px;
+      left: 8px;
+      transform: rotate(-45deg);
+      font: 400 #{$text-size}/1.2em $font;
+      text-transform: uppercase;
+      color: $white;
+    }
+  }
+
+  & .slider-pagination {
+
+    @media (min-width: $screen_md) {
+      display: none;
+    }
   }
 }
 
-// Планшетная версия
 
-@media (min-width: $screen_md) {
-
-  .price .slider-pagination {
-    display: none;
-  }
-}

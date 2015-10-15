@@ -39,10 +39,6 @@
       box-shadow: inset 0 0 0 2px $border-dark;
     }
 
-    &:active:before {
-      box-shadow: inset 0 0 0 2px $pink;
-    }
-
     input[type="radio"]:checked + &:after {
       content: '';
       position: absolute;

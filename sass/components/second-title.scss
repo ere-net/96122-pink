@@ -1,24 +1,20 @@
 .second-title {
-  margin: 0;
-  margin-bottom: 40px;
+  margin: 0 0 40px;
+  padding: 0 20px;
   font: 300 #{$text-size--h1}/1.2em $font;
   text-align: center;
   color: $text-color;
 
+  @media (min-width: $screen_md) {
+    padding: 0 40px;
+    font: 300 40px/1.2em $font;
+  }
+
   &__text {
     display: block;
     margin-bottom: 30px;
-  }
-}
 
-// Планшетная версия
-
-@media (min-width: $screen_md) {
-
-  .second-title {
-    font: 300 40px/1.2em $font;
-
-    &__text {
+    @media (min-width: $screen_md) {
       margin-bottom: 0;
     }
   }

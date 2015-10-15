@@ -2,16 +2,33 @@
   padding-top: 50px;
   background-color: $bg-color;
 
+  @media (min-width: $screen_md) {
+    padding-top: 92px;
+  }
+
   &__descr {
     padding: 0 20px 15px;
     text-align: center;
+
+    @media (min-width: $screen_md) {
+      margin-bottom: 42px;
+      padding: 0 100px;
+    }
 
     p {
       margin: 0;
       font: 400 #{$text-size}/2.15em $font;
 
+      @media (min-width: $screen_md) {
+        font: 400 18px/1.67em $font;
+      }
+
       span {
         display: none;
+
+        @media (min-width: $screen_md) {
+          display: inline;
+        }
       }
     }
   }
@@ -23,24 +40,57 @@
     background-color: $bg-color;
     border: 0;
 
+    @media (min-width: $screen_md) {
+      margin: 0 40px 57px;
+      padding: 42px 60px 39px;
+      border: 2px solid $border-grey;
+    }
+
     &--username {
 
+      @media (min-width: $screen_md) {
+        border: none;
+        margin-bottom: 34px;
+        padding: 0;
+      }
     }
 
     &--app {
       background-color: $bg-color--light;
+
+      @media (min-width: $screen_md) {
+        background-color: $bg-color;
+      }
     }
 
     &--when {
       padding-top: 40px;
 
+      @media (min-width: $screen_md) {
+        padding-top: 40px;
+
+        .form__fieldset-inner {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+        }
+      }
+
       legend {
         padding-bottom: 41px;
+
+        @media (min-width: $screen_md) {
+          padding-bottom: 0;
+        }
       }
     }
 
     &--travellers {
       background-color: $bg-color--light;
+
+      @media (min-width: $screen_md) {
+        background-color: $bg-color;
+      }
     }
 
     &--achievements {
@@ -50,11 +100,28 @@
 
     &--photos {
       background-color: $bg-color--light;
+
+      @media (min-width: $screen_md) {
+        padding-bottom: 46px;
+        background-color: $bg-color;
+      }
     }
 
     &--submit {
       padding-top: 48px;
       padding-bottom: 20px;
+
+      @media (min-width: $screen_md) {
+        border: none;
+        padding: 0;
+
+        .form__fieldset-inner {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+        }
+      }
     }
   }
 
@@ -66,6 +133,21 @@
     color: $pink;
     text-transform: uppercase;
     text-align: center;
+
+    @media (min-width: $screen_md) {
+      float: none;
+      width: auto;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+  }
+
+  &__inner {
+
+    @media (min-width: $screen_md) {
+      display: flex;
+      flex-direction: column;
+    }
   }
 
   &__person {
@@ -129,6 +211,10 @@
     background-color: $bg-color;
     cursor: pointer;
 
+    @media (min-width: $screen_md) {
+      margin-bottom: 41px;
+    }
+
     input[type="file"] {
       display: none;
     }
@@ -157,6 +243,11 @@
     padding: 0;
     padding-top: 12px;
     list-style: none;
+
+    @media (min-width: $screen_md) {
+      margin-left: -68px;
+      padding-top: 14px;
+    }
   }
 
   &__photo {
@@ -164,10 +255,21 @@
     margin-left: 37px;
     margin-top: 23px;
 
+    @media (min-width: $screen_md) {
+      margin-left: 68px;
+      margin-top: 52px;
+    }
+
     img {
       width: 68px;
       height: 68px;
       margin-bottom: 10px;
+
+      @media (min-width: $screen_md) {
+        width: 120px;
+        height: 120px;
+        margin-bottom: 16px;
+      }
     }
   }
 
@@ -183,6 +285,13 @@
     border-radius: 50%;
     cursor: pointer;
 
+    @media (min-width: $screen_md) {
+      top: -28px;
+      right: -28px;
+      width: 55px;
+      height: 55px;
+    }
+
     &:before,
     &:after {
       content: '';
@@ -193,6 +302,12 @@
       width: 15px;
       height: 1px;
       border: 1px solid fade_out($border-dark, 0.7);
+
+      @media (min-width: $screen_md) {
+        top: 24px;
+        right: 12px;
+        width: 26px;
+      }
     }
 
     &:before {
@@ -228,6 +343,10 @@
     font: 400 12px/1.2em $font;
     color: $text-color;
     text-transform: uppercase;
+
+    @media (min-width: $screen_md) {
+      font: 400 14px/1.2em $font;
+    }
   }
 
   &__rules {
@@ -236,125 +355,13 @@
     text-align: center;
     text-transform: uppercase;
     color: $text-color;
+
+    @media (min-width: $screen_md) {
+      margin-top: 0;
+    }
     
     span {
       color: $pink;
-    }
-  }
-}
-
-// Планшетная версия
-
-@media (min-width: $screen_md) {
-
-  .form {
-    padding-top: 92px;
-
-    &__descr {
-      margin-bottom: 42px;
-      padding: 0 100px;
-
-      p {
-        font: 400 18px/1.67em $font;
-
-        span {
-          display: inline;
-        }
-      }
-    }
-
-    &__fieldset {
-      margin: 0 40px 57px;
-      padding: 42px 60px 39px;
-      background-color: $bg-color;
-      border: 2px solid $border-grey;
-
-      &--username {
-        border: none;
-        margin-bottom: 34px;
-        padding: 0;
-      }
-
-      &--when {
-        padding-top: 40px;
-
-        .form__fieldset-inner {
-          flex-direction: row;
-          flex-wrap: wrap;
-        }
-
-        legend {
-          padding-bottom: 0;
-        }
-      }
-
-      &--photos {
-        padding-bottom: 46px;
-      }
-
-      &--submit {
-        border: none;
-        padding: 0;
-
-        .form__fieldset-inner {
-          flex-direction: row;
-          align-items: center;
-          justify-content: space-between;
-        }
-      }
-    }
-
-    &__fieldset-inner {
-      display: flex;
-      flex-direction: column;
-    }
-
-    &__legend {
-      float: none;
-      width: inherit;
-      padding: 0 20px;
-    }
-
-    &__upload {
-      margin-bottom: 41px;
-    }
-
-    &__gallery-list {
-      margin-left: -68px;
-      padding-top: 14px;
-    }
-
-    &__photo {
-      margin-left: 68px;
-      margin-top: 52px;
-
-      img {
-        width: 120px;
-        height: 120px;
-        margin-bottom: 16px;
-      }
-    }
-
-    &__delete-photo {
-      top: -28px;
-      right: -28px;
-      width: 55px;
-      height: 55px;
-
-      &:before,
-      &:after {
-        top: 24px;
-        right: 12px;
-        width: 26px;
-      }
-    }
-
-    &__photo-name {
-      font: 400 14px/1.2em $font;
-    }
-
-    &__rules {
-      margin-top: 0;
     }
   }
 }

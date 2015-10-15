@@ -9,6 +9,13 @@
   </head>
 
   <body>
+    <svg style="display: none">
+      <symbol viewBox="0 0 17.5 14.663" id="icon-twitter"><path d="M11.283.153c1.736-.485 3.074.263 3.685 1.15.694-.225 1.372-.47 2.072-.69-.004.84-.538 1.478-.883 1.727.704.166 1.343-.48 1.343-.48-.175.976-1.035 1.746-1.61 1.977-.24 6.592-3.273 10.956-10.383 10.823h-.46c-.422 0-4.29-.45-5.047-1.843 2.34.192 4.01-.412 4.835-1.15-.99-.293-2.76-.464-3.07-2.88.362.104.583.222 1.228.116C1.757 8.067.385 7.366.46 5.218c.295.32 1.1.523 1.382.46C1.117 5.445-.188 2.4.922.844c1.872 1.81 3.847 3.52 7.368 3.685.216-2.24 1.17-3.74 2.993-4.375z"></path></symbol>
+      <symbol viewBox="0 0 8.673 18.944" id="icon-facebook"><path d="M6.275 3.357h2.398V0H5.795C2.655.18 1.54 2.387 1.948 6.115H0v3.517h1.958v9.312h3.837V9.632h2.857V6.115H5.786c-.02-1.045-.036-2.406.49-2.758z"></path></symbol>
+      <symbol viewBox="0 0 14.64 13.96" id="icon-youtube"><path d="M1.775 13.78C.8 14.257 0 13.758 0 12.67V1.29C0 .202.8-.295 1.775.18l12.133 5.933c.975.478.975 1.258 0 1.736L1.775 13.78z"></path></symbol>
+      <symbol viewBox="0 0 26.943 34.09" id="icon-html"><path d="M13.62.017L13.472 0 0 1.412v24.66l13.472 8.018 13.43-7.99.042-.026V1.412L13.62.017zm11.4 12.11L13.494 5.334V5.23l-.088.05-.088-.056v.11L1.924 12.117v-8.97l11.547-1.213L25.02 3.147v8.98zm-11.615-5.34L24.923 13.5l-4.48 2.64-7.092-4.22-.012 1.414 5.904 3.513-.86.507-5.03-2.992-.014 1.415 3.827 2.275-.782.523-3.032-1.787-.012 1.413 1.852 1.092-1.8 1.08-11.356-6.75 11.37-6.835zm-11.48 8.34l11.41 6.79.016 1.045-7.94-4.728-.015 1.416 7.98 4.796.016 1.076-7.97-4.74-.014 1.414 8.02 4.82.046.027 8.143-4.872v-1.267l-.01-.148v-3.76l3.414-2.037v10.02L13.47 31.85 1.925 24.98v-9.853z"></path></symbol>
+    </svg>
+
     <header class="page-header">
       <div class="page-header__inner  page-header__inner--index">
         <a class="logo" href="/">
@@ -85,8 +92,8 @@
       <section class="reviews">
         <div class="slider  slider--reviews">
           <blockquote class="slider__item">
-            <p>Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи!
-              А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!</p>
+            <p>Это приложение перевернуло мой мир и&nbsp;позволило по-новому взглянуть на привычные серые вещи!
+              А еще я познакомился со своей будущей женой в&nbsp;комментариях к&nbsp;выложенной фотографии!</p>
             <footer class="slider__author">
               Николай Петров
               <span class="slider__author-about">25 лет, водитель трамвая</span>
@@ -103,6 +110,8 @@
       <section class="price">
         <table class="price__table">
           <tr>
+            <th class="price__main-column">
+            </th>
             <th>
               <strong class="price__price-type">База</strong>
               <span class="price__price-usd">1,99 USD</span>
@@ -117,19 +126,49 @@
             </th>
           </tr>
           <tr>
-            <td>Розовый фильтр <span class="price__yes">Да</span></td>
-            <td>Розовый фильтр <span class="price__yes">Да</span></td>
-            <td>Розовый фильтр <span class="price__yes">Да</span></td>
+            <td class="price__main-column">Розовый фильтр</td>
+            <td>
+              <span class="price__item">Розовый фильтр</span>
+              <span class="price__yes">Да</span>
+            </td>
+            <td>
+              <span class="price__item">Розовый фильтр</span>
+              <span class="price__yes">Да</span>
+            </td>
+            <td>
+              <span class="price__item">Розовый фильтр</span>
+              <span class="price__yes">Да</span>
+            </td>
           </tr>
           <tr>
-            <td>Смайлики <span class="price__no">Нет</span></td>
-            <td>Смайлики <span class="price__yes">Да</span></td>
-            <td>Смайлики <span class="price__yes">Да</span></td>
+            <td class="price__main-column">Смайлики</td>
+            <td>
+              <span class="price__item">Смайлики</span>
+              <span class="price__no">Нет</span>
+            </td>
+            <td>
+              <span class="price__item">Смайлики</span>
+              <span class="price__yes">Да</span>
+            </td>
+            <td>
+              <span class="price__item">Смайлики</span>
+              <span class="price__yes">Да</span>
+            </td>
           </tr>
           <tr>
-            <td>Комментарии <span class="price__no">Нет</span></td>
-            <td>Комментарии <span class="price__no">Нет</span></td>
-            <td>Комментарии <span class="price__yes">Да</span></td>
+            <td class="price__main-column">Комментарии</td>
+            <td>
+              <span class="price__item">Комментарии</span>
+              <span class="price__no">Нет</span>
+            </td>
+            <td>
+              <span class="price__item">Комментарии</span>
+              <span class="price__no">Нет</span>
+            </td>
+            <td>
+              <span class="price__item">Комментарии</span>
+              <span class="price__yes">Да</span>
+            </td>
           </tr>
         </table>
         <div class="slider-pagination">
@@ -151,7 +190,7 @@
             </li>
             <li class="contacts__item">
               <strong class="contacts__item-title">Пишите:</strong>
-              <a class="contacts__item-text  contacts__item-text--link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+              <a class="contacts__item-text" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
             </li>
             <li class="contacts__item">
               <strong class="contacts__item-title">Приезжайте в гости:</strong>
@@ -167,18 +206,30 @@
         <div class="page-footer__social">
           <ul class="social-links">
             <li>
-              <a href="#" class="social-links__item-tw">Мы в Twitter</a>
+              <a href="#" class="social-links__item-tw">
+                <svg width="19" height="15"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-twitter"></use></svg>
+                Мы в Twitter
+              </a>
             </li>
             <li>
-              <a href="#" class="social-links__item-fb">Мы ны Facebook</a>
+              <a href="#" class="social-links__item-fb">
+                <svg width="9" height="19"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-facebook"></use></svg>
+                Мы ны Facebook
+              </a>
             </li>
             <li>
-              <a href="#" class="social-links__item-yt">Мы на Youtube</a>
+              <a href="#" class="social-links__item-yt">
+                <svg width="15" height="14"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-youtube"></use></svg>
+                Мы на Youtube
+              </a>
             </li>
           </ul>
         </div>
         <div class="page-footer__copyright">
-          <a href="#">Разработано</a>
+          <a href="#">
+            Разработано
+            <svg width="27" height="34"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-html"></use></svg>
+          </a>
         </div>
       </div>
     </footer>

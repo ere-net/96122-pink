@@ -13,11 +13,11 @@
   cursor: pointer;
 
   &:hover {
-    background-color: darken(saturate($btn, 7%), 5%); //!
+    background-color: #1c9b5e;
   }
 
   &:active {
-    background-color: darken(saturate($btn, 7%), 5%); //!
+    background-color: #1c9b5e;
     color: fade_out($white, 0.7);
   }
 
@@ -41,6 +41,9 @@
 
   &--form-send {
 
+    @media (min-width: $screen_md) {
+        width: 48%;
+    }
   }
 
   &--send {
@@ -49,17 +52,5 @@
 
   &--failure {
 
-  }
-}
-
-// Планшетная версия
-
-@media (min-width: $screen_md) {
-
-  .btn {
-
-    &--form-send {
-      width: 48%;
-    }
   }
 }

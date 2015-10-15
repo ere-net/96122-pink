@@ -18,6 +18,7 @@
     width: 45px;
     height: 45px;
     @include text-replacement;
+    line-height: 45px;
     text-decoration: none;
     background-color: $bg-color;
     box-shadow: 0 0 0 3px fade_out($border-dark, 0.9);
@@ -28,20 +29,17 @@
     }
 
     &:active {
-      box-shadow: 0 0 0 3px $border-dark;
-      opacity: 0.3;
+      box-shadow: 0 0 0 3px fade_out($border-dark, 0.9);
+
+      svg {
+        opacity: 0.3;
+      }
     }
   }
 
-  &__item-tw {
-    background: $bg-color url('../img/icon_tw.png') no-repeat 50% 50%;   //module6 svg  comming soon
-  }
-
-  &__item-fb {
-    background: $bg-color url('../img/icon_fb.png') no-repeat 50% 50%;   //module6 svg  comming soon
-  }
-
-  &__item-yt {
-    background: $bg-color url('../img/icon_yt.png') no-repeat 50% 50%;   //module6 svg  comming soon
+  svg {
+    display: inline-block;
+    vertical-align: middle;
+    fill: $pink;
   }
 }
