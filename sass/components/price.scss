@@ -1,6 +1,6 @@
 .price {
   position: relative;
-  padding: 125px 20px 40px;
+  padding: 125px 0 40px;
   background-color: $bg-color--light;
 
   @media (min-width: $screen_md) {
@@ -18,14 +18,20 @@
     background-size: 1200px 94px;
   }
 
-  &__table {
+  &__inner {
+    overflow: hidden;
     margin: 0 auto;
-    width: 300%;
+  }
+
+  &__table {
+    width: 265%;
+    margin: 0 20px;
     border-collapse: collapse;
     background-color: $white;
 
     @media (min-width: $screen_md) {
       width: 100%;
+      margin: 0;
     }
 
     th {

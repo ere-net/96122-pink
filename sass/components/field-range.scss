@@ -1,0 +1,84 @@
+.field-range {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  width: 100%;
+  margin-bottom: 23px;
+
+  input {
+    width: 100%;
+    padding: 14px 65px 15px;
+    border: 2px solid $border-grey;
+    border-radius: 2px;
+    outline: 0;
+    font: 400 18px/1.7em $font;
+    color: $text-color;
+    @include placeholder($text-color);
+    text-align: center;
+
+    &:hover {
+      border: 2px solid $border-dark;
+    }
+
+    &:focus {
+      border: 2px solid $pink;
+    }
+
+    &[readonly] {
+      background-color: $bg-color--light;
+    }
+  }
+
+  &__name {
+    display: block;
+    margin-bottom: 0;
+    padding-left: 0;
+    padding-top: 14px;
+    font: 400 #{$text-size}/1.3em $font;
+    color: $pink;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  &__minus,
+  &__plus {
+    position: absolute;
+    top: 0;
+    width: 63px;
+    height: 63px;
+    cursor: pointer;
+  }
+
+  &__minus {
+    left: 0;
+    border-right: 2px solid $border-grey;
+  }
+
+  &__plus {
+    right: 0;
+    border-left: 2px solid $border-grey;
+  }
+
+  &__minus:before,
+  &__plus:before,
+  &__plus:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: $text-color;
+    transform: translate(-50%, -50%);
+  }
+
+  &__minus:before,
+  &__plus:before {
+    width: 27px;
+    height: 3px;
+  }
+
+  &__plus:after {
+    width: 3px;
+    height: 27px;
+  }
+
+}
