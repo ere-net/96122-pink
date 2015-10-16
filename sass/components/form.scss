@@ -46,6 +46,14 @@
       border: 2px solid $border-grey;
     }
 
+    &-inner {
+
+      @media (min-width: $screen_md) {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+
     &--username {
 
       @media (min-width: $screen_md) {
@@ -70,9 +78,13 @@
         padding-top: 40px;
 
         .form__fieldset-inner {
-          display: flex;
           flex-direction: row;
           flex-wrap: wrap;
+          justify-content: space-between;
+
+          label {
+            width: 48%;
+          }
         }
       }
 
@@ -116,7 +128,6 @@
         padding: 0;
 
         .form__fieldset-inner {
-          display: flex;
           flex-direction: row;
           align-items: center;
           justify-content: space-between;
@@ -124,7 +135,7 @@
       }
     }
   }
-
+  
   &__legend {
     float: left;
     width: 100%;
@@ -142,14 +153,6 @@
     }
   }
 
-  &__inner {
-
-    @media (min-width: $screen_md) {
-      display: flex;
-      flex-direction: column;
-    }
-  }
-
   &__person {
     margin: 25px 0 0;
     padding: 34px 0 0;
@@ -162,15 +165,23 @@
       &:last-child {
         margin-bottom: 0;
       }
+
+      @media (min-width: $screen_md) {
+        display: flex;
+      }
     }
   }
 
   &__traveller-info {
     position: relative;
-    padding-left: 62px;
+    padding-left: 64px;
+
+    @media (min-width: $screen_md) {
+      padding-left: 83px;
+    }
 
     &:before {
-      content: '\2116';
+      content: "\2116";
       position: absolute;
       top: 0;
       left: 26px;
@@ -180,7 +191,7 @@
     }
 
     &:after {
-      content: counter(travellers) '';
+      content: counter(travellers) "";
       counter-increment: travellers;
       position: absolute;
       top: 29px;
@@ -188,10 +199,41 @@
       width: 64px;
       padding: 14px 0 15px 0;
       border: 2px solid $border-grey;
+      border-right: 0;
       border-radius: 2px 0 0 2px;
       font: 400 18px/1.7em $font;
       color: $text-color;
       text-align: center;
+
+      @media (min-width: $screen_md) {
+        border: 2px solid $border-grey;
+        background-color: #f2f2f2;
+      }
+    }
+  }
+
+  &__traveller-delete {
+    display: none;
+
+    @media (min-width: $screen_md) {
+      display: block;
+      width: 117px;
+      padding-top: 50px;
+      font: 400 #{$text-size}/1.2em $font;
+      text-align: right;
+      text-decoration: none;
+      text-transform: uppercase;
+      color: $text-color;
+
+      &:hover {
+        text-decoration: underline;
+        color: $pink;
+      }
+
+      &:active {
+        text-decoration: none;
+        opacity: 0.7;
+      }
     }
   }
 

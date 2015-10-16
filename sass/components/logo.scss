@@ -10,11 +10,13 @@
     left: 40px;
   }
 
-  &:hover svg {
+  &:hover .logo__glasses,
+  &:hover .logo__text {
     fill: $pink;
   }
 
-  &:active svg {
+  &:active .logo__glasses,
+  &:active .logo__text {
     fill: $bg-color;
     opacity: 0.7;
   }
@@ -40,12 +42,10 @@
 
     &:active .logo__text {
       fill: $text-color;
-      opacity: 0.7;
     }
 
     &:active .logo__glasses {
       fill: $pink;
-      opacity: 0.7;
     }
 
     .logo__text {

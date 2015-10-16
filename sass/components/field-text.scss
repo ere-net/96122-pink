@@ -42,5 +42,13 @@
       padding-top: 14px;
       text-align: center;
     }
+
+    &--left {
+
+      @media (min-width: $screen_md) {
+        padding-left: 23px;
+        text-align: left;
+      }
+    }
   }
 }

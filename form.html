@@ -83,17 +83,19 @@
           <div class="form__fieldset-inner">
             <label class="field-text">
               <input type="text" name="" placeholder="1 апреля 2015" required>
-              <span class="field-text__name  field-text__name--center">Дата выезда</span>
+              <span class="field-text__name  field-text__name--center  field-text__name--left">Дата выезда</span>
             </label>
             <label class="field-range">
-              <input type="text" name="" placeholder="10 дней" required>
-              <span class="field-range__minus"></span>
-              <span class="field-range__plus"></span>
+              <div class="field-range__inner">
+                <span class="field-range__minus"></span>
+                <span class="field-range__plus"></span>
+                <input type="text" name="" placeholder="10 дней" required>
+              </div>
               <span class="field-range__name">Продолжительность</span>
             </label>
             <label class="field-text">
               <input type="text" name="" placeholder="1 апреля 2015" required readonly>
-              <span class="field-text__name  field-text__name--center">Дата возвращения</span>
+              <span class="field-text__name  field-text__name--center  field-text__name--left">Дата возвращения</span>
             </label>
           </div>
         </fieldset>
@@ -101,10 +103,12 @@
         <fieldset class="form__fieldset  form__fieldset--travellers">
           <legend class="form__legend">Количество попутчиков *</legend>
           <div class="form__fieldset-inner">
-            <label class="field-range">
-              <span class="field-range__minus"></span>
-              <span class="field-range__plus"></span>
-              <input type="text" name="" placeholder="2 чел" required>
+            <label class="field-range  field-range--people">
+              <div class="field-range__inner">
+                <span class="field-range__minus"></span>
+                <span class="field-range__plus"></span>
+                <input type="text" name="" placeholder="2 чел" required>
+              </div>
             </label>
             <ol class="form__person">
               <li>
@@ -118,6 +122,7 @@
                     <input type="text" name="" placeholder="Ну как же без этого!">
                   </label>
                 </div>
+                <a class="form__traveller-delete" href="#">Удалить</a>
               </li>
               <li>
                 <div class="form__traveller-info">
@@ -130,6 +135,7 @@
                     <input type="text" name="" placeholder="Ну как же без этого!">
                   </label>
                 </div>
+                <a class="form__traveller-delete" href="#">Удалить</a>
               </li>
             </ol>
           </div>

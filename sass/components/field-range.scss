@@ -1,68 +1,92 @@
 .field-range {
-  position: relative;
   display: inline-block;
   vertical-align: top;
   width: 100%;
   margin-bottom: 23px;
 
+  &__inner {
+    display: flex;
+  }
+
   input {
-    width: 100%;
-    padding: 14px 65px 15px;
-    border: 2px solid $border-grey;
-    border-radius: 2px;
+    order: 2;
+    flex: 1 1 auto;
+    width: 50%;
+    padding: 0 10px;
+    border-top: 2px solid $border-grey;
+    border-bottom: 2px solid $border-grey;
+    border-left: 0;
+    border-right: 0;
     outline: 0;
     font: 400 18px/1.7em $font;
     color: $text-color;
     @include placeholder($text-color);
     text-align: center;
+    background-color: transparent;
 
     &:hover {
-      border: 2px solid $border-dark;
+      border-color: $border-dark;
     }
 
     &:focus {
-      border: 2px solid $pink;
-    }
-
-    &[readonly] {
-      background-color: $bg-color--light;
+      border-color: $pink;
     }
   }
 
-  &__name {
-    display: block;
-    margin-bottom: 0;
-    padding-left: 0;
-    padding-top: 14px;
-    font: 400 #{$text-size}/1.3em $font;
-    color: $pink;
-    text-transform: uppercase;
-    text-align: center;
+  &--people {
+
+    @media (min-width: $screen_md) {
+      width: 250px;
+
+      input,
+      input:hover,
+      input:active {
+        border-color: $bg-color;
+      }
+    }
   }
 
   &__minus,
   &__plus {
-    position: absolute;
-    top: 0;
+    flex-shrink: 0;
+    position: relative;
     width: 63px;
     height: 63px;
+    border: 2px solid $border-grey;
+    background-color: $bg-color;
     cursor: pointer;
+
+    &:hover {
+      border-color: $border-dark;
+    }
+
+    &:active {
+      border-color: $border-dark;
+      background-color: $text-color;
+
+      &:before,
+      &:after {
+        background-color: $bg-color;
+      }
+    }
   }
 
   &__minus {
-    left: 0;
+    order: 1;
     border-right: 2px solid $border-grey;
+    border-radius: 2px 0 0 2px;
   }
 
   &__plus {
-    right: 0;
+    order: 3;
     border-left: 2px solid $border-grey;
+    border-radius: 0 2px 2px 0;
   }
 
   &__minus:before,
   &__plus:before,
   &__plus:after {
-    content: '';
+    content: "";
     position: absolute;
     top: 50%;
     left: 50%;
@@ -81,4 +105,14 @@
     height: 27px;
   }
 
+  &__name {
+    display: block;
+    margin-bottom: 0;
+    padding-left: 0;
+    padding-top: 14px;
+    font: 400 #{$text-size}/1.3em $font;
+    color: $pink;
+    text-transform: uppercase;
+    text-align: center;
+  }
 }
