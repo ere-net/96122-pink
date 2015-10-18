@@ -6,13 +6,23 @@
     padding-top: 92px;
   }
 
+  @media (min-width: $screen_lg) {
+    width: 960px;
+    margin: 0 auto;
+  }
+
   &__descr {
     padding: 0 20px 15px;
     text-align: center;
 
     @media (min-width: $screen_md) {
       margin-bottom: 42px;
-      padding: 0 100px;
+      padding: 0 60px;
+    }
+
+    @media (min-width: $screen_lg) {
+      margin-bottom: 72px;
+      padding: 0 90px;
     }
 
     p {
@@ -41,9 +51,14 @@
     border: 0;
 
     @media (min-width: $screen_md) {
-      margin: 0 40px 57px;
+      margin: 0 20px 65px;
       padding: 42px 60px 39px;
       border: 2px solid $border-grey;
+    }
+
+    @media (min-width: $screen_lg) {
+      margin: 0 10px 65px;
+      padding: 42px 60px 0;
     }
 
     &-inner {
@@ -58,8 +73,21 @@
 
       @media (min-width: $screen_md) {
         border: none;
-        margin-bottom: 34px;
+        margin-bottom: 42px;
         padding: 0;
+      }
+
+      @media (min-width: $screen_lg) {
+        margin-bottom: 34px;
+
+        .form__fieldset-inner {
+          flex-direction: row;
+          justify-content: space-between;
+
+          label {
+            width: 32%;
+          }
+        }
       }
     }
 
@@ -67,7 +95,21 @@
       background-color: $bg-color--light;
 
       @media (min-width: $screen_md) {
+        padding: 50px 60px 39px;
         background-color: $bg-color;
+      }
+
+      @media (min-width: $screen_lg) {
+        padding: 56px 60px 39px;
+
+        .form__fieldset-inner {
+          flex-direction: row;
+          justify-content: space-between;
+
+          label {
+            width: 25%;
+          }
+        }
       }
     }
 
@@ -75,7 +117,7 @@
       padding-top: 40px;
 
       @media (min-width: $screen_md) {
-        padding-top: 40px;
+        padding: 42px 60px 6px;
 
         .form__fieldset-inner {
           flex-direction: row;
@@ -84,6 +126,17 @@
 
           label {
             width: 48%;
+            margin-bottom: 32px;
+          }
+        }
+      }
+
+      @media (min-width: $screen_lg) {
+
+        .form__fieldset-inner {
+
+          label {
+            width: 29.3%;
           }
         }
       }
@@ -101,13 +154,37 @@
       background-color: $bg-color--light;
 
       @media (min-width: $screen_md) {
+        padding-bottom: 31px;
         background-color: $bg-color;
+      }
+
+      @media (min-width: $screen_lg) {
+        padding-bottom: 35px;
       }
     }
 
     &--achievements {
       padding-top: 37px;
       padding-bottom: 31px;
+
+      @media (min-width: $screen_md) {
+        padding-top: 45px;
+        padding-bottom: 33px;
+      }
+
+      @media (min-width: $screen_lg) {
+        padding: 56px 50px 8px 60px;
+
+        .form__fieldset-inner {
+          flex-direction: row;
+          flex-wrap: wrap;
+          justify-content: space-between;
+
+          label {
+            width: 32%;
+          }
+        }
+      }
     }
 
     &--photos {
@@ -116,6 +193,10 @@
       @media (min-width: $screen_md) {
         padding-bottom: 46px;
         background-color: $bg-color;
+      }
+
+      @media (min-width: $screen_lg) {
+        padding-bottom: 57px;
       }
     }
 
@@ -133,6 +214,10 @@
           justify-content: space-between;
         }
       }
+
+      @media (min-width: $screen_lg) {
+        margin: 0 10px;
+      }
     }
   }
   
@@ -146,18 +231,26 @@
     text-align: center;
 
     @media (min-width: $screen_md) {
-      float: none;
+      position: absolute;
+      top: -10px;
+      left: 50%;
+      transform: translate(-50%, 0);
       width: auto;
       margin: 0 auto;
       padding: 0 20px;
+      background-color: $bg-color;
     }
   }
 
-  &__person {
+  &__traveller {
     margin: 25px 0 0;
     padding: 34px 0 0;
     list-style: none;
     border-top: 2px solid $border-grey;
+
+    @media (min-width: $screen_md) {
+      margin: 18px 0 0;
+    }
 
     li {
       margin-bottom: 20px;
@@ -168,6 +261,11 @@
 
       @media (min-width: $screen_md) {
         display: flex;
+        justify-content: space-between;
+      }
+
+      @media (min-width: $screen_lg) {
+        margin-bottom: 4px;
       }
     }
   }
@@ -178,6 +276,16 @@
 
     @media (min-width: $screen_md) {
       padding-left: 83px;
+      width: 100%;
+    }
+
+    @media (min-width: $screen_lg) {
+      display: flex;
+      flex-direction: row;
+
+      label:first-child {
+          margin-right: 20px;
+      }
     }
 
     &:before {
@@ -186,7 +294,7 @@
       top: 0;
       left: 26px;
       margin-bottom: 11px;
-      font: 400 1.4rem/1.3em "Open Sans","Arial",sans-serif;
+      font: 400 1.4rem/1.3em $font;
       color: $pink;
     }
 
@@ -217,6 +325,7 @@
 
     @media (min-width: $screen_md) {
       display: block;
+      flex-shrink: 0;
       width: 117px;
       padding-top: 50px;
       font: 400 #{$text-size}/1.2em $font;
@@ -243,18 +352,24 @@
     width: 100%;
     margin-bottom: 33px;
     padding: 14px 22px 15px 22px;
-    border: 2px solid $border-grey;
-    border-radius: 2px;
-    outline: 0;
     font: 800 18px/1.7em $font;
     text-align: center;
     text-transform: uppercase;
     color: $text-color;
     background-color: $bg-color;
+    border: 2px solid $border-grey;
+    border-radius: 2px;
+    outline: 0;
     cursor: pointer;
 
     @media (min-width: $screen_md) {
       margin-bottom: 41px;
+    }
+
+    @media (min-width: $screen_lg) {
+      color: $white;
+      background-color: $pink;
+      border: 2px solid $pink;
     }
 
     input[type="file"] {
@@ -290,6 +405,11 @@
       margin-left: -68px;
       padding-top: 14px;
     }
+
+    @media (min-width: $screen_lg) {
+      margin-left: -54px;
+      padding-top: 37px;
+    }
   }
 
   &__photo {
@@ -300,6 +420,11 @@
     @media (min-width: $screen_md) {
       margin-left: 68px;
       margin-top: 52px;
+    }
+
+    @media (min-width: $screen_lg) {
+      margin-left: 54px;
+      margin-top: 28px;
     }
 
     img {
@@ -336,7 +461,7 @@
 
     &:before,
     &:after {
-      content: '';
+      content: "";
       position: absolute;
       top: 12px;
       right: 6px;
@@ -401,9 +526,18 @@
     @media (min-width: $screen_md) {
       margin-top: 0;
     }
-    
-    span {
+
+    &--required {
       color: $pink;
+    }
+
+    &--hidden {
+      display: none;
+
+      @media (min-width: $screen_md) {
+        display: inline;
+        color: $text-color;
+      }
     }
   }
 }

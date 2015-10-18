@@ -9,13 +9,7 @@
 
   &__inner {
     position: relative;
-    padding: 85px 20px 287px 20px;
     background-color: $bg-color--light;
-
-    @media (min-width: $screen_md) {
-      padding: 90px 40px 7px 350px;
-
-    }
 
     &:before {
       content: "";
@@ -26,9 +20,29 @@
       height: 94px;
       background: url("../img/triangle-white.svg") no-repeat 50% 0;
       background-size: 1200px 94px;
+
+      @media (min-width: $screen_lg) {
+        background-size: 100% 94px;
+      }
+    }
+  }
+
+  &__wrapper {
+    position: relative;
+    padding: 85px 20px 287px 20px;
+
+    @media (min-width: $screen_md) {
+      min-height: 480px;
+      padding: 90px 20px 7px 330px;
     }
 
-    &:after {
+    @media (min-width: $screen_lg) {
+      width: 960px;
+      margin: 0 auto;
+      padding: 0 10px 20px;
+    }
+
+    &:before {
       content: "";
       position: absolute;
       bottom: 0;
@@ -39,11 +53,15 @@
       background: url("../img/screen-mobile-3.png") no-repeat 50% 100%;
 
       @media (min-width: $screen_md) {
-        left: 40px;
+        left: 20px;
         width: 268px;
         height: 481px;
         transform: none;
         background: url("../img/iphone-screen-tablet-3@1x.png") no-repeat 0 100%;
+      }
+
+      @media (min-width: $screen_lg) {
+        background: none;
       }
     }
   }
@@ -52,6 +70,12 @@
     margin: 0;
     padding: 0;
     list-style: none;
+
+    @media (min-width: $screen_lg) {
+      display: flex;
+      justify-content: space-between;
+      text-align: center;
+    }
   }
 
   &__item {
@@ -60,6 +84,11 @@
     @media (min-width: $screen_md) {
       padding-bottom: 35px;
     }
+
+    @media (min-width: $screen_lg) {
+      width: 300px;
+      padding: 0 20px 35px;
+    }
   }
 
   &__item-title {
@@ -67,11 +96,19 @@
     margin-bottom: 12px;
     font: 800 #{$text-size--h2}/1.35em $font;
     color: $black;
+
+    @media (min-width: $screen_lg) {
+      font: 800 30px/1em $font;
+    }
   }
 
   &__item-descr p {
     margin: 0;
     font: 400 #{$text-size}/1.71em $font;
     color: $text-color;
+
+    @media (min-width: $screen_lg) {
+      font: 400 18px/1.67em $font;
+    }
   }
 }

@@ -9,7 +9,13 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding: 43px 40px 39px;
+    padding: 43px 20px 39px;
+  }
+
+  @media (min-width: $screen_lg) {
+    width: 960px;
+    margin: 0 auto;
+    padding: 77px 10px 75px;
   }
 
   &__social {
@@ -30,6 +36,7 @@
     }
 
     a {
+      font: 400 #{$text-size}/1.9em $font;
       color: $text-color;
       text-decoration: none;
 
@@ -39,6 +46,10 @@
 
       &:active svg {
         fill: fade-out($border-dark,0.7);
+      }
+
+      @media (min-width: $screen_lg) {
+        font: 400 18px/1.2em $font;
       }
     }
 

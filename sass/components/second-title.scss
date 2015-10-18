@@ -6,8 +6,14 @@
   color: $text-color;
 
   @media (min-width: $screen_md) {
-    padding: 0 40px;
     font: 300 40px/1.2em $font;
+  }
+
+  @media (min-width: $screen_lg) {
+    width: 960px;
+    margin: 0 auto 40px;
+    padding: 0 10px;
+    font: 300 50px/1.2em $font;
   }
 
   &__text {

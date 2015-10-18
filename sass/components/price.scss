@@ -4,7 +4,11 @@
   background-color: $bg-color--light;
 
   @media (min-width: $screen_md) {
-    padding: 115px 40px 68px;
+    padding: 115px 20px 68px;
+  }
+
+  @media (min-width: $screen_lg) {
+    padding: 115px 0 95px;
   }
 
   &:before {
@@ -16,11 +20,20 @@
     height: 94px;
     background: url("../img/triangle-white.svg") no-repeat 50% 0;
     background-size: 1200px 94px;
+
+    @media (min-width: $screen_lg) {
+      background-size: 100% 94px;
+    }
   }
 
   &__inner {
     overflow: hidden;
     margin: 0 auto;
+
+    @media (min-width: $screen_lg) {
+      width: 960px;
+      padding: 0 10px;
+    }
   }
 
   &__table {
@@ -56,6 +69,10 @@
       font: 400 #{$text-size}/2.15em $font;
       border: 2px solid #e5e5e5;
       color: $text-color;
+
+      @media (min-width: $screen_md) {
+        font: 400 18px/1.2em $font;
+      }
     }
   }
 
@@ -114,6 +131,10 @@
     @media (min-width: $screen_md) {
       font: 800 16px/1.75em $font;
     }
+
+    @media (min-width: $screen_lg) {
+      font: 800 18px/1.67em $font;
+    }
   }
 
   &__price-usd {
@@ -124,6 +145,10 @@
 
     @media (min-width: $screen_md) {
       font: 300 18px/1.25em $font;
+    }
+
+    @media (min-width: $screen_lg) {
+      font: 300 24px/1.25em $font;
     }
   }
 
@@ -149,13 +174,6 @@
       font: 400 #{$text-size}/1.2em $font;
       text-transform: uppercase;
       color: $white;
-    }
-  }
-
-  & .slider-pagination {
-
-    @media (min-width: $screen_md) {
-      display: none;
     }
   }
 }

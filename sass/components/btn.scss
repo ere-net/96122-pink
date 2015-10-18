@@ -1,7 +1,7 @@
 .btn {
   display: block;
   width: 100%;
-  padding: 22px 0;
+  padding: 19px 0 20px;
   font: 800 18px/1.2em $font;
   text-align: center;
   text-decoration: none;
@@ -42,7 +42,11 @@
   &--form-send {
 
     @media (min-width: $screen_md) {
-        width: 48%;
+      width: 48%;
+    }
+
+    @media (min-width: $screen_lg) {
+      width: 300px;
     }
   }
 

@@ -30,7 +30,7 @@
     background-color: $bg-color;
 
     @media (min-width: $screen_md) {
-      padding: 44px 40px 0;
+      padding: 44px 20px 0;
     }
 
     &:after {
@@ -62,12 +62,33 @@
       justify-content: space-around;
       padding-top: 4px;
     }
+
+    @media (min-width: $screen_lg) {
+      width: 960px;
+      margin: 0 auto;
+      padding: 4px 10px 0;
+    }
   }
 
   &__item {
 
     @media (min-width: $screen_md) {
       width: 290px;
+    }
+
+    @media (min-width: $screen_lg) {
+
+      &:nth-child(1) {
+        order: 1;
+      }
+
+      &:nth-child(2) {
+        order: 3;
+      }
+
+      &:nth-child(3) {
+        order: 2;
+      }
     }
 
     a:hover {
@@ -79,13 +100,13 @@
       color: fade_out($text-color, 0.7);
       text-decoration: none;
     }
-  }
 
-  &__item:not(:last-child) {
-    margin-bottom: 25px;
+    &:not(:last-child) {
+      margin-bottom: 25px;
 
-    @media (min-width: $screen_md) {
-      margin-bottom: 47px;
+      @media (min-width: $screen_md) {
+        margin-bottom: 47px;
+      }
     }
   }
 
@@ -96,6 +117,10 @@
 
     @media (min-width: $screen_md) {
       padding-bottom: 8px;
+    }
+
+    @media (min-width: $screen_lg) {
+      padding-bottom: 25px;
     }
   }
 

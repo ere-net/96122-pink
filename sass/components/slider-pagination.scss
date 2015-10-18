@@ -9,6 +9,20 @@
     padding-top: 7px;
   }
 
+  &--reviews {
+
+    @media (min-width: $screen_lg) {
+      display: none;
+    }
+  }
+
+  &--price {
+
+    @media (min-width: $screen_md) {
+      display: none;
+    }
+  }
+
   &__item {
     position: relative;
     width: 25px;

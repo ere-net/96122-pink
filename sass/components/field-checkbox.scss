@@ -7,6 +7,10 @@
 
   &:first-of-type {
     margin-top: 10px;
+
+    @media (min-width: $screen_lg) {
+      margin-top: 0;
+    }
   }
 
   &:last-of-type {
@@ -24,7 +28,7 @@
     color: $text-color;
 
     &:before {
-      content: '';
+      content: "";
       position: absolute;
       top: -7px;
       left: 0;
@@ -40,13 +44,13 @@
     }
 
     input[type="checkbox"]:checked + &:after {
-      content: '';
+      content: "";
       position: absolute;
       top: 4px;
       left: 9px;
       width: 22px;
       height: 16px;
-      background: url('../img/icon_checked.png') no-repeat 0 0;
+      background: url("../img/icon_checked.png") no-repeat 0 0;
     }
   }
 }

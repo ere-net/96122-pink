@@ -1,4 +1,5 @@
 .slider {
+  position: relative;
   text-align: center;
   
   &--reviews {
@@ -9,6 +10,10 @@
     display: flex;
     flex-direction: column;
     margin: 0;
+
+    @media (min-width: $screen_lg) {
+      padding: 0 80px;
+    }
   }
 
   &__author {
@@ -22,6 +27,10 @@
       padding-top: 37px;
       font-size: 20px;
     }
+
+    @media (min-width: $screen_lg) {
+      font-size: 24px;
+    }
   }
 
   &__author-about {
@@ -32,6 +41,10 @@
       padding-top: 12px;
       font: 400 #{$text-size}/1.2em $font;
       color: $text-color;
+    }
+
+    @media (min-width: $screen_lg) {
+      font-size: 18px;
     }
   }
 
@@ -46,11 +59,19 @@
     }
 
     &:before {
-      content: '\00ab';
+      content: "\00ab";
+
+      @media (min-width: $screen_lg) {
+        content: none;
+      }
     }
 
     &:after {
-      content: '\00bb';
+      content: "\00bb";
+
+      @media (min-width: $screen_lg) {
+        content: none;
+      }
     }
   }
 }

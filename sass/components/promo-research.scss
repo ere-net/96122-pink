@@ -2,12 +2,32 @@
   display: none;
 
   @media (min-width: $screen_md) {
-    display: flex;
-    align-items: center;
-    padding: 57px 40px 26px 40px;
+    display: block;
     background-color: $bg-color;
+  }
 
-    &__clock {
+  @media (min-width: $screen_lg) {
+    background-color: $bg-color--light;
+  }
+
+  &__wrapper {
+
+    @media (min-width: $screen_md) {
+      display: flex;
+      align-items: center;
+      padding: 57px 20px 26px;
+    }
+
+    @media (min-width: $screen_lg) {
+      width: 960px;
+      margin: 0 auto;
+      padding: 57px 10px 66px;
+    }
+  }
+
+  &__clock {
+
+    @media (min-width: $screen_md) {
       position: relative;
       flex-shrink: 0;
       width: 262px;
@@ -16,7 +36,15 @@
       background-size: 262px 302px;
     }
 
-    &__hours {
+    @media (min-width: $screen_lg) {
+      background: url("../img/timer-dark.svg") no-repeat 0 0;
+      background-size: 262px 302px;
+    }
+  }
+
+  &__hours {
+
+    @media (min-width: $screen_md) {
       position: absolute;
       top: 64px;
       left: 24px;
@@ -29,28 +57,52 @@
       text-align: center;
       color: $pink;
     }
+  }
 
-    &__info {
+  &__info {
+
+    @media (min-width: $screen_md) {
       padding-left: 48px;
     }
 
-    &__title {
+    @media (min-width: $screen_lg) {
+      padding-left: 68px;
+    }
+  }
+
+  &__title {
+
+    @media (min-width: $screen_md) {
       padding: 0 40px 20px 0;
       font: 800 30px/1.2em $font;
       color: $black;
     }
+  }
 
-    &__descr p {
+  &__descr p {
+
+    @media (min-width: $screen_md) {
       margin: 0;
       padding-bottom: 20px;
       font: 400 #{$text-size}/1.71em $font;
       color: $text-color;
     }
 
-    &__more a {
+    @media (min-width: $screen_lg) {
+      font: 400 18px/1.67em $font;
+    }
+  }
+
+  &__more a {
+
+    @media (min-width: $screen_md) {
       font: 400 #{$text-size}/1.71em $font;
       color: $pink;
       text-decoration: underline;
+    }
+
+    @media (min-width: $screen_lg) {
+      font: 400 18px/1.67em $font;
     }
   }
 }
