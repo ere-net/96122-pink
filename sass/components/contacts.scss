@@ -3,10 +3,34 @@
   padding-bottom: 238px;
   text-align: center;
   background: $bg-color url("../img/map-mobile@1x.jpg") no-repeat 50% 100%;
+  background-size: 700px 641px;
+
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    background-image: url("../img/map-mobile@2x.jpg");
+  }
+
+  @media (min-resolution: 288dpi), (min-resolution: 2.25dppx) {
+    background-image: url("../img/map-mobile@3x.jpg");
+  }
 
   @media (min-width: $screen_md) {
     padding-bottom: 378px;
     background: $bg-color url("../img/map-tablet@1x.jpg") no-repeat 50% 100%;
+    background-size: 960px 473px;
+
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-image: url("../img/map-tablet@2x.jpg");
+    }
+  }
+
+  @media (min-width: $screen_lg) {
+    padding-bottom: 522px;
+    background: $bg-color url("../img/map-desktop@1x.jpg") no-repeat 50% 100%;
+    background-size: 960px 473px;
+
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-image: url("../img/map-desktop@2x.jpg");
+    }
   }
 
   &:after {
@@ -22,6 +46,10 @@
     @media (min-width: $screen_md) {
       bottom: 145px;
     }
+
+    @media (min-width: $screen_lg) {
+      bottom: 204px;
+    }
   }
 
   &__inner {
@@ -31,6 +59,10 @@
 
     @media (min-width: $screen_md) {
       padding: 44px 20px 0;
+    }
+
+    @media (min-width: $screen_lg) {
+      padding: 64px 0 0;
     }
 
     &:after {
@@ -45,6 +77,11 @@
       @media (min-width: $screen_md) {
         bottom: -95px;
         height: 96px;
+      }
+
+      @media (min-width: $screen_lg) {
+        bottom: -122px;
+        height: 123px;
       }
     }
   }
@@ -106,6 +143,10 @@
 
       @media (min-width: $screen_md) {
         margin-bottom: 47px;
+      }
+
+      @media (min-width: $screen_lg) {
+        margin-bottom: 31px;
       }
     }
   }

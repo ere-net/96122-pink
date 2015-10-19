@@ -534,7 +534,7 @@
     &--hidden {
       display: none;
 
-      @media (min-width: $screen_md) {
+      @media (min-width: $screen_lg) {
         display: inline;
         color: $text-color;
       }
