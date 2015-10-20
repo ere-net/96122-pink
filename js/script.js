@@ -13,11 +13,11 @@
     var minus = parent.querySelector(".field-range__minus");
     var plus = parent.querySelector(".field-range__plus");
 
-    minus.addEventListener("click", function() {
+    minus.addEventListener("tap", function() {
       changeNumber(false);
     });
 
-    plus.addEventListener("click", function() {
+    plus.addEventListener("tap", function() {
       changeNumber(true);
     });
 
@@ -89,12 +89,12 @@
 
   });
 
-  modal_success_close.addEventListener("click", function(event) {
+  modal_success_close.addEventListener("tap", function(event) {
     event.preventDefault();
     modal_success.classList.remove("modal--show");
   });
 
-  modal_failure_close.addEventListener("click", function(event) {
+  modal_failure_close.addEventListener("tap", function(event) {
     event.preventDefault();
     modal_failure.classList.remove("modal--show");
   });
@@ -138,17 +138,17 @@
       var reader = new FileReader();
 
       reader.addEventListener("load", function(event) {
-        var html = template.replace("{{image}}", event.target.result);
-        html = html.replace("{{name}}", file.name);
-        html = html.replace("{{name}}", file.name);
-        html = html.replace("{{name}}", file.name);
+        var html = Mustache.render(template, {
+            "image": event.target.result,
+            "name": file.name
+        })
 
         var li = document.createElement("li");
         li.classList.add("form__photo");
         li.innerHTML = html;
         area.appendChild(li);
 
-        li.querySelector(".form__delete-photo").addEventListener("click", function(event) {
+        li.querySelector(".form__delete-photo").addEventListener("tap", function(event) {
             event.preventDefault();
             removePreview(li);
           });

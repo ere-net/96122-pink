@@ -60,11 +60,11 @@
           <div class="form__fieldset-inner">
             <label class="field-text">
               <span class="field-text__name">Имя: *</span>
-              <input type="text" name="user_name" placeholder="Введите ваше имя" ><!-- required-->
+              <input type="text" name="user_name" placeholder="Введите ваше имя" required>
             </label>
             <label class="field-text">
               <span class="field-text__name">Фамилия: *</span>
-              <input type="text" name="user_surname" placeholder="Укажите фамилию" ><!-- required-->
+              <input type="text" name="user_surname" placeholder="Укажите фамилию" required>
             </label>
             <label class="field-text">
               <span class="field-text__name">Отчество:</span>
@@ -77,15 +77,15 @@
           <legend class="form__legend">С каким приложением путешествовали? *</legend>
           <div class="form__fieldset-inner">
             <label class="field-radio">
-              <input type="radio" name="app" value="app-ios" checked ><!-- required-->
+              <input type="radio" name="app" value="app-ios" checked required>
               <span class="field-radio__name">Pink для iOS</span>
             </label>
             <label class="field-radio">
-              <input type="radio" name="app" value="app-android" ><!-- required-->
+              <input type="radio" name="app" value="app-android" required>
               <span class="field-radio__name">Pink на Android</span>
             </label>
             <label class="field-radio">
-              <input type="radio" name="app" value="app-windows" ><!-- required-->
+              <input type="radio" name="app" value="app-windows" required>
               <span class="field-radio__name">Windows Phone</span>
             </label>
           </div>
@@ -95,14 +95,14 @@
           <legend class="form__legend">Когда вы путешествовали? *</legend>
           <div class="form__fieldset-inner">
             <label class="field-text">
-              <input type="text" name="travel_start" placeholder="1 апреля 2015" ><!-- required-->
+              <input type="text" name="travel_start" placeholder="1 апреля 2015" required>
               <span class="field-text__name  field-text__name--center  field-text__name--left">Дата выезда</span>
             </label>
             <label class="field-range">
               <div class="field-range__inner">
                 <span class="field-range__minus"></span>
                 <span class="field-range__plus"></span>
-                <input type="number" min="1" max="999" pattern="\d+" name="travel_duration" placeholder="10 дней" ><!-- required-->
+                <input type="number" min="1" max="999" pattern="\d+" name="travel_duration" placeholder="10 дней" required>
               </div>
               <span class="field-range__name">Продолжительность</span>
             </label>
@@ -120,7 +120,7 @@
               <div class="field-range__inner">
                 <span class="field-range__minus"></span>
                 <span class="field-range__plus"></span>
-                <input type="number" min="1" max="99" pattern="\d+" name="travellers_number" placeholder="2 чел" ><!-- required-->
+                <input type="number" min="1" max="99" pattern="\d+" name="travellers_number" placeholder="2 чел" required>
               </div>
             </label>
             <ol class="form__traveller">
@@ -128,7 +128,7 @@
                 <div class="form__traveller-info">
                   <label class="field-text">
                     <span class="field-text__name">Имя: *</span>
-                    <input type="text" name="traveller_name1" placeholder="Введите ваше имя" ><!-- required-->
+                    <input type="text" name="traveller_name1" placeholder="Введите ваше имя" required>
                   </label>
                   <label class="field-text">
                     <span class="field-text__name">Прозвище:</span>
@@ -141,7 +141,7 @@
                 <div class="form__traveller-info">
                   <label class="field-text">
                     <span class="field-text__name">Имя: *</span>
-                    <input type="text" name="traveller_name2" placeholder="Введите ваше имя" ><!-- required-->
+                    <input type="text" name="traveller_name2" placeholder="Введите ваше имя" required>
                   </label>
                   <label class="field-text">
                     <span class="field-text__name">Прозвище:</span>
@@ -192,11 +192,6 @@
             </label>
             <div class="form__gallery">
               <ul class="form__gallery-list">
-                <!--<li class="form__photo">
-                  <div class="form__delete-photo"></div>
-                  <img src="img/photo.png" alt="" width="67" height="68">
-                  <span class="form__photo-name">img-1.jpg</span>
-                </li>-->
               </ul>
             </div>
           </div>
@@ -258,7 +253,7 @@
       </div>
     </section>
 
-    <section class="modal   modal--failure">
+    <section class="modal  modal--failure">
       <h1 class="modal__title">Что-то пошло не&nbsp;так!</h1>
       <div class="modal__text">
         <p>Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
@@ -276,6 +271,8 @@
 
   </script>
 
+  <script src="js/components/mustache.min.js"></script>
+  <script src="js/components/tap.min.js"></script>
   <script src="js/script.js"></script>
 
   </body>
