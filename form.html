@@ -50,7 +50,7 @@
     </header>
 
     <main class="content">
-      <form class="form" action="/echo" method="post" enctype="multipart/form-data">
+      <form class="form" action="https://echo.htmlacademy.ru/adaptive" method="post" enctype="multipart/form-data">
         <div class="form__descr">
           <p>Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!
             <span>Пожалуйста, заполните форму ниже:</span></p>
@@ -60,15 +60,15 @@
           <div class="form__fieldset-inner">
             <label class="field-text">
               <span class="field-text__name">Имя: *</span>
-              <input type="text" name="" placeholder="Введите ваше имя" required>
+              <input type="text" name="user_name" placeholder="Введите ваше имя" ><!-- required-->
             </label>
             <label class="field-text">
               <span class="field-text__name">Фамилия: *</span>
-              <input type="text" name="" placeholder="Укажите фамилию" required>
+              <input type="text" name="user_surname" placeholder="Укажите фамилию" ><!-- required-->
             </label>
             <label class="field-text">
               <span class="field-text__name">Отчество:</span>
-              <input type="text" name="" placeholder="Ну и отчество тоже">
+              <input type="text" name="user_patronymic" placeholder="Ну и отчество тоже">
             </label>
           </div>
         </fieldset>
@@ -77,15 +77,15 @@
           <legend class="form__legend">С каким приложением путешествовали? *</legend>
           <div class="form__fieldset-inner">
             <label class="field-radio">
-              <input type="radio" name="app" value="" checked required>
+              <input type="radio" name="app" value="app-ios" checked ><!-- required-->
               <span class="field-radio__name">Pink для iOS</span>
             </label>
             <label class="field-radio">
-              <input type="radio" name="app" value="" required>
+              <input type="radio" name="app" value="app-android" ><!-- required-->
               <span class="field-radio__name">Pink на Android</span>
             </label>
             <label class="field-radio">
-              <input type="radio" name="app" value="" required>
+              <input type="radio" name="app" value="app-windows" ><!-- required-->
               <span class="field-radio__name">Windows Phone</span>
             </label>
           </div>
@@ -95,19 +95,19 @@
           <legend class="form__legend">Когда вы путешествовали? *</legend>
           <div class="form__fieldset-inner">
             <label class="field-text">
-              <input type="text" name="" placeholder="1 апреля 2015" required>
+              <input type="text" name="travel_start" placeholder="1 апреля 2015" ><!-- required-->
               <span class="field-text__name  field-text__name--center  field-text__name--left">Дата выезда</span>
             </label>
             <label class="field-range">
               <div class="field-range__inner">
                 <span class="field-range__minus"></span>
                 <span class="field-range__plus"></span>
-                <input type="number" min="1" max="999" pattern="\d+" name="" placeholder="10 дней" required>
+                <input type="number" min="1" max="999" pattern="\d+" name="travel_duration" placeholder="10 дней" ><!-- required-->
               </div>
               <span class="field-range__name">Продолжительность</span>
             </label>
             <label class="field-text">
-              <input type="text" name="" placeholder="1 апреля 2015" required readonly>
+              <input type="text" name="travel_end" placeholder="1 апреля 2015" readonly>
               <span class="field-text__name  field-text__name--center  field-text__name--left">Дата возвращения</span>
             </label>
           </div>
@@ -120,7 +120,7 @@
               <div class="field-range__inner">
                 <span class="field-range__minus"></span>
                 <span class="field-range__plus"></span>
-                <input type="number" min="1" max="999" pattern="\d+" name="" placeholder="2 чел" required>
+                <input type="number" min="1" max="99" pattern="\d+" name="travellers_number" placeholder="2 чел" ><!-- required-->
               </div>
             </label>
             <ol class="form__traveller">
@@ -128,11 +128,11 @@
                 <div class="form__traveller-info">
                   <label class="field-text">
                     <span class="field-text__name">Имя: *</span>
-                    <input type="text" name="" placeholder="Введите ваше имя" required>
+                    <input type="text" name="traveller_name1" placeholder="Введите ваше имя" ><!-- required-->
                   </label>
                   <label class="field-text">
                     <span class="field-text__name">Прозвище:</span>
-                    <input type="text" name="" placeholder="Ну как же без этого!">
+                    <input type="text" name="traveller_nick1" placeholder="Ну как же без этого!">
                   </label>
                 </div>
                 <a class="form__traveller-delete" href="#">Удалить</a>
@@ -141,11 +141,11 @@
                 <div class="form__traveller-info">
                   <label class="field-text">
                     <span class="field-text__name">Имя: *</span>
-                    <input type="text" name="" placeholder="Введите ваше имя" required>
+                    <input type="text" name="traveller_name2" placeholder="Введите ваше имя" ><!-- required-->
                   </label>
                   <label class="field-text">
                     <span class="field-text__name">Прозвище:</span>
-                    <input type="text" name="" placeholder="Ну как же без этого!">
+                    <input type="text" name="traveller_nick2" placeholder="Ну как же без этого!">
                   </label>
                 </div>
                 <a class="form__traveller-delete" href="#">Удалить</a>
@@ -158,27 +158,27 @@
           <legend class="form__legend">Ваши безбашенные достижения в путешествии</legend>
           <div class="form__fieldset-inner">
             <label class="field-checkbox">
-              <input type="checkbox" name="" value="" checked>
+              <input type="checkbox" name="achieve" value="achieve1" checked>
               <span class="field-checkbox__name">Сделал селфи с акулой</span>
             </label>
             <label class="field-checkbox">
-              <input type="checkbox" name="" value="" checked>
+              <input type="checkbox" name="achieve" value="achieve2" checked>
               <span class="field-checkbox__name">Обгорел на пляже</span>
             </label>
             <label class="field-checkbox">
-              <input type="checkbox" name="" value="">
+              <input type="checkbox" name="achieve" value="achieve3">
               <span class="field-checkbox__name">Видел Чака Норриса</span>
             </label>
             <label class="field-checkbox">
-              <input type="checkbox" name="" value="">
+              <input type="checkbox" name="achieve" value="achieve4">
               <span class="field-checkbox__name">Накупил сувениров</span>
             </label>
             <label class="field-checkbox">
-              <input type="checkbox" name="" value="" checked>
+              <input type="checkbox" name="achieve" value="achieve5" checked>
               <span class="field-checkbox__name">Удержал башню</span>
             </label>
             <label class="field-checkbox">
-              <input type="checkbox" name="" value="">
+              <input type="checkbox" name="achieve" value="achieve6">
               <span class="field-checkbox__name">Разгромил отель</span>
             </label>
           </div>
@@ -188,50 +188,15 @@
           <legend class="form__legend">Ваши фотографии из поездки *</legend>
           <div class="form__fieldset-inner">
             <label class="form__upload">
-              <input type="file" name="" multiple required>Загрузить фото
+              <input type="file" id="upload_photo" name="images" multiple >Загрузить фото <!--required-->
             </label>
             <div class="form__gallery">
               <ul class="form__gallery-list">
-                <li class="form__photo">
+                <!--<li class="form__photo">
                   <div class="form__delete-photo"></div>
                   <img src="img/photo.png" alt="" width="67" height="68">
                   <span class="form__photo-name">img-1.jpg</span>
-                </li>
-                <li class="form__photo">
-                  <div class="form__delete-photo"></div>
-                  <img src="img/photo.png" alt="" width="67" height="68">
-                  <span class="form__photo-name">img-2.jpg</span>
-                </li>
-                <li class="form__photo">
-                  <div class="form__delete-photo"></div>
-                  <img src="img/photo.png" alt="" width="67" height="68">
-                  <span class="form__photo-name">img-3.jpg</span>
-                </li>
-                <li class="form__photo">
-                  <div class="form__delete-photo"></div>
-                  <img src="img/photo.png" alt="" width="67" height="68">
-                  <span class="form__photo-name">img-4.jpg</span>
-                </li>
-                <li class="form__photo">
-                  <div class="form__delete-photo"></div>
-                  <img src="img/photo.png" alt="" width="67" height="68">
-                  <span class="form__photo-name">img-5.jpg</span>
-                </li>
-                <li class="form__photo">
-                  <div class="form__delete-photo"></div>
-                  <img src="img/photo.png" alt="" width="67" height="68">
-                  <span class="form__photo-name">img-6.jpg</span>
-                </li>
-                <li class="form__photo">
-                  <div class="form__delete-photo"></div>
-                  <img src="img/photo.png" alt="" width="67" height="68">
-                  <span class="form__photo-name">img-7.jpg</span>
-                </li>
-                <li class="form__photo">
-                  <div class="form__delete-photo"></div>
-                  <img src="img/photo.png" alt="" width="67" height="68">
-                  <span class="form__photo-name">img-8.jpg</span>
-                </li>
+                </li>-->
               </ul>
             </div>
           </div>
@@ -302,6 +267,14 @@
         <a href="#" class="btn  btn--failure">Ok</a>
       </div>
     </section>
+
+  <script id="image-template" type="text/html">
+
+    <div class="form__delete-photo"></div>
+    <img src="{{image}}" alt="{{name}}" title="{{name}}" width="67" height="68">
+    <span class="form__photo-name">{{name}}</span>
+
+  </script>
 
   <script src="js/script.js"></script>
 
