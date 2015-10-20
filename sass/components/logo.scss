@@ -57,13 +57,19 @@
     @media (min-width: $screen_lg) {
       display: inline-block;
       fill: $pink;
+    }
 
-      &--glasses,
-      &--text {
+    &--glasses,
+    &--text {
+
+      @media (min-width: $screen_lg) {
         fill: $bg-color;
       }
+    }
 
-      &--stars {
+    &--stars {
+
+      @media (min-width: $screen_lg) {
         fill: $pink;
       }
     }
@@ -92,6 +98,16 @@
       fill: $pink;
     }
 
+    &:active .logo__stars--glasses {
+      fill: $pink;
+      opacity: 0.7;
+    }
+
+    &:active .logo__stars--text {
+      fill: $text-color;
+      opacity: 0.7;
+    }
+
     .logo__text {
       fill: $text-color;
     }
@@ -108,13 +124,17 @@
 
     .logo__stars {
 
-      @media (min-width: $screen_lg) {
-        &--glasses {
+      &--glasses {
+
+        @media (min-width: $screen_lg) {
           fill: $pink;
         }
+      }
 
-        &--text,
-        &--stars {
+      &--text,
+      &--stars {
+
+        @media (min-width: $screen_lg) {
           fill: $text-color;
         }
       }

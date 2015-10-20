@@ -135,7 +135,8 @@
 
         .form__fieldset-inner {
 
-          label {
+          > label,
+          > div {
             width: 29.3%;
           }
         }
@@ -378,6 +379,10 @@
 
     &:hover {
       border: 2px solid $border-dark;
+
+      @media (min-width: $screen_lg) {
+        border: 2px solid $pink;
+      }
     }
 
     &:active {
