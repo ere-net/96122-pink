@@ -3,19 +3,88 @@
   text-align: center;
   background-color: $bg-color;
 
+  @media (min-width: $screen_md) {
+    text-align: left;
+  }
+
+  @media (min-width: $screen_lg) {
+    padding-top: 65px;
+  }
+
   &__inner {
     position: relative;
-    padding: 85px 20px 280px 20px;
-    background: $bg-color--light url("../img/bg_promo.png") no-repeat 50% 100%;
+    background-color: $bg-color--light;
+
+    @media (min-width: $screen_lg) {
+      margin-top: 34px;
+    }
 
     &:before {
-      content: '';
+      content: "";
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
-      height: 30px;
-      background-image: linear-gradient(to bottom right, $bg-color 50%, $bg-color--light 50%);
+      height: 94px;
+      background: url("../img/triangle-white.svg") no-repeat 50% 0;
+      background-size: 1200px 94px;
+
+      @media (min-width: $screen_lg) {
+        background-size: 100% 94px;
+      }
+    }
+  }
+
+  &__wrapper {
+    position: relative;
+    padding: 85px 20px 287px 20px;
+
+    @media (min-width: $screen_md) {
+      min-height: 480px;
+      padding: 90px 20px 7px 330px;
+    }
+
+    @media (min-width: $screen_lg) {
+      width: 960px;
+      margin: 0 auto;
+      padding: 347px 10px 20px;
+    }
+
+    &:before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 158px;
+      height: 278px;
+      transform: translate(-50%, 0);
+      background: url("../img/screen-mobile-3@1x.png") no-repeat 50% 100%;
+      background-size: 158px 278px;
+
+      @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+        background-image: url("../img/screen-mobile-3@2x.png");
+      }
+
+      @media (min-resolution: 288dpi), (min-resolution: 2.25dppx) {
+        background-image: url("../img/screen-mobile-3@3x.png");
+      }
+
+      @media (min-width: $screen_md) {
+        left: 20px;
+        width: 268px;
+        height: 481px;
+        transform: none;
+        background: url("../img/iphone-screen-tablet-3@1x.png") no-repeat 0 100%;
+        background-size: 268px 481px;
+
+        @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+          background-image: url("../img/iphone-screen-tablet-3@2x.png");
+        }
+      }
+
+      @media (min-width: $screen_lg) {
+        background: none;
+      }
     }
   }
 
@@ -23,25 +92,92 @@
     margin: 0;
     padding: 0;
     list-style: none;
+
+    @media (min-width: $screen_lg) {
+      display: flex;
+      justify-content: space-between;
+      text-align: center;
+    }
   }
 
   &__item {
-    margin-bottom: 40px;
+    padding-bottom: 31px;
+
+    @media (min-width: $screen_md) {
+      padding-bottom: 35px;
+    }
+
+    @media (min-width: $screen_lg) {
+      width: 300px;
+      padding: 0 20px;
+      
+      &:nth-of-type(1):before {
+        content: "";
+        position: absolute;
+        top: -10px;
+        left: 18px;
+        width: 292px;
+        height: 302px;
+        background: transparent url("../img/iphone-screen-desktop-1@1x.png") no-repeat 0 0;
+        background-size: 292px 302px;
+
+        @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+          background-image: url("../img/iphone-screen-desktop-1@2x.png");
+        }
+      }
+
+      &:nth-of-type(2):before {
+        content: "";
+        position: absolute;
+        top: -10px;
+        left: 50%;
+        width: 292px;
+        height: 302px;
+        transform: translate(-50%, 0);
+        background: transparent url("../img/iphone-screen-desktop-2@1x.png") no-repeat 0 0;
+        background-size: 292px 302px;
+
+        @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+          background-image: url("../img/iphone-screen-desktop-2@2x.png");
+        }
+      }
+
+      &:nth-of-type(3):before {
+        content: "";
+        position: absolute;
+        top: -10px;
+        right: 18px;
+        width: 292px;
+        height: 302px;
+        background: transparent url("../img/iphone-screen-desktop-3@1x.png") no-repeat 0 0;
+        background-size: 292px 302px;
+
+        @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+          background-image: url("../img/iphone-screen-desktop-3@2x.png");
+        }
+      }
+    }
   }
 
   &__item-title {
     margin: 0;
-    margin-bottom: 18px;
+    margin-bottom: 12px;
     font: 800 #{$text-size--h2}/1.35em $font;
     color: $black;
-  }
 
-  &__item-descr {
-    font: 400 #{$text-size}/1.75em $font;
-    color: $text-color;
+    @media (min-width: $screen_lg) {
+      margin-bottom: 25px;
+      font: 800 30px/1em $font;
+    }
   }
 
   &__item-descr p {
     margin: 0;
+    font: 400 #{$text-size}/1.71em $font;
+    color: $text-color;
+
+    @media (min-width: $screen_lg) {
+      font: 400 18px/1.67em $font;
+    }
   }
 }

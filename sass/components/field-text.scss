@@ -15,6 +15,14 @@
     color: $text-color;
     @include placeholder($text-color);
 
+    &:hover {
+      border: 2px solid $border-dark;
+    }
+
+    &:focus {
+      border: 2px solid $pink;
+    }
+
     &[readonly] {
       background-color: $bg-color--light;
     }
@@ -34,52 +42,13 @@
       padding-top: 14px;
       text-align: center;
     }
-  }
 
-  &--num input {
-    padding-left: 65px;
-    padding-right: 65px;
-    text-align: center;
-  }
+    &--left {
 
-  &__minus,
-  &__plus {
-    position: absolute;
-    top: 0;
-    width: 63px;
-    height: 63px;
-    cursor: pointer;
-  }
-
-  &__minus {
-    left: 0;
-    border-right: 2px solid $border-grey;
-  }
-
-  &__plus {
-    right: 0;
-    border-left: 2px solid $border-grey;
-  }
-
-  &__minus:before,
-  &__plus:before,
-  &__plus:after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    background-color: $text-color;
-    transform: translate(-50%, -50%);
-  }
-
-  &__minus:before,
-  &__plus:before {
-    width: 27px;
-    height: 3px;
-  }
-
-  &__plus:after {
-    width: 3px;
-    height: 27px;
+      @media (min-width: $screen_md) {
+        padding-left: 23px;
+        text-align: left;
+      }
+    }
   }
 }

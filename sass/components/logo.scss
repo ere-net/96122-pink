@@ -1,12 +1,123 @@
-.logo {  //module6 svg  comming soon
+.logo {
   position: absolute;
   left: 20px;
   top: 20px;
   z-index: 50;
+  text-decoration: none;
 
-    &--glasses {
-      position: relative;
-      left: 0;
-      top: 0;
+  @media (min-width: $screen_md) {
+    top: 27px;
+    left: 20px;
+  }
+
+  @media (min-width: $screen_lg) {
+    left: 10px;
+  }
+
+  &:hover .logo__glasses,
+  &:hover .logo__text,
+  &:hover .logo__stars--glasses,
+  &:hover .logo__stars--text {
+    fill: $pink;
+  }
+
+  &:active .logo__glasses,
+  &:active .logo__text,
+  &:active .logo__stars--glasses,
+  &:active .logo__stars--text {
+    fill: $bg-color;
+    opacity: 0.7;
+  }
+
+  &__glasses {
+    display: none;
+
+    @media (min-width: $screen_md) {
+      display: inline-block;
+      margin-right: 8px;
+      fill: $bg-color;
     }
+
+    @media (min-width: $screen_lg) {
+      display: none;
+    }
+  }
+
+  &__text {
+    fill: $bg-color;
+
+    @media (min-width: $screen_lg) {
+      display: none;
+    }
+  }
+
+  &__stars {
+    display: none;
+
+    @media (min-width: $screen_lg) {
+      display: inline-block;
+      fill: $pink;
+
+      &--glasses,
+      &--text {
+        fill: $bg-color;
+      }
+
+      &--stars {
+        fill: $pink;
+      }
+    }
+  }
+
+  &--glasses {
+    position: relative;
+    left: 0;
+    top: 0;
+
+    @media (min-width: $screen_md) {
+      top: -6px;
+      width: 180px;
+      text-align: left;
+    }
+
+    &:hover .logo__stars--stars {
+      fill: $pink;
+    }
+
+    &:active .logo__text {
+      fill: $text-color;
+    }
+
+    &:active .logo__glasses {
+      fill: $pink;
+    }
+
+    .logo__text {
+      fill: $text-color;
+    }
+
+    .logo__glasses {
+      display: inline-block;
+      margin-right: 8px;
+      fill: $pink;
+
+      @media (min-width: $screen_lg) {
+        display: none;
+      }
+    }
+
+    .logo__stars {
+
+      @media (min-width: $screen_lg) {
+        &--glasses {
+          fill: $pink;
+        }
+
+        &--text,
+        &--stars {
+          fill: $text-color;
+        }
+      }
+    }
+  }
 }
