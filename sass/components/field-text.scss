@@ -1,0 +1,54 @@
+.field-text {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  width: 100%;
+  margin-bottom: 23px;
+
+  input {
+    width: 100%;
+    padding: 14px 22px 15px 22px;
+    border: 2px solid $border-grey;
+    border-radius: 2px;
+    outline: 0;
+    font: 400 18px/1.7em $font;
+    color: $text-color;
+    @include placeholder($text-color);
+
+    &:hover {
+      border: 2px solid $border-dark;
+    }
+
+    &:focus {
+      border: 2px solid $pink;
+    }
+
+    &[readonly] {
+      background-color: $bg-color--light;
+    }
+  }
+
+  &__name {
+    display: block;
+    margin-bottom: 11px;
+    padding-left: 23px;
+    font: 400 #{$text-size}/1.3em $font;
+    color: $pink;
+    text-transform: uppercase;
+
+    &--center {
+      margin-bottom: 0;
+      padding-left: 0;
+      padding-top: 14px;
+      text-align: center;
+    }
+
+    &--left {
+
+      @media (min-width: $screen_md) {
+        padding-left: 23px;
+        text-align: left;
+      }
+    }
+  }
+}

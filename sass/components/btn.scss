@@ -1,0 +1,60 @@
+.btn {
+  display: block;
+  width: 100%;
+  padding: 19px 0 20px;
+  font: 800 18px/1.2em $font;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: $white;
+  background-color: $btn;
+  border: 0;
+  border-radius: 2px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #1c9b5e;
+  }
+
+  &:active {
+    background-color: #1c9b5e;
+    color: fade_out($white, 0.7);
+  }
+
+  &--transparent {
+    padding: 14px 0;
+    text-transform: none;
+    background-color: transparent;
+    border: 3px solid $white;
+    border-radius: 25px;
+
+    &:hover {
+      background-color: $bg-color;
+      color: $pink;
+    }
+
+    &:active {
+      background-color: $bg-color;
+      color: fade_out($pink, 0.7);
+    }
+  }
+
+  &--form-send {
+
+    @media (min-width: $screen_md) {
+      width: 48%;
+    }
+
+    @media (min-width: $screen_lg) {
+      width: 300px;
+    }
+  }
+
+  &--send {
+
+  }
+
+  &--failure {
+
+  }
+}

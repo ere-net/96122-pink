@@ -1,0 +1,36 @@
+html {
+  box-sizing: border-box;
+  font-size: $html-size-base;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  min-width: 320px;
+  //max-width: 1200px;
+  font: 400 #{$text-size}/1.9em $font;
+  color: $text-color;
+  background-color: $bg-color;
+  margin: 0 auto;
+  counter-reset: travellers;
+}
+
+img {
+  vertical-align: middle;
+  max-width: 100%;
+  border: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+button {
+  outline: none;
+}

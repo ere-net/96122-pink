@@ -1,0 +1,185 @@
+.price {
+  position: relative;
+  padding: 125px 0 40px;
+  background-color: $bg-color--light;
+
+  @media (min-width: $screen_md) {
+    padding: 115px 20px 68px;
+  }
+
+  @media (min-width: $screen_lg) {
+    padding: 143px 0 95px;
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 94px;
+    background: url("../img/triangle-white.svg") no-repeat 50% 0;
+    background-size: 1200px 94px;
+
+    @media (min-width: $screen_lg) {
+      background-size: 100% 94px;
+    }
+  }
+
+  &__inner {
+    overflow: hidden;
+    margin: 0 auto;
+
+    @media (min-width: $screen_lg) {
+      width: 960px;
+      padding: 0 10px;
+    }
+  }
+
+  &__table {
+    width: 265%;
+    margin: 0 20px;
+    border-collapse: collapse;
+    background-color: $white;
+
+    @media (min-width: $screen_md) {
+      width: 100%;
+      margin: 0;
+    }
+
+    th {
+      position: relative;
+      overflow: hidden;
+      padding: 20px;
+      background-color: $border-dark;
+      text-align: center;
+
+      @media (min-width: $screen_md) {
+        width: 25%;
+
+        &:first-child {
+          background-color: $bg-color--light;
+        }
+      }
+
+      @media (min-width: $screen_lg) {
+        padding: 17px 20px 20px;
+      }
+    }
+
+    td {
+      position: relative;
+      padding: 18px;
+      font: 400 #{$text-size}/2.15em $font;
+      border: 2px solid #e5e5e5;
+      color: $text-color;
+
+      @media (min-width: $screen_md) {
+        font: 400 18px/1.2em $font;
+      }
+    }
+  }
+
+  &__main-column {
+    display: none;
+
+    @media (min-width: $screen_md) {
+      display: table-cell;
+    }
+  }
+
+  &__item {
+    text-transform: uppercase;
+
+    @media (min-width: $screen_md) {
+      display: none;
+    }
+  }
+
+  &__no {
+    position: absolute;
+    @include text-replacement;
+    bottom: 17px;
+    right: 19px;
+    width: 27px;
+    height: 27px;
+    background: url("../img/no.svg") no-repeat 0 0;
+
+    @media (min-width: $screen_md) {
+      left: 50%;
+      transform: translate(-50%, 0);
+    }
+  }
+
+  &__yes {
+    position: absolute;
+    @include text-replacement;
+    bottom: 18px;
+    right: 18px;
+    width: 30px;
+    height: 22px;
+    background: url("../img/yes.svg") no-repeat 0 0;
+
+    @media (min-width: $screen_md) {
+      left: 50%;
+      transform: translate(-50%, 0);
+    }
+  }
+
+  &__price-type {
+    display: block;
+    font: 800 18px/1.75em $font;
+    text-transform: uppercase;
+    color: $white;
+
+    @media (min-width: $screen_md) {
+      font: 800 16px/1.75em $font;
+    }
+
+    @media (min-width: $screen_lg) {
+      font: 800 18px/1.67em $font;
+    }
+  }
+
+  &__price-usd {
+    display: block;
+    font: 300 24px/1.25em $font;
+    text-transform: uppercase;
+    color: $white;
+
+    @media (min-width: $screen_md) {
+      font: 300 18px/1.25em $font;
+    }
+
+    @media (min-width: $screen_lg) {
+      font: 300 24px/1.25em $font;
+    }
+  }
+
+  &__hit{
+
+    &:before {
+      content: "";
+      position: absolute;
+      width: 100px;
+      height: 30px;
+      top: 5px;
+      left: -25px;
+      transform: rotate(-45deg);
+      background: $pink none repeat scroll 0 0;
+    }
+
+    &:after {
+      content: "хит";
+      position: absolute;
+      top: 15px;
+      left: 8px;
+      transform: rotate(-45deg);
+      font: 400 #{$text-size}/1.2em $font;
+      text-transform: uppercase;
+      color: $white;
+    }
+  }
+}
+
+

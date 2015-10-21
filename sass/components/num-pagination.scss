@@ -1,0 +1,26 @@
+.num-pagination {
+  padding: 23px 0 27px;
+  font-size: 0;
+
+  &__item {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 9px;
+    padding: 18px 24px 19px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: 2px solid $border-grey;
+    border-radius: 2px;
+    font: 800 18px/1.25em $font;
+    color: $text-color;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+
+    &--active {
+      border-color: $pink;
+    }
+  }
+}

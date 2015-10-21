@@ -1,0 +1,31 @@
+.text-pagination {
+  padding: 7px 0 4px;
+  font-size: 0;
+
+  &__item {
+    display: inline-block;
+    vertical-align: top;
+    width: 46%;
+    margin-bottom: 20px;
+    padding: 18px 24px 19px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: 2px solid $border-grey;
+    border-radius: 2px;
+    font: 800 18px/1.25em $font;
+    color: $text-color;
+
+    &--back {
+      width: 100%;
+    }
+
+    &:nth-child(1) {
+      margin-right: 8%;
+    }
+
+    &--active {
+      border-color: $pink;
+    }
+  }
+}
