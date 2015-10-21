@@ -1,237 +1,281 @@
 (function() {
 
-  // start field-range change
+  if (document.querySelector(".form").length > 0) {
 
-  function initNumberField(inputParent,wordForms,maxValue) {
+    // start field-range change
 
-    var input = inputParent.querySelector("input");
-    var minus = inputParent.querySelector(".field-range__minus");
-    var plus = inputParent.querySelector(".field-range__plus");
+    function initNumberField(inputParent, wordForms, maxValue) {
 
-    // при фокусе оставляем только цифры
-    input.addEventListener("focusin", function() {
-      input.value = parseInt(input.value);
-    });
+      var input = inputParent.querySelector("input");
+      var minus = inputParent.querySelector(".field-range__minus");
+      var plus = inputParent.querySelector(".field-range__plus");
 
-    // возвращаем текстовое описание при focusout
-    input.addEventListener("focusout", function() {
-      var value = parseInt(input.value);
+      // при фокусе оставляем только цифры
+      input.addEventListener("focusin", function () {
+        input.value = parseInt(input.value);
+      });
 
-      if ((isNaN(value)) || (value <= 0)) {
-        input.value = 1 + " " + wordForms[CheckNumber(1)];
-      }
-      else {
-        if (value > maxValue) {
-          input.value = maxValue + " " + wordForms[CheckNumber(maxValue)];
-        }
-        else {
-          input.value = value + " " + wordForms[CheckNumber(value)];
-        }
-      }
-    });
+      // возвращаем текстовое описание при focusout
+      input.addEventListener("focusout", function () {
+        var value = parseInt(input.value);
 
-    minus.addEventListener("tap", function () {
-      changeNumber(false);
-    });
-
-    plus.addEventListener("tap", function () {
-      changeNumber(true);
-    });
-
-    // выбор нужной формы слова
-    function CheckNumber(number) {
-      var b = number % 10;
-      var a = (number % 100 - b) / 10;
-
-      if(a == 0 || a >= 2) {
-        if(b == 0 || (b > 4 && b <= 9)) {
-          return 2;
-        }
-        else {
-          if(b != 1) {
-            return 1;
-          }
-          else {
-            return 0;
-          }
-        }
-      }
-      else {
-        return 2;
-      }
-    }
-
-    // изменение числа при нажатии на кнопки + и -
-    function changeNumber(operation) {
-      var value = parseInt(input.value);
-
-      if (isNaN(value)) {
-        value = 0;
-      }
-
-      if (operation) {
-        if (value >= maxValue) {
-          input.value = maxValue + " " + wordForms[CheckNumber(maxValue)];
-        }
-        else {
-          value = value + 1;
-          input.value = value + " " + wordForms[CheckNumber(value)];
-        }
-      }
-      else {
-        if (value > 1) {
-          value = value - 1;
-          input.value = value + " " + wordForms[CheckNumber(value)];
-        }
-        else {
+        if ((isNaN(value)) || (value <= 0)) {
           input.value = 1 + " " + wordForms[CheckNumber(1)];
         }
+        else {
+          if (value > maxValue) {
+            input.value = maxValue + " " + wordForms[CheckNumber(maxValue)];
+          }
+          else {
+            input.value = value + " " + wordForms[CheckNumber(value)];
+          }
+        }
+      });
+
+      minus.addEventListener("tap", function () {
+        changeNumber(false);
+      });
+
+      plus.addEventListener("tap", function () {
+        changeNumber(true);
+      });
+
+      // выбор нужной формы слова
+      function CheckNumber(number) {
+        var b = number % 10;
+        var a = (number % 100 - b) / 10;
+
+        if (a == 0 || a >= 2) {
+          if (b == 0 || (b > 4 && b <= 9)) {
+            return 2;
+          }
+          else {
+            if (b != 1) {
+              return 1;
+            }
+            else {
+              return 0;
+            }
+          }
+        }
+        else {
+          return 2;
+        }
+      }
+
+      // изменение числа при нажатии на кнопки + и -
+      function changeNumber(operation) {
+        var value = parseInt(input.value);
+
+        if (isNaN(value)) {
+          value = 0;
+        }
+
+        if (operation) {
+          if (value >= maxValue) {
+            input.value = maxValue + " " + wordForms[CheckNumber(maxValue)];
+          }
+          else {
+            value = value + 1;
+            input.value = value + " " + wordForms[CheckNumber(value)];
+          }
+        }
+        else {
+          if (value > 1) {
+            value = value - 1;
+            input.value = value + " " + wordForms[CheckNumber(value)];
+          }
+          else {
+            input.value = 1 + " " + wordForms[CheckNumber(1)];
+          }
+        }
       }
     }
-  }
 
-  initNumberField(document.querySelector(".field-range--duration"),["день", "дня", "дней"],365);
-  initNumberField(document.querySelector(".field-range--people"),["чел", "чел", "чел"],10);
+    initNumberField(document.querySelector(".field-range--duration"), ["день", "дня", "дней"], 365);
+    initNumberField(document.querySelector(".field-range--people"), ["чел", "чел", "чел"], 10);
 
-  // end field-range change
-
-
-  // start add and delete travellers
+    // end field-range change
 
 
+    // start add and delete travellers
 
-  // end add and delete travellers
+    var form = document.querySelector(".form");
 
+    var travellersArea = form.querySelector(".form__traveller");
+    var travellersRange = form.querySelector(".field-range--people");
+    var travellersTemplate = form.querySelector("#traveller-template").innerHTML;
+    var travellersAmount = travellersRange.querySelector("input");
+    var travellersCounter = parseInt(travellersAmount.value);
+    var minus = travellersRange.querySelector(".field-range__minus");
+    var plus = travellersRange.querySelector(".field-range__plus");
 
-  // start send form
+    // начальное заполнение
+    for (var i = 1; i <= travellersCounter; i++) {
+      addTraveller(i);
+    }
 
-  if (!("FormData" in window) || !("FileReader" in window)) {
-    return;
-  }
-
-  var form = document.querySelector(".form");
-  var area = form.querySelector(".form__gallery-list");
-
-  var template = document.querySelector("#image-template").innerHTML;
-  var queue = [];
-
-  var modal_success = document.querySelector(".modal--success");
-  var modal_failure = document.querySelector(".modal--failure");
-
-  var modal_success_close = modal_success.querySelector(".btn--send");
-  var modal_failure_close = modal_failure.querySelector(".btn--failure");
-
-  var user_name = form.querySelector("[name='user_name']");
-  var user_surname = form.querySelector("[name='user_surname']");
-  var app = form.querySelector("[name='app']");
-  var travel_start = form.querySelector("[name='travel_start']");
-  var travel_duration = form.querySelector("[name='travel_duration']");
-  var travellers_number = form.querySelector("[name='travellers_number']");
-  var traveller_name1 = form.querySelector("[name='traveller_name1']");
-  //var images = form.querySelector("[name='images']");
-
-  form.addEventListener("submit", function(event) {
-    event.preventDefault();
-
-    var data = new FormData(form);
-
-    queue.forEach(function(element) {
-      data.append("images", element.file);
+    // нажатие кнопки плюс
+    plus.addEventListener("tap", function () {
+      event.preventDefault();
+      var counter = parseInt(travellersAmount.value);
+      addTraveller(counter);
     });
 
-    if (user_name.value && user_surname.value && app.value && travel_start.value && travel_duration.value && travellers_number.value && traveller_name1.value ) {
-      modal_success.classList.remove("modal--show");
-      modal_success.classList.add("modal--show");
+    // нажатие кнопки минус
+    minus.addEventListener("tap", function () {
+      event.preventDefault();
+      var counter = parseInt(travellersAmount.value);
+      deleteTraveller(counter + 1);
+    });
 
-      request(data, function(response) {
-        console.log(response);
-      });
-    } else {
-      modal_failure.classList.remove("modal--show");
-      modal_failure.classList.add("modal--show");
+    // функция добавления
+    function addTraveller(id){
+      var html = Mustache.render(travellersTemplate, {"id": id});
+      var li = document.createElement("li");
+      li.innerHTML = html;
+      li.id = id;
+      travellersArea.appendChild(li);
     }
-  });
 
-  modal_success_close.addEventListener("tap", function(event) {
-    event.preventDefault();
-    modal_success.classList.remove("modal--show");
-  });
+    // функция удаления
+    function deleteTraveller(id){
+      var last = document.getElementById(id);
+      last.remove();
+    }
 
-  modal_failure_close.addEventListener("tap", function(event) {
-    event.preventDefault();
-    modal_failure.classList.remove("modal--show");
-  });
+    // end add and delete travellers
 
-  window.addEventListener("keydown", function(event) {
-    if (event.keyCode == 27) {
-      if (modal_success.classList.contains("modal--show")) {
+
+    // start send form
+
+    if (!("FormData" in window) || !("FileReader" in window)) {
+      return;
+    }
+
+    var area = form.querySelector(".form__gallery-list");
+
+    var template = document.querySelector("#image-template").innerHTML;
+    var queue = [];
+
+    var modal_success = document.querySelector(".modal--success");
+    var modal_failure = document.querySelector(".modal--failure");
+
+    var modal_success_close = modal_success.querySelector(".btn--send");
+    var modal_failure_close = modal_failure.querySelector(".btn--failure");
+
+    var user_name = form.querySelector("[name='user_name']");
+    var user_surname = form.querySelector("[name='user_surname']");
+    var app = form.querySelector("[name='app']");
+    var travel_start = form.querySelector("[name='travel_start']");
+    var travel_duration = form.querySelector("[name='travel_duration']");
+    var travellers_number = form.querySelector("[name='travellers_number']");
+    var traveller_name1 = form.querySelector("[name='traveller_name1']");
+    //var images = form.querySelector("[name='images']");
+
+    form.addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      var data = new FormData(form);
+
+      queue.forEach(function (element) {
+        data.append("images", element.file);
+      });
+
+      if (user_name.value && user_surname.value && app.value && travel_start.value && travel_duration.value && travellers_number.value && traveller_name1.value) {
         modal_success.classList.remove("modal--show");
-      }
-      if (modal_failure.classList.contains("modal--show")) {
+        modal_success.classList.add("modal--show");
+
+        request(data, function (response) {
+          console.log(response);
+        });
+      } else {
         modal_failure.classList.remove("modal--show");
-      }
-    }
-  });
-
-  function request(data, fn) {
-    var xhr = new XMLHttpRequest();
-    var time = (new Date()).getTime();
-
-    xhr.open("post", "https://echo.htmlacademy.ru/adaptive?" + time);
-    xhr.addEventListener("readystatechange", function() {
-      if (xhr.readyState == 4) {
-        fn(xhr.responseText);
+        modal_failure.classList.add("modal--show");
       }
     });
-    xhr.send(data);
-  }
 
-  form.querySelector("#upload_photo").addEventListener("change", function() {
+    modal_success_close.addEventListener("tap", function (event) {
+      event.preventDefault();
+      modal_success.classList.remove("modal--show");
+    });
 
-    var files = this.files;
+    modal_failure_close.addEventListener("tap", function (event) {
+      event.preventDefault();
+      modal_failure.classList.remove("modal--show");
+    });
 
-    for (var i = 0; i < files.length; i++) {
-      preview(files[i]);
-    }
-    this.value = "";
-  });
+    window.addEventListener("keydown", function (event) {
+      if (event.keyCode == 27) {
+        if (modal_success.classList.contains("modal--show")) {
+          modal_success.classList.remove("modal--show");
+        }
+        if (modal_failure.classList.contains("modal--show")) {
+          modal_failure.classList.remove("modal--show");
+        }
+      }
+    });
 
-  function preview(file) {
-    if (file.type.match(/image.*/)) {
-      var reader = new FileReader();
+    function request(data, fn) {
+      var xhr = new XMLHttpRequest();
+      var time = (new Date()).getTime();
 
-      reader.addEventListener("load", function(event) {
-        var html = Mustache.render(template, {
-          "image": event.target.result,
-          "name": file.name
-        });
-
-        var li = document.createElement("li");
-        li.classList.add("form__photo");
-        li.innerHTML = html;
-        area.appendChild(li);
-
-        li.querySelector(".form__delete-photo").addEventListener("tap", function(event) {
-          event.preventDefault();
-          removePreview(li);
-        });
-
-        queue.push({
-          "file": file,
-          "li": li
-        });
+      xhr.open("post", "https://echo.htmlacademy.ru/adaptive?" + time);
+      xhr.addEventListener("readystatechange", function () {
+        if (xhr.readyState == 4) {
+          fn(xhr.responseText);
+        }
       });
-      reader.readAsDataURL(file);
+      xhr.send(data);
     }
-  }
 
-  function removePreview(li) {
-    queue = queue.filter(function(element) {
-      return element.li != li;
+    form.querySelector("#upload_photo").addEventListener("change", function () {
+
+      var files = this.files;
+
+      for (var i = 0; i < files.length; i++) {
+        preview(files[i]);
+      }
+      this.value = "";
     });
-    li.parentNode.removeChild(li);
+
+    function preview(file) {
+      if (file.type.match(/image.*/)) {
+        var reader = new FileReader();
+
+        reader.addEventListener("load", function (event) {
+          var html = Mustache.render(template, {
+            "image": event.target.result,
+            "name": file.name
+          });
+
+          var li = document.createElement("li");
+          li.classList.add("form__photo");
+          li.innerHTML = html;
+          area.appendChild(li);
+
+          li.querySelector(".form__delete-photo").addEventListener("tap", function (event) {
+            event.preventDefault();
+            removePreview(li);
+          });
+
+          queue.push({
+            "file": file,
+            "li": li
+          });
+        });
+        reader.readAsDataURL(file);
+      }
+    }
+
+    function removePreview(li) {
+      queue = queue.filter(function (element) {
+        return element.li != li;
+      });
+      li.parentNode.removeChild(li);
+    }
+
+    // end send form
+
   }
-
-  // end send form
-
 })();

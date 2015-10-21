@@ -119,36 +119,23 @@
               <div class="field-range__inner">
                 <span class="field-range__minus"></span>
                 <span class="field-range__plus"></span>
-                <input type="text" name="travellers_number" value="2 чел" required>
+                <input type="text" name="travellers_number" value="2 чел" required readonly>
               </div>
             </div>
             <ol class="form__traveller">
-              <li>
-                <div class="form__traveller-info">
-                  <label class="field-text">
-                    <span class="field-text__name">Имя: *</span>
-                    <input type="text" name="traveller_name1" placeholder="Введите ваше имя" required>
-                  </label>
-                  <label class="field-text">
-                    <span class="field-text__name">Прозвище:</span>
-                    <input type="text" name="traveller_nick1" placeholder="Ну как же без этого!">
-                  </label>
-                </div>
-                <a class="form__traveller-delete" href="#">Удалить</a>
-              </li>
-              <li>
-                <div class="form__traveller-info">
-                  <label class="field-text">
-                    <span class="field-text__name">Имя: *</span>
-                    <input type="text" name="traveller_name2" placeholder="Введите ваше имя" required>
-                  </label>
-                  <label class="field-text">
-                    <span class="field-text__name">Прозвище:</span>
-                    <input type="text" name="traveller_nick2" placeholder="Ну как же без этого!">
-                  </label>
-                </div>
-                <a class="form__traveller-delete" href="#">Удалить</a>
-              </li>
+              <script id="traveller-template" type="text/html">
+                  <div class="form__traveller-info">
+                    <label class="field-text">
+                      <span class="field-text__name">Имя: *</span>
+                      <input type="text" name="traveller_name{{id}}" placeholder="Введите ваше имя" required>
+                    </label>
+                    <label class="field-text">
+                      <span class="field-text__name">Прозвище:</span>
+                      <input type="text" name="traveller_nick{{id}}" placeholder="Ну как же без этого!">
+                    </label>
+                  </div>
+                  <a class="form__traveller-delete" href="#">Удалить</a>
+              </script>
             </ol>
           </div>
         </fieldset>

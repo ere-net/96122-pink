@@ -57,6 +57,10 @@
   }
 
   &--row {
+    @media (min-width: $screen_md) {
+      width: 48%;
+    }
+
     @media (min-width: $screen_lg) {
       width: 29.3%;
     }

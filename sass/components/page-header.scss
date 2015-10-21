@@ -21,7 +21,7 @@
 
   @media (min-width: $screen_lg) {
     background: $bg-color--dark url("../img/background-fullsize.jpg") no-repeat 50% top;
-    background-size: 100% 853px;
+    background-size: cover;
   }
 
   &__wrapper {
