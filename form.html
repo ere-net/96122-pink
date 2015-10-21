@@ -93,19 +93,19 @@
         <fieldset class="form__fieldset  form__fieldset--when">
           <legend class="form__legend">Когда вы путешествовали? *</legend>
           <div class="form__fieldset-inner">
-            <label class="field-text">
+            <label class="field-text  field-text--row">
               <input type="text" name="travel_start" placeholder="1 апреля 2015" required>
               <span class="field-text__name  field-text__name--center  field-text__name--left">Дата выезда</span>
             </label>
-            <div class="field-range">
+            <div class="field-range  field-range--duration  field-range--row">
               <div class="field-range__inner">
                 <span class="field-range__minus"></span>
                 <span class="field-range__plus"></span>
-                <input type="number" min="1" max="999" pattern="\d+" name="travel_duration" placeholder="10 дней" required>
+                <input type="text" name="travel_duration" value="10 дней" required>
               </div>
               <span class="field-range__name">Продолжительность</span>
             </div>
-            <label class="field-text">
+            <label class="field-text  field-text--row">
               <input type="text" name="travel_end" placeholder="1 апреля 2015" readonly>
               <span class="field-text__name  field-text__name--center  field-text__name--left">Дата возвращения</span>
             </label>
@@ -115,13 +115,13 @@
         <fieldset class="form__fieldset  form__fieldset--travellers">
           <legend class="form__legend">Количество попутчиков *</legend>
           <div class="form__fieldset-inner">
-            <label class="field-range  field-range--people">
+            <div class="field-range  field-range--people">
               <div class="field-range__inner">
                 <span class="field-range__minus"></span>
                 <span class="field-range__plus"></span>
-                <input type="number" min="1" max="99" pattern="\d+" name="travellers_number" placeholder="2 чел" required>
+                <input type="text" name="travellers_number" value="2 чел" required>
               </div>
-            </label>
+            </div>
             <ol class="form__traveller">
               <li>
                 <div class="form__traveller-info">

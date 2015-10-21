@@ -1,42 +1,107 @@
 (function() {
 
-  // start of field-range change
+  // start field-range change
 
-  var elements = document.querySelectorAll(".field-range__inner");
+  function initNumberField(inputParent,wordForms,maxValue) {
 
-  for (var i = 0; i < elements.length; i++) {
-    initNumberField(elements[i]);
-  }
+    var input = inputParent.querySelector("input");
+    var minus = inputParent.querySelector(".field-range__minus");
+    var plus = inputParent.querySelector(".field-range__plus");
 
-  function initNumberField(parent) {
-    var input = parent.querySelector("input");
-    var minus = parent.querySelector(".field-range__minus");
-    var plus = parent.querySelector(".field-range__plus");
+    // при фокусе оставляем только цифры
+    input.addEventListener("focusin", function() {
+      input.value = parseInt(input.value);
+    });
 
-    minus.addEventListener("tap", function() {
+    // возвращаем текстовое описание при focusout
+    input.addEventListener("focusout", function() {
+      var value = parseInt(input.value);
+
+      if ((isNaN(value)) || (value <= 0)) {
+        input.value = 1 + " " + wordForms[CheckNumber(1)];
+      }
+      else {
+        if (value > maxValue) {
+          input.value = maxValue + " " + wordForms[CheckNumber(maxValue)];
+        }
+        else {
+          input.value = value + " " + wordForms[CheckNumber(value)];
+        }
+      }
+    });
+
+    minus.addEventListener("tap", function () {
       changeNumber(false);
     });
 
-    plus.addEventListener("tap", function() {
+    plus.addEventListener("tap", function () {
       changeNumber(true);
     });
 
+    // выбор нужной формы слова
+    function CheckNumber(number) {
+      var b = number % 10;
+      var a = (number % 100 - b) / 10;
+
+      if(a == 0 || a >= 2) {
+        if(b == 0 || (b > 4 && b <= 9)) {
+          return 2;
+        }
+        else {
+          if(b != 1) {
+            return 1;
+          }
+          else {
+            return 0;
+          }
+        }
+      }
+      else {
+        return 2;
+      }
+    }
+
+    // изменение числа при нажатии на кнопки + и -
     function changeNumber(operation) {
-      var value = Number(input.value);
+      var value = parseInt(input.value);
 
       if (isNaN(value)) {
         value = 0;
       }
 
       if (operation) {
-        input.value = value + 1;
-      } else {
-        input.value = value - 1;
+        if (value >= maxValue) {
+          input.value = maxValue + " " + wordForms[CheckNumber(maxValue)];
+        }
+        else {
+          value = value + 1;
+          input.value = value + " " + wordForms[CheckNumber(value)];
+        }
+      }
+      else {
+        if (value > 1) {
+          value = value - 1;
+          input.value = value + " " + wordForms[CheckNumber(value)];
+        }
+        else {
+          input.value = 1 + " " + wordForms[CheckNumber(1)];
+        }
       }
     }
   }
 
-  // end of field-range change
+  initNumberField(document.querySelector(".field-range--duration"),["день", "дня", "дней"],365);
+  initNumberField(document.querySelector(".field-range--people"),["чел", "чел", "чел"],10);
+
+  // end field-range change
+
+
+  // start add and delete travellers
+
+
+
+  // end add and delete travellers
+
 
   // start send form
 
@@ -53,8 +118,8 @@
   var modal_success = document.querySelector(".modal--success");
   var modal_failure = document.querySelector(".modal--failure");
 
-  var modal_success_close = modal_success.querySelector(".btn");
-  var modal_failure_close = modal_failure.querySelector(".btn");
+  var modal_success_close = modal_success.querySelector(".btn--send");
+  var modal_failure_close = modal_failure.querySelector(".btn--failure");
 
   var user_name = form.querySelector("[name='user_name']");
   var user_surname = form.querySelector("[name='user_surname']");
@@ -64,7 +129,6 @@
   var travellers_number = form.querySelector("[name='travellers_number']");
   var traveller_name1 = form.querySelector("[name='traveller_name1']");
   //var images = form.querySelector("[name='images']");
-
 
   form.addEventListener("submit", function(event) {
     event.preventDefault();
@@ -140,7 +204,7 @@
         var html = Mustache.render(template, {
           "image": event.target.result,
           "name": file.name
-        })
+        });
 
         var li = document.createElement("li");
         li.classList.add("form__photo");

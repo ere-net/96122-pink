@@ -56,6 +56,12 @@
     }
   }
 
+  &--row {
+    @media (min-width: $screen_lg) {
+      width: 29.3%;
+    }
+  }
+
   &__minus,
   &__plus {
     flex-shrink: 0;

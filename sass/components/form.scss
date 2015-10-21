@@ -125,19 +125,7 @@
           justify-content: space-between;
 
           label {
-            width: 48%;
             margin-bottom: 32px;
-          }
-        }
-      }
-
-      @media (min-width: $screen_lg) {
-
-        .form__fieldset-inner {
-
-          > label,
-          > div {
-            width: 29.3%;
           }
         }
       }
@@ -218,6 +206,15 @@
 
       @media (min-width: $screen_lg) {
         margin: 0 10px;
+      }
+
+      button:disabled {
+        background-color: $border-grey;
+        cursor: auto;
+
+        &:active {
+          color: $white;
+        }
       }
     }
   }
