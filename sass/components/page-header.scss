@@ -33,7 +33,7 @@
     }
 
     @media (min-width: $screen_lg) {
-      width: 960px;
+      width: $screen_lg;
       margin: 0 auto;
     }
   }
@@ -42,11 +42,11 @@
     padding: 12px 20px 25px;
 
     @media (min-width: $screen_md) {
-      padding: 12px 60px 25px;
+      padding: 12px 40px 25px;
     }
 
     @media (min-width: $screen_lg) {
-      //padding: 12px 60px 25px;
+      padding: 12px 60px 25px;
     }
 
     &--index {

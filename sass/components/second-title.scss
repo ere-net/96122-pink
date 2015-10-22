@@ -10,7 +10,7 @@
   }
 
   @media (min-width: $screen_lg) {
-    width: 960px;
+    width: $screen_lg;
     margin: 0 auto;
     padding: 0 10px 53px;
     font: 300 50px/1.2em $font;

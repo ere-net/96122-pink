@@ -2,6 +2,9 @@
 
   if (document.querySelector(".form").length > 0) {
 
+    var maxValueDays = 365;
+    var maxValueTravellers = 10;
+
     // start field-range change
 
     function initNumberField(inputParent, wordForms, maxValue) {
@@ -90,10 +93,12 @@
           }
         }
       }
+
+
     }
 
-    initNumberField(document.querySelector(".field-range--duration"), ["день", "дня", "дней"], 365);
-    initNumberField(document.querySelector(".field-range--people"), ["чел", "чел", "чел"], 10);
+    initNumberField(document.querySelector(".field-range--duration"), ["день", "дня", "дней"], maxValueDays);
+    initNumberField(document.querySelector(".field-range--people"), ["чел", "чел", "чел"], maxValueTravellers);
 
     // end field-range change
 
@@ -110,39 +115,60 @@
     var minus = travellersRange.querySelector(".field-range__minus");
     var plus = travellersRange.querySelector(".field-range__plus");
 
+    // функция добавления
+    function addTraveller(id){
+      var counter = travellersArea.querySelectorAll(".form__traveller-info").length;
+      var time = (new Date()).getTime();
+
+      if (counter < maxValueTravellers) {
+        var html = Mustache.render(travellersTemplate, {"id": time});
+        var li = document.createElement("li");
+        li.innerHTML = html;
+        travellersArea.appendChild(li);
+
+        // нажатие кнопки "удалить"
+          li.querySelector(".form__traveller-delete").addEventListener("tap", function (event) {
+            event.preventDefault();
+            deleteTraveller(li);
+          });
+      }
+    }
+
+    // функция удаления
+    function deleteTraveller(li){
+      var counter = travellersArea.querySelectorAll(".form__traveller-info").length;
+
+      if (counter > 1) {
+        queue = queue.filter(function (element) {
+          return element.li != li;
+        });
+        li.parentNode.removeChild(li);
+        travellersAmount.value = (parseInt(travellersAmount.value) - 1) + " чел";
+      }
+    }
+
     // начальное заполнение
     for (var i = 1; i <= travellersCounter; i++) {
       addTraveller(i);
     }
 
     // нажатие кнопки плюс
-    plus.addEventListener("tap", function () {
+    plus.addEventListener("tap", function (event) {
       event.preventDefault();
       var counter = parseInt(travellersAmount.value);
       addTraveller(counter);
     });
 
     // нажатие кнопки минус
-    minus.addEventListener("tap", function () {
+    minus.addEventListener("tap", function (event) {
       event.preventDefault();
-      var counter = parseInt(travellersAmount.value);
-      deleteTraveller(counter + 1);
+      var counter = travellersArea.querySelectorAll(".form__traveller-info").length;
+
+      if (counter > 1) {
+        var li = travellersArea.lastChild;
+        li.parentNode.removeChild(li);
+      }
     });
-
-    // функция добавления
-    function addTraveller(id){
-      var html = Mustache.render(travellersTemplate, {"id": id});
-      var li = document.createElement("li");
-      li.innerHTML = html;
-      li.id = id;
-      travellersArea.appendChild(li);
-    }
-
-    // функция удаления
-    function deleteTraveller(id){
-      var last = document.getElementById(id);
-      last.remove();
-    }
 
     // end add and delete travellers
 
@@ -171,7 +197,7 @@
     var travel_duration = form.querySelector("[name='travel_duration']");
     var travellers_number = form.querySelector("[name='travellers_number']");
     var traveller_name1 = form.querySelector("[name='traveller_name1']");
-    //var images = form.querySelector("[name='images']");
+    var images = form.querySelector("[name='images']");
 
     form.addEventListener("submit", function (event) {
       event.preventDefault();
@@ -182,7 +208,7 @@
         data.append("images", element.file);
       });
 
-      if (user_name.value && user_surname.value && app.value && travel_start.value && travel_duration.value && travellers_number.value && traveller_name1.value) {
+      if (user_name.value && user_surname.value && app.value && travel_start.value && travel_duration.value && travellers_number.value) {
         modal_success.classList.remove("modal--show");
         modal_success.classList.add("modal--show");
 

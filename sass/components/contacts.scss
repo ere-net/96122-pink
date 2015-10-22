@@ -101,7 +101,7 @@
     }
 
     @media (min-width: $screen_lg) {
-      width: 960px;
+      width: $screen_lg;
       margin: 0 auto;
       padding: 4px 10px 0;
     }

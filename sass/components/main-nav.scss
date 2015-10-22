@@ -21,9 +21,9 @@
       display: flex;
       flex-direction: row;
       justify-content: flex-end;
-      padding-left: 190px;
-      width: 960px;
+      width: $screen_lg;
       margin: 0 auto;
+      padding-left: 190px;
     }
 
     &:before {

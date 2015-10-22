@@ -1,10 +1,19 @@
 .text-pagination {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   padding: 7px 0 4px;
-  font-size: 0;
+
+  @media (min-width: $screen_md) {
+    flex-wrap: nowrap;
+    padding: 23px 0 8px;
+  }
+
+  @media (min-width: $screen_lg) {
+    padding: 26px 0 0;
+  }
 
   &__item {
-    display: inline-block;
-    vertical-align: top;
     width: 46%;
     margin-bottom: 20px;
     padding: 18px 24px 19px;
@@ -16,12 +25,43 @@
     font: 800 18px/1.25em $font;
     color: $text-color;
 
-    &--back {
-      width: 100%;
+    @media (min-width: $screen_md) {
+      width: 22.5%;
     }
 
-    &:nth-child(1) {
-      margin-right: 8%;
+    @media (min-width: $screen_lg) {
+      width: 31.7%;
+      margin-bottom: 5px;
+    }
+
+    &:hover,
+    &:active {
+      border-color: $pink;
+    }
+
+    &--prevous {
+      @media (min-width: $screen_md) {
+        order: 1;
+      }
+    }
+
+    &--next {
+      @media (min-width: $screen_md) {
+        order: 3;
+      }
+    }
+
+    &--back {
+      width: 100%;
+
+      @media (min-width: $screen_md) {
+        order: 2;
+        width: 48%;
+      }
+
+      @media (min-width: $screen_lg) {
+        width: 33.5%;
+      }
     }
 
     &--active {

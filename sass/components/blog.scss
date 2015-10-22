@@ -1,4 +1,14 @@
 .blog {
   padding: 12px 20px 0;
   background-color: $bg-color;
+
+  @media (min-width: $screen_md) {
+    padding: 12px 80px 0;
+  }
+
+  @media (min-width: $screen_lg) {
+    width: $screen_lg;
+    margin: 0 auto;
+    padding: 56px 70px 0;
+  }
 }

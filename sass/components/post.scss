@@ -2,8 +2,27 @@
   padding: 12px 20px 0;
   background-color: $bg-color;
 
+  @media (min-width: $screen_md) {
+    padding: 54px 20px 0;
+  }
+
+  @media (min-width: $screen_lg) {
+    width: $screen_lg;
+    margin: 0 auto;
+    padding: 76px 70px 0;
+  }
+
   &__content {
     padding-top: 28px;
+
+    @media (min-width: $screen_md) {
+      padding-top: 0;
+      margin-top: -2px;
+    }
+
+    @media (min-width: $screen_lg) {
+      margin-top: -7px;
+    }
     
     h2 {
       margin: 0 0 20px;
@@ -11,6 +30,12 @@
       font: 800 #{$text-size--h2}/1.7em $font;
       color: $text-color;
       text-transform: uppercase;
+
+      @media (min-width: $screen_md) {
+        //margin: 0 0 22px;
+        margin: 57px 0 22px;
+        font: 800 24px/1.25em $font;
+      }
     }
     
     p {
@@ -18,12 +43,23 @@
       padding: 0 0 29px;
       font: 400 #{$text-size}/1.9em $font;
       color: $text-color;
+
+      @media (min-width: $screen_md) {
+        //padding: 0 0 57px;
+        margin: 22px 0 30px;
+        padding: 0;
+        font: 400 18px/1.67em $font;
+      }
     }
 
     a {
       font: 400 #{$text-size}/1.9em $font;
       color: $pink;
       text-decoration: underline;
+
+      @media (min-width: $screen_md) {
+        font: 400 18px/1.67em $font;
+      }
     }
     
     ul {
@@ -32,14 +68,23 @@
       list-style: none;
       color: $pink;
 
+      @media (min-width: $screen_md) {
+        padding: 0 0 7px;
+      }
+
       li {
         position: relative;
         padding: 0 0 27px 21px;
         font: 400 #{$text-size}/1.9em $font;
         color: $text-color;
 
+        @media (min-width: $screen_md) {
+          padding: 0 0 30px 35px;
+          font: 400 18px/1.67em $font;
+        }
+
         &:before {
-          content: '';
+          content: "";
           position: absolute;
           top: 10px;
           left: 0;
@@ -57,12 +102,22 @@
       font: 400 #{$text-size}/1.9em $font;
       color: $text-color;
       border-left: 2px solid $pink;
+
+      @media (min-width: $screen_md) {
+        font: 400 18px/1.67em $font;
+      }
     }
 
     cite {
       display: block;
       font: 400 #{$text-size}/1.9em $font;
       color: #8a8a8a;
+      font-style: italic;
+
+      @media (min-width: $screen_md) {
+        font: 400 18px/1.67em $font;
+        font-style: italic;
+      }
     }
   }
 }

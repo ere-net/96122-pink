@@ -1,11 +1,52 @@
 .blog-post {
+  position: relative;
+  display: flex;
+  flex-direction: column;
   padding-bottom: 22px;
   border-bottom: 1px solid $border-grey;
 
+  @media (min-width: $screen_md) {
+    border-bottom: 2px dotted $border-grey;
+    padding-bottom: 41px;
+  }
+
+  @media (min-width: $screen_lg) {
+    padding-bottom: 44px;
+  }
+
+  &:before {
+    content: none;
+
+    @media (min-width: $screen_md) {
+      content: "";
+      position: absolute;
+      top: 50px;
+      left: -57px;
+      width: 28px;
+      height: 26px;
+      background: transparent url("../img/blog-post-icon.svg") no-repeat 0 0;
+    }
+
+    @media (min-width: $screen_lg) {
+      top: 56px;
+      left: -58px;
+    }
+  }
+
   &__title {
+    margin: 0;
     padding: 22px 0 7px;
     font: 800 #{$text-size--h2}/1.5em $font;
     color: $text-color;
+
+    @media (min-width: $screen_md) {
+      padding: 43px 0 10px;
+      font: 800 27px/1.11em $font;
+    }
+
+    @media (min-width: $screen_lg) {
+      padding: 49px 0 10px;
+    }
     
     a {
       text-decoration: none;
@@ -19,11 +60,20 @@
     font: 400 12px/1.5em $font;
     color: $pink;
     text-transform: uppercase;
+
+    @media (min-width: $screen_md) {
+      padding-bottom: 22px;
+      font: 400 14px/1.5em $font;
+    }
   }
 
   &__text p {
     font: 400 #{$text-size}/1.93em $font;
     color: $text-color;
+
+    @media (min-width: $screen_md) {
+      font: 400 18px/1.67em $font;
+    }
   }
 
   &:last-of-type {
@@ -34,13 +84,51 @@
     padding-bottom: 24px;
     text-align: center;
 
+    @media (min-width: $screen_md) {
+      padding-bottom: 44px;
+    }
+
+    &:before {
+      content: none;
+    }
+
     .blog-post__title {
       padding: 22px 0 23px;
       font: 800 30px/1.2em $font;
+
+      @media (min-width: $screen_md) {
+        order: 1;
+        padding: 22px 0 24px;
+        font: 800 50px/1.2em $font;
+      }
     }
 
-    .blog-post__text p {
-      font: 400 16px/1.69em $font;
+    .blog-post__date {
+
+      @media (min-width: $screen_md) {
+        order: 3;
+        position: absolute;
+        bottom: -11px;
+        left: 50%;
+        padding: 0 25px;
+        transform: translate(-50%, 0);
+        background-color: $bg-color;
+      }
+    }
+
+    .blog-post__text {
+
+      @media (min-width: $screen_md) {
+        order: 2;
+      }
+
+      p {
+        font: 400 16px/1.69em $font;
+
+        @media (min-width: $screen_md) {
+          font: 400 24px/1.67em $font;
+        }
+      }
     }
   }
 }

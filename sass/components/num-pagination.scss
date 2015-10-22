@@ -1,11 +1,40 @@
 .num-pagination {
-  padding: 23px 0 27px;
-  font-size: 0;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 23px 0 17px;
+  margin-left: -9px;
+
+  @media (min-width: $screen_md) {
+    padding: 17px 0 39px;
+    margin-left: -11px;
+  }
+
+  @media (min-width: $screen_lg) {
+    padding: 49px 0 23px;
+  }
+
+  &:before {
+    content: none;
+
+    @media (min-width: $screen_md) {
+      content: "стр.";
+      position: absolute;
+      top: 37px;
+      left: -49px;
+      text-decoration: none;
+      text-transform: uppercase;
+      font: 800 18px/1.25em $font;
+      color: $text-color;
+    }
+
+    @media (min-width: $screen_lg) {
+      top: 69px;
+    }
+  }
 
   &__item {
-    display: inline-block;
-    vertical-align: top;
-    margin-right: 9px;
+    margin: 0 0 10px 9px;
     padding: 18px 24px 19px;
     text-align: center;
     text-decoration: none;
@@ -15,8 +44,13 @@
     font: 800 18px/1.25em $font;
     color: $text-color;
 
-    &:last-of-type {
-      margin-right: 0;
+    @media (min-width: $screen_md) {
+      margin: 0 0 10px 11px;
+    }
+
+    &:hover,
+    &:active {
+      border-color: $pink;
     }
 
     &--active {

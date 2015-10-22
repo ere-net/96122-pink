@@ -22,9 +22,9 @@
       <nav class="main-nav">
         <ul class="main-nav__list">
           <li class="main-nav__item"><a href="#">Информация</a></li>
-          <li class="main-nav__item"><a href="#">Блог</a></li>
+          <li class="main-nav__item"><a href="blog.html">Блог</a></li>
           <li class="main-nav__item"><a href="#">Отзывы</a></li>
-          <li class="main-nav__item"><a href="#">Конкурс</a></li>
+          <li class="main-nav__item"><a href="form.html">Конкурс</a></li>
         </ul>
         <a class="main-nav__toggle" href="#"><span></span></a>
       </nav>
@@ -174,7 +174,7 @@
           <legend class="form__legend">Ваши фотографии из поездки *</legend>
           <div class="form__fieldset-inner">
             <label class="form__upload">
-              <input type="file" id="upload_photo" name="images" multiple >Загрузить фото <!--required-->
+              <input type="file" id="upload_photo" name="images" multiple>Загрузить фото <!--required-->
             </label>
             <div class="form__gallery">
               <ul class="form__gallery-list">
@@ -257,18 +257,18 @@
       </div>
     </section>
 
-  <script id="image-template" type="text/html">
+    <script id="image-template" type="text/html">
 
-    <div class="form__delete-photo"></div>
-    <img src="{{image}}" alt="{{name}}" title="{{name}}" width="67" height="68">
-    <span class="form__photo-name">{{name}}</span>
+      <div class="form__delete-photo"></div>
+      <img src="{{image}}" alt="{{name}}" title="{{name}}" width="67" height="68">
+      <span class="form__photo-name">{{name}}</span>
 
-  </script>
+    </script>
 
-  <script src="js/components/mustache.min.js"></script>
-  <script src="js/components/tap.min.js"></script>
-  <script src="js/components/form.js"></script>
-  <script src="js/script.js"></script>
+    <script src="js/components/mustache.min.js"></script>
+    <script src="js/components/tap.min.js"></script>
+    <script src="js/components/form.js"></script>
+    <script src="js/script.js"></script>
 
   </body>
 </html>
