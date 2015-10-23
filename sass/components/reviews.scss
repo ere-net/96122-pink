@@ -1,7 +1,11 @@
 .reviews {
   position: relative;
   background-color: $bg-color;
-  padding: 48px 20px 30px;
+  padding: 46px 20px 0;
+
+  @media (min-width: $screen_md) {
+    padding: 48px 20px 0;
+  }
 
   @media (min-width: $screen_lg) {
     width: $screen_lg;

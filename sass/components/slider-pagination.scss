@@ -2,11 +2,10 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  margin: 5px 0;
-  padding-top: 15px;
+  margin: 26px 0 5px;
 
   @media (min-width: $screen_md) {
-    padding-top: 7px;
+    margin-top: 13px;
   }
 
   &--reviews {
@@ -17,6 +16,7 @@
   }
 
   &--price {
+    margin: 33px 0 5px;
 
     @media (min-width: $screen_md) {
       display: none;

@@ -1,13 +1,15 @@
 .price {
   position: relative;
-  padding: 125px 0 40px;
+  padding: 125px 0 36px;
   background-color: $bg-color--light;
 
   @media (min-width: $screen_md) {
-    padding: 115px 20px 68px;
+    margin-top: -11px;
+    padding: 109px 20px 68px;
   }
 
   @media (min-width: $screen_lg) {
+    margin-top: 0;
     padding: 143px 0 95px;
   }
 
@@ -50,12 +52,13 @@
     th {
       position: relative;
       overflow: hidden;
-      padding: 20px;
+      padding: 17px 20px 20px;
       background-color: $border-dark;
       text-align: center;
 
       @media (min-width: $screen_md) {
         width: 25%;
+        padding: 12px 20px 13px;
 
         &:first-child {
           background-color: $bg-color--light;
@@ -69,12 +72,17 @@
 
     td {
       position: relative;
-      padding: 18px;
+      padding: 15px 18px 14px 20px;
       font: 400 #{$text-size}/2.15em $font;
       border: 2px solid #e5e5e5;
       color: $text-color;
 
       @media (min-width: $screen_md) {
+        padding: 7px 18px 8px 20px;
+      }
+
+      @media (min-width: $screen_lg) {
+        padding: 18px;
         font: 400 18px/1.2em $font;
       }
     }
@@ -106,8 +114,13 @@
     background: url("../img/no.svg") no-repeat 0 0;
 
     @media (min-width: $screen_md) {
+      bottom: 9px;
       left: 50%;
       transform: translate(-50%, 0);
+    }
+
+    @media (min-width: $screen_lg) {
+      bottom: 18px;
     }
   }
 
@@ -121,8 +134,13 @@
     background: url("../img/yes.svg") no-repeat 0 0;
 
     @media (min-width: $screen_md) {
+      bottom: 10px;
       left: 50%;
       transform: translate(-50%, 0);
+    }
+
+    @media (min-width: $screen_lg) {
+      bottom: 18px;
     }
   }
 

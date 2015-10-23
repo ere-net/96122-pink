@@ -18,12 +18,13 @@
 
   &__author {
     order: 1;
-    margin-bottom: 20px;
+    margin-bottom: 18px;
     font: 800 #{$text-size--h2}/1.2em $font;
     color: $black;
 
     @media (min-width: $screen_md) {
       order: 2;
+      margin-bottom: 20px;
       padding-top: 37px;
       font-size: 20px;
     }

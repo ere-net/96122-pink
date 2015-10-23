@@ -54,7 +54,7 @@
 
   &__inner {
     position: relative;
-    padding: 40px 20px 0;
+    padding: 43px 20px 0;
     background-color: $bg-color;
 
     @media (min-width: $screen_md) {
@@ -128,18 +128,8 @@
       }
     }
 
-    a:hover {
-      color: $text-color;
-      text-decoration: underline;
-    }
-
-    &:active {
-      color: fade_out($text-color, 0.7);
-      text-decoration: none;
-    }
-
     &:not(:last-child) {
-      margin-bottom: 25px;
+      margin-bottom: 22px;
 
       @media (min-width: $screen_md) {
         margin-bottom: 47px;
@@ -148,6 +138,16 @@
       @media (min-width: $screen_lg) {
         margin-bottom: 31px;
       }
+    }
+
+    a:hover {
+      color: $text-color;
+      text-decoration: underline;
+    }
+
+    &:active {
+      color: fade_out($text-color, 0.7);
+      text-decoration: none;
     }
   }
 

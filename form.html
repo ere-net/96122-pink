@@ -43,7 +43,7 @@
               <path class="logo__stars--stars" d="M50.686 16.125c-2.485 0-4.5-2.014-4.5-4.5 0 2.486-2.013 4.5-4.498 4.5 2.485 0 4.5 2.014 4.5 4.5 0-2.486 2.012-4.5 4.498-4.5zm-12.782 3.5c-1.52 0-2.75-1.23-2.75-2.75 0 1.52-1.23 2.75-2.748 2.75 1.52 0 2.75 1.23 2.75 2.75 0-1.52 1.23-2.75 2.748-2.75zm-27.17 14.447c-1.52 0-2.75-1.23-2.75-2.75 0 1.52-1.23 2.75-2.748 2.75 1.52 0 2.75 1.23 2.75 2.748 0-1.517 1.23-2.748 2.748-2.748z"/>
             </svg>
           </a>
-          <h1 class="page-title">Конкурс на самое безбашеное путешествие с Пинк</h1>
+          <h1 class="page-title">Конкурс на самое безбашеное путешествие с&nbsp;Пинк</h1>
         </div>
       </div>
     </header>
@@ -51,7 +51,7 @@
     <main class="content">
       <form class="form" action="https://echo.htmlacademy.ru/adaptive" method="post" enctype="multipart/form-data">
         <div class="form__descr">
-          <p>Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!
+          <p>Поделитесь своей историей и получите шанс выиграть ценный приз&nbsp;— 1000 миль на вашу бонусную карту!
             <span>Пожалуйста, заполните форму ниже:</span></p>
         </div>
 
@@ -94,19 +94,19 @@
           <legend class="form__legend">Когда вы путешествовали? *</legend>
           <div class="form__fieldset-inner">
             <label class="field-text  field-text--row">
-              <input type="text" name="travel_start" placeholder="1 апреля 2015" required>
+              <input id="travel_start" type="text" name="travel_start" value="1 апреля 2015" required>
               <span class="field-text__name  field-text__name--center  field-text__name--left">Дата выезда</span>
             </label>
             <div class="field-range  field-range--duration  field-range--row">
               <div class="field-range__inner">
                 <span class="field-range__minus"></span>
                 <span class="field-range__plus"></span>
-                <input type="text" name="travel_duration" value="10 дней" required>
+                <input id="travel_duration" type="text" name="travel_duration" value="10 дней" required>
               </div>
               <span class="field-range__name">Продолжительность</span>
             </div>
             <label class="field-text  field-text--row">
-              <input type="text" name="travel_end" placeholder="1 апреля 2015" readonly>
+              <input id="travel_end" type="text" name="travel_end" value="11 апреля 2015 г." readonly>
               <span class="field-text__name  field-text__name--center  field-text__name--left">Дата возвращения</span>
             </label>
           </div>
@@ -265,7 +265,9 @@
 
     </script>
 
+    <script src="js/components/moment-with-locales.min.js"></script>
     <script src="js/components/mustache.min.js"></script>
+    <script src="js/components/pikaday.js"></script>
     <script src="js/components/tap.min.js"></script>
     <script src="js/components/form.js"></script>
     <script src="js/script.js"></script>

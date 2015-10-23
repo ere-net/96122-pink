@@ -5,6 +5,32 @@
     var maxValueDays = 365;
     var maxValueTravellers = 10;
 
+
+    // start change dates
+
+    var form = document.querySelector(".form");
+
+    var travelStart = document.getElementById("travel_start");
+    var travelEnd = document.getElementById("travel_end");
+    var travelDuration = document.getElementById("travel_duration");
+
+    moment.locale("ru");
+
+    function changeTravelEnd() {
+      var start = picker.getMoment();
+      var days = parseInt(travelDuration.value);
+      travelEnd.value = start.add(days, "d").format("LL");
+    }
+
+    var picker = new Pikaday({
+      field: travelStart,
+      format: "LL",
+      onSelect: changeTravelEnd
+    });
+
+    // end change dates
+
+
     // start field-range change
 
     function initNumberField(inputParent, wordForms, maxValue) {
@@ -24,13 +50,16 @@
 
         if ((isNaN(value)) || (value <= 0)) {
           input.value = 1 + " " + wordForms[CheckNumber(1)];
+          changeTravelEnd();
         }
         else {
           if (value > maxValue) {
             input.value = maxValue + " " + wordForms[CheckNumber(maxValue)];
+            changeTravelEnd();
           }
           else {
             input.value = value + " " + wordForms[CheckNumber(value)];
+            changeTravelEnd();
           }
         }
       });
@@ -81,15 +110,18 @@
           else {
             value = value + 1;
             input.value = value + " " + wordForms[CheckNumber(value)];
+            changeTravelEnd();
           }
         }
         else {
           if (value > 1) {
             value = value - 1;
             input.value = value + " " + wordForms[CheckNumber(value)];
+            changeTravelEnd();
           }
           else {
             input.value = 1 + " " + wordForms[CheckNumber(1)];
+            changeTravelEnd();
           }
         }
       }
@@ -104,8 +136,6 @@
 
 
     // start add and delete travellers
-
-    var form = document.querySelector(".form");
 
     var travellersArea = form.querySelector(".form__traveller");
     var travellersRange = form.querySelector(".field-range--people");
@@ -193,8 +223,8 @@
     var user_name = form.querySelector("[name='user_name']");
     var user_surname = form.querySelector("[name='user_surname']");
     var app = form.querySelector("[name='app']");
-    var travel_start = form.querySelector("[name='travel_start']");
-    var travel_duration = form.querySelector("[name='travel_duration']");
+    //var travel_start = form.querySelector("[name='travel_start']");
+    //var travel_duration = form.querySelector("[name='travel_duration']");
     var travellers_number = form.querySelector("[name='travellers_number']");
     var traveller_name1 = form.querySelector("[name='traveller_name1']");
     var images = form.querySelector("[name='images']");

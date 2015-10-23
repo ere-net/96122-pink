@@ -1,11 +1,12 @@
 .second-title {
-  margin: 0 0 40px;
+  margin: 0;
   padding: 0 20px;
   font: 300 #{$text-size--h1}/1.2em $font;
   text-align: center;
   color: $text-color;
 
   @media (min-width: $screen_md) {
+    margin: 0 0 31px;
     font: 300 40px/1.2em $font;
   }
 
@@ -18,9 +19,29 @@
 
   &__text {
     display: block;
-    margin-bottom: 30px;
+    margin-bottom: 29px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
 
     @media (min-width: $screen_md) {
+      margin-bottom: 0;
+    }
+  }
+
+  &--br {
+    margin: 0 0 35px;
+
+    @media (min-width: $screen_md) {
+      margin: 0 0 40px;
+    }
+
+    @media (min-width: $screen_lg) {
+      margin: 0;
+    }
+
+    .second-title__text {
       margin-bottom: 0;
     }
   }
