@@ -64,11 +64,11 @@
         }
       });
 
-      minus.addEventListener("tap", function () {
+      minus.addEventListener("click", function () {
         changeNumber(false);
       });
 
-      plus.addEventListener("tap", function () {
+      plus.addEventListener("click", function () {
         changeNumber(true);
       });
 
@@ -125,8 +125,6 @@
           }
         }
       }
-
-
     }
 
     initNumberField(document.querySelector(".field-range--duration"), ["день", "дня", "дней"], maxValueDays);
@@ -157,7 +155,7 @@
         travellersArea.appendChild(li);
 
         // нажатие кнопки "удалить"
-          li.querySelector(".form__traveller-delete").addEventListener("tap", function (event) {
+          li.querySelector(".form__traveller-delete").addEventListener("click", function (event) {
             event.preventDefault();
             deleteTraveller(li);
           });
@@ -183,14 +181,14 @@
     }
 
     // нажатие кнопки плюс
-    plus.addEventListener("tap", function (event) {
+    plus.addEventListener("click", function (event) {
       event.preventDefault();
       var counter = parseInt(travellersAmount.value);
       addTraveller(counter);
     });
 
     // нажатие кнопки минус
-    minus.addEventListener("tap", function (event) {
+    minus.addEventListener("click", function (event) {
       event.preventDefault();
       var counter = travellersArea.querySelectorAll(".form__traveller-info").length;
 
@@ -211,22 +209,18 @@
 
     var area = form.querySelector(".form__gallery-list");
 
-    var template = document.querySelector("#image-template").innerHTML;
+    var imageTemplate = document.querySelector("#image-template").innerHTML;
     var queue = [];
 
-    var modal_success = document.querySelector(".modal--success");
-    var modal_failure = document.querySelector(".modal--failure");
+    var modalSuccess = document.querySelector(".modal--success");
+    var modalFailure = document.querySelector(".modal--failure");
+    var modalSuccessClose = modalSuccess.querySelector(".btn--send");
+    var modalFailureClose = modalFailure.querySelector(".btn--failure");
 
-    var modal_success_close = modal_success.querySelector(".btn--send");
-    var modal_failure_close = modal_failure.querySelector(".btn--failure");
-
-    var user_name = form.querySelector("[name='user_name']");
-    var user_surname = form.querySelector("[name='user_surname']");
+    var userName = form.querySelector("[name='user_name']");
+    var userSurname = form.querySelector("[name='user_surname']");
     var app = form.querySelector("[name='app']");
-    //var travel_start = form.querySelector("[name='travel_start']");
-    //var travel_duration = form.querySelector("[name='travel_duration']");
-    var travellers_number = form.querySelector("[name='travellers_number']");
-    var traveller_name1 = form.querySelector("[name='traveller_name1']");
+    var travellersNumber = form.querySelector("[name='travellers_number']");
     var images = form.querySelector("[name='images']");
 
     form.addEventListener("submit", function (event) {
@@ -238,36 +232,36 @@
         data.append("images", element.file);
       });
 
-      if (user_name.value && user_surname.value && app.value && travel_start.value && travel_duration.value && travellers_number.value) {
-        modal_success.classList.remove("modal--show");
-        modal_success.classList.add("modal--show");
+      if (userName.value && userSurname.value && app.value && travelStart.value && travelDuration.value && travellersNumber.value) {
+        modalSuccess.classList.remove("modal--show");
+        modalSuccess.classList.add("modal--show");
 
         request(data, function (response) {
           console.log(response);
         });
       } else {
-        modal_failure.classList.remove("modal--show");
-        modal_failure.classList.add("modal--show");
+        modalFailure.classList.remove("modal--show");
+        modalFailure.classList.add("modal--show");
       }
     });
 
-    modal_success_close.addEventListener("tap", function (event) {
+    modalSuccessClose.addEventListener("click", function (event) {
       event.preventDefault();
-      modal_success.classList.remove("modal--show");
+      modalSuccess.classList.remove("modal--show");
     });
 
-    modal_failure_close.addEventListener("tap", function (event) {
+    modalFailureClose.addEventListener("click", function (event) {
       event.preventDefault();
-      modal_failure.classList.remove("modal--show");
+      modalFailure.classList.remove("modal--show");
     });
 
     window.addEventListener("keydown", function (event) {
       if (event.keyCode == 27) {
-        if (modal_success.classList.contains("modal--show")) {
-          modal_success.classList.remove("modal--show");
+        if (modalSuccess.classList.contains("modal--show")) {
+          modalSuccess.classList.remove("modal--show");
         }
-        if (modal_failure.classList.contains("modal--show")) {
-          modal_failure.classList.remove("modal--show");
+        if (modalFailure.classList.contains("modal--show")) {
+          modalFailure.classList.remove("modal--show");
         }
       }
     });
@@ -300,7 +294,7 @@
         var reader = new FileReader();
 
         reader.addEventListener("load", function (event) {
-          var html = Mustache.render(template, {
+          var html = Mustache.render(imageTemplate, {
             "image": event.target.result,
             "name": file.name
           });
@@ -310,7 +304,7 @@
           li.innerHTML = html;
           area.appendChild(li);
 
-          li.querySelector(".form__delete-photo").addEventListener("tap", function (event) {
+          li.querySelector(".form__delete-photo").addEventListener("click", function (event) {
             event.preventDefault();
             removePreview(li);
           });

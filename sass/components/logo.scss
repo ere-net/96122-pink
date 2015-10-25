@@ -5,12 +5,12 @@
   z-index: 50;
   text-decoration: none;
 
-  @media (min-width: $screen_md) {
+  @media (min-width: $screen-md) {
     top: 27px;
     left: 20px;
   }
 
-  @media (min-width: $screen_lg) {
+  @media (min-width: $screen-lg) {
     left: 10px;
   }
 
@@ -25,28 +25,28 @@
   &:active .logo__text,
   &:active .logo__stars--glasses,
   &:active .logo__stars--text {
-    fill: $bg-color;
+    fill: #ffffff;
     opacity: 0.7;
   }
 
   &__glasses {
     display: none;
 
-    @media (min-width: $screen_md) {
+    @media (min-width: $screen-md) {
       display: inline-block;
       margin-right: 8px;
-      fill: $bg-color;
+      fill: #ffffff;
     }
 
-    @media (min-width: $screen_lg) {
+    @media (min-width: $screen-lg) {
       display: none;
     }
   }
 
   &__text {
-    fill: $bg-color;
+    fill: #ffffff;
 
-    @media (min-width: $screen_lg) {
+    @media (min-width: $screen-lg) {
       display: none;
     }
   }
@@ -54,7 +54,7 @@
   &__stars {
     display: none;
 
-    @media (min-width: $screen_lg) {
+    @media (min-width: $screen-lg) {
       display: inline-block;
       fill: $pink;
     }
@@ -62,14 +62,14 @@
     &--glasses,
     &--text {
 
-      @media (min-width: $screen_lg) {
-        fill: $bg-color;
+      @media (min-width: $screen-lg) {
+        fill: #ffffff;
       }
     }
 
     &--stars {
 
-      @media (min-width: $screen_lg) {
+      @media (min-width: $screen-lg) {
         fill: $pink;
       }
     }
@@ -80,7 +80,7 @@
     left: 0;
     top: 0;
 
-    @media (min-width: $screen_md) {
+    @media (min-width: $screen-md) {
       top: -6px;
       width: 180px;
       text-align: left;
@@ -91,7 +91,7 @@
     }
 
     &:active .logo__text {
-      fill: $text-color;
+      fill: $blue;
     }
 
     &:active .logo__glasses {
@@ -104,12 +104,12 @@
     }
 
     &:active .logo__stars--text {
-      fill: $text-color;
+      fill: $blue;
       opacity: 0.7;
     }
 
     .logo__text {
-      fill: $text-color;
+      fill: $blue;
     }
 
     .logo__glasses {
@@ -117,7 +117,7 @@
       margin-right: 8px;
       fill: $pink;
 
-      @media (min-width: $screen_lg) {
+      @media (min-width: $screen-lg) {
         display: none;
       }
     }
@@ -126,7 +126,7 @@
 
       &--glasses {
 
-        @media (min-width: $screen_lg) {
+        @media (min-width: $screen-lg) {
           fill: $pink;
         }
       }
@@ -134,8 +134,8 @@
       &--text,
       &--stars {
 
-        @media (min-width: $screen_lg) {
-          fill: $text-color;
+        @media (min-width: $screen-lg) {
+          fill: $blue;
         }
       }
     }

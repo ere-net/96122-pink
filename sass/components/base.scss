@@ -1,6 +1,7 @@
 html {
   box-sizing: border-box;
-  font-size: $html-size-base;
+  font-size: 10px;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 *,
@@ -11,12 +12,10 @@ html {
 
 body {
   min-width: 320px;
-  //max-width: 1200px;
-  font: 400 #{$text-size}/1.9em $font;
-  color: $text-color;
-  background-color: $bg-color;
+  font: 400 1.4rem/1.9 "Open Sans", "Arial", sans-serif;
+  color: $blue;
+  background-color: #ffffff;
   margin: 0 auto;
-  counter-reset: travellers;
 }
 
 img {

@@ -4,7 +4,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: pink</title>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,800,400italic&subset=latin,cyrillic" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="css/style.css">
   </head>
 
@@ -77,15 +76,15 @@
         <div class="promo__inner">
           <div class="promo__wrapper">
             <ul class="promo__list">
-              <li class="promo__item">
+              <li class="promo__item  promo__item--mood">
                 <h2 class="promo__item-title">Поднимает настроение</h2>
                 <div class="promo__item-descr"><p>Приложение позволит вам победить осеннюю хандру и&nbsp;деперессию буквально в&nbsp;несколько кликов!</p></div>
               </li>
-              <li class="promo__item">
+              <li class="promo__item  promo__item--change">
                 <h2 class="promo__item-title">Меняет мир вокруг</h2>
                 <div class="promo__item-descr"><p>Сделайте снимок и&nbsp;украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p></div>
               </li>
-              <li class="promo__item">
+              <li class="promo__item  promo__item--friends">
                 <h2 class="promo__item-title">Заводит новых друзей</h2>
                 <div class="promo__item-descr"><p>Ставьте лайки, комментируте, делитесь фотографиями с&nbsp;друзьями и&nbsp;заводите новых</p></div>
               </li>
@@ -145,7 +144,8 @@
                 <strong class="price__price-type">База</strong>
                 <span class="price__price-usd">1,99 USD</span>
               </th>
-              <th class="price__hit">
+              <th>
+                <span class="price__hit">хит</span>
                 <strong class="price__price-type">Стандарт</strong>
                 <span class="price__price-usd">3,99 USD</span>
               </th>
@@ -217,21 +217,22 @@
             <span class="second-title__text">Свяжитесь с нами!</span>
           </h1>
           <ul class="contacts__list">
-            <li class="contacts__item">
+            <li class="contacts__item  contacts__item--tel">
               <strong class="contacts__item-title">Звоните:</strong>
               <a class="contacts__item-text" href="tel:+78125556666">+7 (812) 555-66-66</a>
             </li>
-            <li class="contacts__item">
+            <li class="contacts__item  contacts__item--mail">
               <strong class="contacts__item-title">Пишите:</strong>
               <a class="contacts__item-text" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
             </li>
-            <li class="contacts__item">
+            <li class="contacts__item  contacts__item--address">
               <strong class="contacts__item-title">Приезжайте в гости:</strong>
-              <span class="contacts__item-text">ул. Большая Конюшенная, 19/8</span>
+              <span class="contacts__item-text">ул. Большая Конюшенная,&nbsp;19/8</span>
             </li>
           </ul>
         </div>
       </div>
+      <div class="map" id="map"></div>
       <div class="page-footer  page-footer--index">
         <a class="logo  logo--glasses" href="#">
           <svg class="logo__glasses" width="59" height="40"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo-glasses"></use></svg>
@@ -277,8 +278,10 @@
       </div>
     </footer>
 
-    <script src="js/components/tap.min.js"></script>
     <script src="js/script.js"></script>
+
+    <script async defer src="https://maps.googleapis.com/maps/api/js?signed_in=true&callback=initMap"></script>
+    <script src="js/components/map.js"></script>
 
   </body>
 </html>

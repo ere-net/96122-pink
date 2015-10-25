@@ -20,16 +20,16 @@
     @include text-replacement;
     line-height: 45px;
     text-decoration: none;
-    background-color: $bg-color;
-    box-shadow: 0 0 0 3px fade_out($border-dark, 0.9);
+    background-color: #ffffff;
+    box-shadow: 0 0 0 3px fade_out($blue, 0.9);
     border-radius: 50%;
 
     &:hover {
-      box-shadow: 0 0 0 3px $border-dark;
+      box-shadow: 0 0 0 3px $blue;
     }
 
     &:active {
-      box-shadow: 0 0 0 3px fade_out($border-dark, 0.9);
+      box-shadow: 0 0 0 3px fade_out($blue, 0.9);
 
       svg {
         opacity: 0.3;

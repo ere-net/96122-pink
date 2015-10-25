@@ -2,18 +2,18 @@
   display: flex;
   flex-direction: column;
   padding: 35px 20px 45px;
-  background-color: $bg-color;
+  background-color: #ffffff;
   text-align: center;
 
-  @media (min-width: $screen_md) {
+  @media (min-width: $screen-md) {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     padding: 39px 20px 37px;
   }
 
-  @media (min-width: $screen_lg) {
-    width: $screen_lg;
+  @media (min-width: $screen-lg) {
+    width: $screen-lg;
     margin: 0 auto;
     padding: 77px 10px 75px;
   }
@@ -21,7 +21,7 @@
   &__social {
     margin-top: 40px;
 
-    @media (min-width: $screen_md) {
+    @media (min-width: $screen-md) {
       margin-top: 0;
     }
   }
@@ -29,27 +29,30 @@
   &__copyright {
     margin-top: 40px;
 
-    @media (min-width: $screen_md) {
+    @media (min-width: $screen-md) {
       width: 180px;
       margin-top: 0;
       text-align: right;
     }
 
     a {
-      font: 400 #{$text-size}/1.9em $font;
-      color: $text-color;
+      font-weight: 400;
+      font-size: 1.4rem;
+      line-height: 1.9;
+      color: $blue;
       text-decoration: none;
 
       &:hover svg {
-        fill: $border-dark;
+        fill: $blue;
       }
 
       &:active svg {
-        fill: fade-out($border-dark,0.7);
+        fill: fade_out($blue, 0.7);
       }
 
-      @media (min-width: $screen_lg) {
-        font: 400 18px/1.2em $font;
+      @media (min-width: $screen-lg) {
+        font-size: 1.8rem;
+        line-height: 1.2;
       }
     }
 
@@ -64,7 +67,7 @@
   &--index {
     display: none;
 
-    @media (min-width: $screen_md) {
+    @media (min-width: $screen-md) {
       display: flex;
     }
   }

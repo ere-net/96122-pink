@@ -1,20 +1,22 @@
 .second-title {
   margin: 0;
   padding: 0 20px;
-  font: 300 #{$text-size--h1}/1.2em $font;
+  font-weight: 300;
+  font-size: 2.4rem;
+  line-height: 1.2;
   text-align: center;
-  color: $text-color;
+  color: $blue;
 
-  @media (min-width: $screen_md) {
+  @media (min-width: $screen-md) {
     margin: 0 0 31px;
-    font: 300 40px/1.2em $font;
+    font-size: 4rem;
   }
 
-  @media (min-width: $screen_lg) {
-    width: $screen_lg;
+  @media (min-width: $screen-lg) {
+    width: $screen-lg;
     margin: 0 auto;
     padding: 0 10px 53px;
-    font: 300 50px/1.2em $font;
+    font-size: 5rem;
   }
 
   &__text {
@@ -25,7 +27,7 @@
       margin-bottom: 0;
     }
 
-    @media (min-width: $screen_md) {
+    @media (min-width: $screen-md) {
       margin-bottom: 0;
     }
   }
@@ -33,11 +35,11 @@
   &--br {
     margin: 0 auto 35px;
 
-    @media (min-width: $screen_md) {
+    @media (min-width: $screen-md) {
       margin: 0 auto 40px;
     }
 
-    @media (min-width: $screen_lg) {
+    @media (min-width: $screen-lg) {
       margin: 0 auto;
     }
 

@@ -4,7 +4,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Конкурс на самое безбашеное путешествие с Пинк</title>
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,800,400italic&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/style.css">
   </head>
 
@@ -143,27 +142,27 @@
         <fieldset class="form__fieldset  form__fieldset--achievements">
           <legend class="form__legend">Ваши безбашенные достижения в путешествии</legend>
           <div class="form__fieldset-inner">
-            <label class="field-checkbox">
+            <label class="field-checkbox  field-checkbox--order1">
               <input type="checkbox" name="achieve" value="achieve1" checked>
               <span class="field-checkbox__name">Сделал селфи с акулой</span>
             </label>
-            <label class="field-checkbox">
+            <label class="field-checkbox  field-checkbox--order2">
               <input type="checkbox" name="achieve" value="achieve2" checked>
               <span class="field-checkbox__name">Обгорел на пляже</span>
             </label>
-            <label class="field-checkbox">
+            <label class="field-checkbox  field-checkbox--order1">
               <input type="checkbox" name="achieve" value="achieve3">
               <span class="field-checkbox__name">Видел Чака Норриса</span>
             </label>
-            <label class="field-checkbox">
+            <label class="field-checkbox  field-checkbox--order2">
               <input type="checkbox" name="achieve" value="achieve4">
               <span class="field-checkbox__name">Накупил сувениров</span>
             </label>
-            <label class="field-checkbox">
+            <label class="field-checkbox  field-checkbox--order1">
               <input type="checkbox" name="achieve" value="achieve5" checked>
               <span class="field-checkbox__name">Удержал башню</span>
             </label>
-            <label class="field-checkbox">
+            <label class="field-checkbox  field-checkbox--order2">
               <input type="checkbox" name="achieve" value="achieve6">
               <span class="field-checkbox__name">Разгромил отель</span>
             </label>
@@ -174,7 +173,7 @@
           <legend class="form__legend">Ваши фотографии из поездки *</legend>
           <div class="form__fieldset-inner">
             <label class="form__upload">
-              <input type="file" id="upload_photo" name="images" multiple>Загрузить фото <!--required-->
+              <input type="file" id="upload_photo" name="images" multiple>Загрузить фото
             </label>
             <div class="form__gallery">
               <ul class="form__gallery-list">
@@ -260,7 +259,7 @@
     <script id="image-template" type="text/html">
 
       <div class="form__delete-photo"></div>
-      <img src="{{image}}" alt="{{name}}" title="{{name}}" width="67" height="68">
+      <span class="form__photo-image" style="background-image: url('{{image}}');"></span>
       <span class="form__photo-name">{{name}}</span>
 
     </script>
@@ -268,7 +267,6 @@
     <script src="js/components/moment-with-locales.min.js"></script>
     <script src="js/components/mustache.min.js"></script>
     <script src="js/components/pikaday.js"></script>
-    <script src="js/components/tap.min.js"></script>
     <script src="js/components/form.js"></script>
     <script src="js/script.js"></script>
 

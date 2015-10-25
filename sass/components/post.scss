@@ -1,13 +1,13 @@
 .post {
   padding: 12px 20px 0;
-  background-color: $bg-color;
+  background-color: #ffffff;
 
-  @media (min-width: $screen_md) {
+  @media (min-width: $screen-md) {
     padding: 54px 20px 0;
   }
 
-  @media (min-width: $screen_lg) {
-    width: $screen_lg;
+  @media (min-width: $screen-lg) {
+    width: $screen-lg;
     margin: 0 auto;
     padding: 76px 70px 0;
   }
@@ -15,50 +15,57 @@
   &__content {
     padding-top: 28px;
 
-    @media (min-width: $screen_md) {
+    @media (min-width: $screen-md) {
       padding-top: 0;
       margin-top: -2px;
     }
 
-    @media (min-width: $screen_lg) {
+    @media (min-width: $screen-lg) {
       margin-top: -7px;
     }
     
     h2 {
       margin: 0 0 20px;
       padding: 0;
-      font: 800 #{$text-size--h2}/1.7em $font;
-      color: $text-color;
+      font-weight: 700;
+      font-size: 1.8rem;
+      line-height: 1.7;
+      color: $blue;
       text-transform: uppercase;
 
-      @media (min-width: $screen_md) {
-        //margin: 0 0 22px;
+      @media (min-width: $screen-md) {
         margin: 57px 0 22px;
-        font: 800 24px/1.25em $font;
+        font-size: 2.4rem;
+        line-height: 1.25;
       }
     }
     
     p {
       margin: 0;
       padding: 0 0 29px;
-      font: 400 #{$text-size}/1.9em $font;
-      color: $text-color;
+      font-weight: 400;
+      font-size: 1.4rem;
+      line-height: 1.9;
+      color: $blue;
 
-      @media (min-width: $screen_md) {
-        //padding: 0 0 57px;
+      @media (min-width: $screen-md) {
         margin: 22px 0 30px;
         padding: 0;
-        font: 400 18px/1.67em $font;
+        font-size: 1.8rem;
+        line-height: 1.67;
       }
     }
 
     a {
-      font: 400 #{$text-size}/1.9em $font;
+      font-weight: 400;
+      font-size: 1.4rem;
+      line-height: 1.9;
       color: $pink;
       text-decoration: underline;
 
-      @media (min-width: $screen_md) {
-        font: 400 18px/1.67em $font;
+      @media (min-width: $screen-md) {
+        font-size: 1.8rem;
+        line-height: 1.67;
       }
     }
     
@@ -68,19 +75,22 @@
       list-style: none;
       color: $pink;
 
-      @media (min-width: $screen_md) {
+      @media (min-width: $screen-md) {
         padding: 0 0 7px;
       }
 
       li {
         position: relative;
         padding: 0 0 27px 21px;
-        font: 400 #{$text-size}/1.9em $font;
-        color: $text-color;
+        font-weight: 400;
+        font-size: 1.4rem;
+        line-height: 1.9;
+        color: $blue;
 
-        @media (min-width: $screen_md) {
+        @media (min-width: $screen-md) {
           padding: 0 0 30px 35px;
-          font: 400 18px/1.67em $font;
+          font-size: 1.8rem;
+          line-height: 1.67;
         }
 
         &:before {
@@ -99,23 +109,29 @@
     blockquote {
       margin: 0 0 35px;
       padding-left: 20px;
-      font: 400 #{$text-size}/1.9em $font;
-      color: $text-color;
+      font-weight: 400;
+      font-size: 1.4rem;
+      line-height: 1.9;
+      color: $blue;
       border-left: 2px solid $pink;
 
-      @media (min-width: $screen_md) {
-        font: 400 18px/1.67em $font;
+      @media (min-width: $screen-md) {
+        font-size: 1.8rem;
+        line-height: 1.67;
       }
     }
 
     cite {
       display: block;
-      font: 400 #{$text-size}/1.9em $font;
+      font-weight: 400;
+      font-size: 1.4rem;
+      line-height: 1.9;
       color: #8a8a8a;
       font-style: italic;
 
-      @media (min-width: $screen_md) {
-        font: 400 18px/1.67em $font;
+      @media (min-width: $screen-md) {
+        font-size: 1.8rem;
+        line-height: 1.67;
         font-style: italic;
       }
     }

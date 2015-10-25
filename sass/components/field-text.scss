@@ -6,11 +6,11 @@
   margin-bottom: 23px;
 
   &--row {
-    @media (min-width: $screen_md) {
+    @media (min-width: $screen-md) {
       width: 48%;
     }
 
-    @media (min-width: $screen_lg) {
+    @media (min-width: $screen-lg) {
       width: 29.3%;
     }
   }
@@ -18,16 +18,18 @@
   input {
     width: 100%;
     min-height: 63px;
-    padding: 14px 22px 15px 22px;
-    border: 2px solid $border-grey;
+    padding: 0 22px;
+    border: 2px solid $grey;
     border-radius: 2px;
     outline: 0;
-    font: 400 18px/1.7em $font;
-    color: $text-color;
-    @include placeholder($text-color);
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 59px;
+    color: $blue;
+    @include placeholder($blue);
 
     &:hover {
-      border: 2px solid $border-dark;
+      border: 2px solid $blue;
     }
 
     &:focus {
@@ -35,7 +37,7 @@
     }
 
     &[readonly] {
-      background-color: $bg-color--light;
+      background-color: $grey-light;
     }
   }
 
@@ -43,7 +45,9 @@
     display: block;
     margin-bottom: 11px;
     padding-left: 23px;
-    font: 400 #{$text-size}/1.3em $font;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 1.3;
     color: $pink;
     text-transform: uppercase;
 
@@ -56,7 +60,7 @@
 
     &--left {
 
-      @media (min-width: $screen_md) {
+      @media (min-width: $screen-md) {
         padding-left: 23px;
         text-align: left;
       }

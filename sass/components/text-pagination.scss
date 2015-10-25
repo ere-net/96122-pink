@@ -4,32 +4,34 @@
   justify-content: space-between;
   padding: 7px 0 4px;
 
-  @media (min-width: $screen_md) {
+  @media (min-width: $screen-md) {
     flex-wrap: nowrap;
     padding: 23px 0 8px;
   }
 
-  @media (min-width: $screen_lg) {
+  @media (min-width: $screen-lg) {
     padding: 26px 0 0;
   }
 
   &__item {
     width: 46%;
     margin-bottom: 20px;
-    padding: 18px 24px 19px;
+    padding: 0 10px;
     text-align: center;
     text-decoration: none;
     text-transform: uppercase;
-    border: 2px solid $border-grey;
+    font-weight: 700;
+    font-size: 1.8rem;
+    line-height: 63px;
+    color: $blue;
+    border: 2px solid $grey;
     border-radius: 2px;
-    font: 800 18px/1.25em $font;
-    color: $text-color;
 
-    @media (min-width: $screen_md) {
+    @media (min-width: $screen-md) {
       width: 22.5%;
     }
 
-    @media (min-width: $screen_lg) {
+    @media (min-width: $screen-lg) {
       width: 31.7%;
       margin-bottom: 5px;
     }
@@ -40,13 +42,13 @@
     }
 
     &--prevous {
-      @media (min-width: $screen_md) {
+      @media (min-width: $screen-md) {
         order: 1;
       }
     }
 
     &--next {
-      @media (min-width: $screen_md) {
+      @media (min-width: $screen-md) {
         order: 3;
       }
     }
@@ -54,12 +56,12 @@
     &--back {
       width: 100%;
 
-      @media (min-width: $screen_md) {
+      @media (min-width: $screen-md) {
         order: 2;
         width: 48%;
       }
 
-      @media (min-width: $screen_lg) {
+      @media (min-width: $screen-lg) {
         width: 33.5%;
       }
     }

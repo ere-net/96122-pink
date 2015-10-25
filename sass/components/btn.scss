@@ -2,12 +2,14 @@
   display: block;
   width: 100%;
   padding: 19px 0 20px;
-  font: 800 18px/1.2em $font;
+  font-weight: 700;
+  font-size: 1.8rem;
+  line-height: 1.2;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
-  color: $white;
-  background-color: $btn;
+  color: #ffffff;
+  background-color: $green;
   border: 0;
   border-radius: 2px;
   cursor: pointer;
@@ -18,43 +20,41 @@
 
   &:active {
     background-color: #1c9b5e;
-    color: fade_out($white, 0.7);
+    color: fade_out(#ffffff, 0.7);
   }
 
   &--transparent {
     padding: 14px 0;
     text-transform: none;
     background-color: transparent;
-    border: 3px solid $white;
+    border: 3px solid #ffffff;
     border-radius: 25px;
 
     &:hover {
-      background-color: $bg-color;
+      background-color: #ffffff;
       color: $pink;
     }
 
     &:active {
-      background-color: $bg-color;
+      background-color: #ffffff;
       color: fade_out($pink, 0.7);
     }
   }
 
   &--form-send {
 
-    @media (min-width: $screen_md) {
+    @media (min-width: $screen-md) {
       width: 48%;
     }
 
-    @media (min-width: $screen_lg) {
+    @media (min-width: $screen-lg) {
       width: 300px;
     }
   }
 
   &--send {
-
   }
 
   &--failure {
-
   }
 }

@@ -4,13 +4,13 @@
   flex-wrap: wrap;
   margin: 26px 0 5px;
 
-  @media (min-width: $screen_md) {
+  @media (min-width: $screen-md) {
     margin-top: 13px;
   }
 
   &--reviews {
 
-    @media (min-width: $screen_lg) {
+    @media (min-width: $screen-lg) {
       display: none;
     }
   }
@@ -18,7 +18,7 @@
   &--price {
     margin: 33px 0 5px;
 
-    @media (min-width: $screen_md) {
+    @media (min-width: $screen-md) {
       display: none;
     }
   }
@@ -37,7 +37,7 @@
       width: 6px;
       height: 6px;
       border-radius: 50%;
-      background-color: $text-color;
+      background-color: $blue;
       opacity: 0.3;
     }
 
@@ -52,8 +52,8 @@
     &--active {
 
       &:before {
-        background-color: $bg-color;
-        box-shadow: 0 0 0 3px $text-color;
+        background-color: #ffffff;
+        box-shadow: 0 0 0 3px $blue;
         opacity: 1;
       }
 

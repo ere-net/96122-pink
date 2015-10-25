@@ -1,88 +1,18 @@
 .contacts {
   position: relative;
-  padding-bottom: 238px;
   text-align: center;
-  background: $bg-color url("../img/map-mobile@1x.jpg") no-repeat 50% 100%;
-  background-size: 700px 641px;
-
-  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-    background-image: url("../img/map-mobile@2x.jpg");
-  }
-
-  @media (min-resolution: 288dpi), (min-resolution: 2.25dppx) {
-    background-image: url("../img/map-mobile@3x.jpg");
-  }
-
-  @media (min-width: $screen_md) {
-    padding-bottom: 378px;
-    background: $bg-color url("../img/map-tablet@1x.jpg") no-repeat 50% 100%;
-    background-size: 960px 473px;
-
-    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-      background-image: url("../img/map-tablet@2x.jpg");
-    }
-  }
-
-  @media (min-width: $screen_lg) {
-    padding-bottom: 522px;
-    background: $bg-color url("../img/map-desktop@1x.jpg") no-repeat 50% 100%;
-    background-size: 960px 523px;
-
-    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-      background-image: url("../img/map-desktop@2x.jpg");
-    }
-  }
-
-  &:after {
-    content: "";
-    position: absolute;
-    bottom: 70px;
-    left: 50%;
-    width: 36px;
-    height: 36px;
-    background: url("../img/map-marker.svg") no-repeat 50% 50%;
-    transform: translate(-50%, 0px);
-
-    @media (min-width: $screen_md) {
-      bottom: 145px;
-    }
-
-    @media (min-width: $screen_lg) {
-      bottom: 204px;
-    }
-  }
 
   &__inner {
     position: relative;
     padding: 43px 20px 0;
-    background-color: $bg-color;
+    background-color: #ffffff;
 
-    @media (min-width: $screen_md) {
+    @media (min-width: $screen-md) {
       padding: 44px 20px 0;
     }
 
-    @media (min-width: $screen_lg) {
+    @media (min-width: $screen-lg) {
       padding: 64px 0 0;
-    }
-
-    &:after {
-      content: "";
-      position: absolute;
-      bottom: -72px;
-      left: 0;
-      width: 100%;
-      height: 73px;
-      background: url("../img/triangle-white-footer.svg") no-repeat 50% 100%;
-
-      @media (min-width: $screen_md) {
-        bottom: -95px;
-        height: 96px;
-      }
-
-      @media (min-width: $screen_lg) {
-        bottom: -122px;
-        height: 123px;
-      }
     }
   }
 
@@ -93,15 +23,15 @@
     padding: 0;
     list-style: none;
 
-    @media (min-width: $screen_md) {
+    @media (min-width: $screen-md) {
       flex-direction: row;
       flex-wrap: wrap;
       justify-content: space-around;
       padding-top: 4px;
     }
 
-    @media (min-width: $screen_lg) {
-      width: $screen_lg;
+    @media (min-width: $screen-lg) {
+      width: $screen-lg;
       margin: 0 auto;
       padding: 4px 10px 0;
     }
@@ -109,21 +39,27 @@
 
   &__item {
 
-    @media (min-width: $screen_md) {
+    @media (min-width: $screen-md) {
       width: 290px;
     }
 
-    @media (min-width: $screen_lg) {
+    &--tel {
 
-      &:nth-child(1) {
+      @media (min-width: $screen-lg) {
         order: 1;
       }
+    }
 
-      &:nth-child(2) {
+    &--mail {
+
+      @media (min-width: $screen-lg) {
         order: 3;
       }
+    }
 
-      &:nth-child(3) {
+    &--address {
+
+      @media (min-width: $screen-lg) {
         order: 2;
       }
     }
@@ -131,44 +67,48 @@
     &:not(:last-child) {
       margin-bottom: 22px;
 
-      @media (min-width: $screen_md) {
+      @media (min-width: $screen-md) {
         margin-bottom: 47px;
       }
 
-      @media (min-width: $screen_lg) {
+      @media (min-width: $screen-lg) {
         margin-bottom: 31px;
       }
     }
 
     a:hover {
-      color: $text-color;
+      color: $blue;
       text-decoration: underline;
     }
 
-    &:active {
-      color: fade_out($text-color, 0.7);
+    a:active {
+      color: fade_out($blue, 0.7);
       text-decoration: none;
     }
   }
 
   &__item-title {
     display: block;
-    font: 800 #{$text-size--h2}/1.2em $font;
-    color: $text-color;
+    font-weight: 700;
+    font-size: 1.8rem;
+    line-height: 1.2;
+    color: $blue;
 
-    @media (min-width: $screen_md) {
+    @media (min-width: $screen-md) {
       padding-bottom: 8px;
     }
 
-    @media (min-width: $screen_lg) {
+    @media (min-width: $screen-lg) {
       padding-bottom: 25px;
     }
   }
 
   &__item-text {
     display: block;
-    font: 400 #{$text-size--h1}/1.2em $font;
+    font-weight: 400;
+    font-size: 2.4rem;
+    line-height: 1.2;
     text-decoration: none;
-    color: $link-color;
+    color: $pink;
   }
 }

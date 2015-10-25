@@ -11,7 +11,7 @@
     flex-direction: column;
     margin: 0;
 
-    @media (min-width: $screen_lg) {
+    @media (min-width: $screen-lg) {
       padding: 0 105px;
     }
   }
@@ -19,17 +19,19 @@
   &__author {
     order: 1;
     margin-bottom: 18px;
-    font: 800 #{$text-size--h2}/1.2em $font;
-    color: $black;
+    font-weight: 700;
+    font-size: 1.8rem;
+    line-height: 1.2;
+    color: #000000;
 
-    @media (min-width: $screen_md) {
+    @media (min-width: $screen-md) {
       order: 2;
       margin-bottom: 20px;
       padding-top: 37px;
       font-size: 20px;
     }
 
-    @media (min-width: $screen_lg) {
+    @media (min-width: $screen-lg) {
       font-size: 24px;
     }
   }
@@ -37,14 +39,16 @@
   &__author-about {
     display: none;
 
-    @media (min-width: $screen_md) {
+    @media (min-width: $screen-md) {
       display: block;
       padding-top: 12px;
-      font: 400 #{$text-size}/1.2em $font;
-      color: $text-color;
+      font-weight: 400;
+      font-size: 1.4rem;
+      line-height: 1.2;
+      color: $blue;
     }
 
-    @media (min-width: $screen_lg) {
+    @media (min-width: $screen-lg) {
       padding-top: 7px;
       font-size: 18px;
     }
@@ -52,26 +56,29 @@
 
   p {
     order: 2;
-    font: 400 #{$text-size}/2.15em $font;
-    color: $text-color;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 2.15;
+    color: $blue;
 
-    @media (min-width: $screen_md) {
+    @media (min-width: $screen-md) {
       order: 1;
-      font: 400 18px/1.67em $font;
+      font-size: 1.8rem;
+      line-height: 1.67;
     }
 
     &:before {
-      content: "\00ab";
+      content: "«";
 
-      @media (min-width: $screen_lg) {
+      @media (min-width: $screen-lg) {
         content: none;
       }
     }
 
     &:after {
-      content: "\00bb";
+      content: "»";
 
-      @media (min-width: $screen_lg) {
+      @media (min-width: $screen-lg) {
         content: none;
       }
     }

@@ -7,7 +7,7 @@
   height: 66px;
   background-color: rgba(0, 0, 0, 0.3);
 
-  @media (min-width: $screen_md) {
+  @media (min-width: $screen-md) {
     height: 110px;
   }
 
@@ -17,11 +17,11 @@
     padding: 0;
     list-style: none;
 
-    @media (min-width: $screen_lg) {
+    @media (min-width: $screen-lg) {
       display: flex;
       flex-direction: row;
       justify-content: flex-end;
-      width: $screen_lg;
+      width: $screen-lg;
       margin: 0 auto;
       padding-left: 190px;
     }
@@ -33,14 +33,14 @@
       left: 0;
       width: 100%;
       height: 70px;
-      background-color: $border-dark;
-      border-bottom: 1px solid $black;
+      background-color: $blue;
+      border-bottom: 1px solid #000000;
 
-      @media (min-width: $screen_md) {
+      @media (min-width: $screen-md) {
         height: 110px;
       }
 
-      @media (min-width: $screen_lg) {
+      @media (min-width: $screen-lg) {
         content: none;
       }
     }
@@ -55,16 +55,16 @@
     &:first-of-type {
       padding-top: 70px;
 
-      @media (min-width: $screen_md) {
+      @media (min-width: $screen-md) {
         padding-top: 110px;
       }
 
-      @media (min-width: $screen_lg) {
+      @media (min-width: $screen-lg) {
         padding-top: 0;
       }
     }
 
-    @media (min-width: $screen_lg) {
+    @media (min-width: $screen-lg) {
       padding: 0 35px;
 
       &:last-child {
@@ -77,16 +77,18 @@
       display: block;
       width: 100%;
       padding: 16px 20px 15px;
-      font: 800 18px/1.78em $font;
+      font-weight: 700;
+      font-size: 1.8rem;
+      line-height: 1.78;
       text-align: center;
       text-decoration: none;
       text-transform: uppercase;
-      color: $white;
-      background-color: $border-dark;
+      color: #ffffff;
+      background-color: $blue;
       box-shadow: inset 0 1px rgba(255, 255, 255, 0.15);
-      border-bottom: 1px solid $black;
+      border-bottom: 1px solid #000000;
 
-      @media (min-width: $screen_lg) {
+      @media (min-width: $screen-lg) {
         padding: 0;
         font-weight: 400;
         line-height: 108px;
@@ -100,7 +102,7 @@
       &:hover {
         color: $pink;
 
-        @media (min-width: $screen_lg) {
+        @media (min-width: $screen-lg) {
           color: white;
 
           &:after {
@@ -109,7 +111,7 @@
             left: 0;
             bottom: 31px;
             width: 100%;
-            border-bottom: 2px solid $white;
+            border-bottom: 2px solid #ffffff;
           }
         }
       }
@@ -117,8 +119,8 @@
       &:active {
         color: fade_out($pink, 0.7);
 
-        @media (min-width: $screen_lg) {
-          color: fade_out($white, 0.7);
+        @media (min-width: $screen-lg) {
+          color: fade_out(#ffffff, 0.7);
 
           &:after {
             content: none;
@@ -139,11 +141,11 @@
     line-height: 20px;
     user-select: none;
 
-    @media (min-width: $screen_md) {
+    @media (min-width: $screen-md) {
       height: 110px;
     }
 
-    @media (min-width: $screen_lg) {
+    @media (min-width: $screen-lg) {
       display: none;
     }
 
@@ -165,7 +167,7 @@
       vertical-align: bottom;
       width: 100%;
       height: 4px;
-      background-color: $bg-color;
+      background-color: #ffffff;
 
       &:before,
       &:after {
@@ -174,9 +176,9 @@
         left: 0;
         width: 100%;
         height: 4px;
-        background-color: $bg-color;
+        background-color: #ffffff;
         transform-origin: 50% 50%;
-        transition: top .3s .6s, transform .3s;
+        transition: top 0.3s 0.6s, transform 0.3s;
       }
 
       &:before {
@@ -196,12 +198,12 @@
 
       span {
         background-color: transparent;
-        transition: background .3s 0;
+        transition: background 0.3s 0;
 
         &:before,
         &:after {
           top: 0;
-          transition: top .3s, transform .3s .5s;
+          transition: top 0.3s, transform 0.3s 0.5s;
         }
 
         &:before {
