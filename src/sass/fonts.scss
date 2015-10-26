@@ -1,0 +1,72 @@
+/* cyrillic */
+@font-face
+{
+  font-family: 'Open Sans';
+  font-weight: 300;
+  font-style: normal;
+
+  src: local('Open Sans Light'), local('OpenSans-Light'), url('../fonts/OpenSans-cyrillic-300.woff2') format('woff2');
+}
+/* latin */
+@font-face
+{
+  font-family: 'Open Sans';
+  font-weight: 300;
+  font-style: normal;
+
+  src: local('Open Sans Light'), local('OpenSans-Light'), url('../fonts/OpenSans-latin-300.woff2') format('woff2');
+}
+/* cyrillic */
+@font-face
+{
+  font-family: 'Open Sans';
+  font-weight: 400;
+  font-style: normal;
+
+  src: local('Open Sans'), local('OpenSans'), url('../fonts/OpenSans-cyrillic-400.woff2') format('woff2');
+}
+/* latin */
+@font-face
+{
+  font-family: 'Open Sans';
+  font-weight: 400;
+  font-style: normal;
+
+  src: local('Open Sans'), local('OpenSans'), url('../fonts/OpenSans-latin-400.woff2') format('woff2');
+}
+/* cyrillic */
+@font-face
+{
+  font-family: 'Open Sans';
+  font-weight: 700;
+  font-style: normal;
+
+  src: local('Open Sans Bold'), local('OpenSans-Bold'), url('../fonts/OpenSans-cyrillic-700.woff2') format('woff2');
+}
+/* latin */
+@font-face
+{
+  font-family: 'Open Sans';
+  font-weight: 700;
+  font-style: normal;
+
+  src: local('Open Sans Bold'), local('OpenSans-Bold'), url('../fonts/OpenSans-latin-700.woff2') format('woff2');
+}
+/* cyrillic */
+@font-face
+{
+  font-family: 'Open Sans';
+  font-weight: 400;
+  font-style: italic;
+
+  src: local('Open Sans Italic'), local('OpenSans-Italic'), url('../fonts/OpenSans-cyrillic-400-italic.woff2') format('woff2');
+}
+/* latin */
+@font-face
+{
+  font-family: 'Open Sans';
+  font-weight: 400;
+  font-style: italic;
+
+  src: local('Open Sans Italic'), local('OpenSans-Italic'), url('../fonts/OpenSans-latin-400-italic.woff2') format('woff2');
+}

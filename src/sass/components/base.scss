@@ -1,0 +1,48 @@
+html
+{
+  font-size: 10px;
+
+  box-sizing: border-box;
+
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+*,
+*:before,
+*:after
+{
+  box-sizing: inherit;
+}
+
+body
+{
+  font: 400 1.4rem/1.9 'Open Sans', 'Arial', sans-serif;
+
+  min-width: 320px;
+  margin: 0 auto;
+
+  color: $blue;
+  background-color: #fff;
+}
+
+img
+{
+  max-width: 100%;
+
+  vertical-align: middle;
+
+  border: 0;
+}
+
+ul
+{
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+button
+{
+  outline: none;
+}

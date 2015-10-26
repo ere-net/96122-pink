@@ -1,0 +1,84 @@
+.slider-pagination
+{
+  display: flex;
+
+  margin: 26px 0 5px;
+
+  justify-content: center;
+  flex-wrap: wrap;
+
+  @media (min-width: $screen-md)
+  {
+    margin-top: 13px;
+  }
+
+  &--reviews
+  {
+    @media (min-width: $screen-lg)
+    {
+      display: none;
+    }
+  }
+
+  &--price
+  {
+    margin: 33px 0 5px;
+
+    @media (min-width: $screen-md)
+    {
+      display: none;
+    }
+  }
+
+  &__item
+  {
+    position: relative;
+
+    width: 25px;
+    height: 25px;
+
+    cursor: pointer;
+
+    &:before
+    {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+
+      width: 6px;
+      height: 6px;
+
+      content: '';
+
+      opacity: .3;
+      border-radius: 50%;
+      background-color: $blue;
+    }
+
+    &:hover:before
+    {
+      opacity: .6;
+    }
+
+    &:active:before
+    {
+      opacity: .1;
+    }
+
+    &--active
+    {
+      &:before
+      {
+        opacity: 1;
+        background-color: #fff;
+        box-shadow: 0 0 0 3px $blue;
+      }
+
+      &:hover:before,
+      &:active:before
+      {
+        opacity: 1;
+      }
+    }
+  }
+}

@@ -1,0 +1,32 @@
+@mixin text-replacement
+{
+  font: 0/0 a;
+
+  color: transparent;
+  border: 0;
+  text-shadow: none;
+}
+
+@mixin placeholder($color)
+{
+  &::-moz-placeholder
+  {
+    opacity: 1;
+    color: $color;
+  }
+  &::-webkit-input-placeholder
+  {
+    opacity: 1;
+    color: $color;
+  }
+  &:-moz-placeholder
+  {
+    opacity: 1;
+    color: $color;
+  }
+  &:-ms-input-placeholder
+  {
+    opacity: 1;
+    color: $color;
+  }
+}

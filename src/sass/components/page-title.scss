@@ -1,0 +1,49 @@
+.page-title
+{
+  font-size: 2.4rem;
+  font-weight: 300;
+  line-height: 1.2;
+
+  margin: 19px 0 29px;
+
+  text-align: center;
+
+  color: #fff;
+
+  @media (min-width: $screen-md)
+  {
+    font-size: 5rem;
+
+    margin: 59px 0 55px;
+  }
+
+  @media (min-width: $screen-lg)
+  {
+    margin: 49px 0 77px;
+  }
+
+  &--index
+  {
+    @media (min-width: $screen-md)
+    {
+      font-size: 40px;
+
+      position: absolute;
+      top: 202px;
+      left: 3%;
+
+      width: 300px;
+      margin: 0;
+    }
+
+    @media (min-width: $screen-lg)
+    {
+      font-size: 50px;
+
+      top: 219px;
+      left: 10px;
+
+      margin: 0;
+    }
+  }
+}

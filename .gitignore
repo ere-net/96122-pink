@@ -7,3 +7,4 @@ prepros.cfg
 *.map
 css/*.css
 .idea
+build/

@@ -1,0 +1,95 @@
+.text-pagination
+{
+  display: flex;
+
+  padding: 7px 0 4px;
+
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  @media (min-width: $screen-md)
+  {
+    padding: 23px 0 8px;
+
+    flex-wrap: nowrap;
+  }
+
+  @media (min-width: $screen-lg)
+  {
+    padding: 26px 0 0;
+  }
+
+  &__item
+  {
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 63px;
+
+    width: 46%;
+    margin-bottom: 20px;
+    padding: 0 10px;
+
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    color: $blue;
+    border: 2px solid $grey;
+    border-radius: 2px;
+
+    @media (min-width: $screen-md)
+    {
+      width: 22.5%;
+    }
+
+    @media (min-width: $screen-lg)
+    {
+      width: 31.7%;
+      margin-bottom: 5px;
+    }
+
+    &:hover,
+    &:active
+    {
+      border-color: $pink;
+    }
+
+    &--prevous
+    {
+      @media (min-width: $screen-md)
+      {
+        order: 1;
+      }
+    }
+
+    &--next
+    {
+      @media (min-width: $screen-md)
+      {
+        order: 3;
+      }
+    }
+
+    &--back
+    {
+      width: 100%;
+
+      @media (min-width: $screen-md)
+      {
+        width: 48%;
+
+        order: 2;
+      }
+
+      @media (min-width: $screen-lg)
+      {
+        width: 33.5%;
+      }
+    }
+
+    &--active
+    {
+      border-color: $pink;
+    }
+  }
+}

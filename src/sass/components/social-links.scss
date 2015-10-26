@@ -1,0 +1,62 @@
+.social-links
+{
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+
+  li
+  {
+    display: inline-block;
+
+    margin-right: 14px;
+
+    vertical-align: top;
+
+    &:last-child
+    {
+      margin-right: 0;
+    }
+  }
+
+  a
+  {
+    font-size: 0;
+    line-height: 45px;
+
+    display: block;
+
+    width: 45px;
+    height: 45px;
+
+    text-decoration: none;
+
+    border-radius: 50%;
+    background-color: #fff;
+    box-shadow: 0 0 0 3px fade_out($blue, .9);
+
+    &:hover
+    {
+      box-shadow: 0 0 0 3px $blue;
+    }
+
+    &:active
+    {
+      box-shadow: 0 0 0 3px fade_out($blue, .9);
+
+      svg
+      {
+        opacity: .3;
+      }
+    }
+  }
+
+  svg
+  {
+    display: inline-block;
+
+    vertical-align: middle;
+
+    fill: $pink;
+  }
+}

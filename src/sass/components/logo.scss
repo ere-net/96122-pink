@@ -1,0 +1,185 @@
+.logo
+{
+  position: absolute;
+  z-index: 50;
+  top: 20px;
+  left: 20px;
+
+  text-decoration: none;
+
+  @media (min-width: $screen-md)
+  {
+    top: 27px;
+    left: 20px;
+  }
+
+  @media (min-width: $screen-lg)
+  {
+    left: 10px;
+  }
+
+  &:hover .logo__glasses,
+  &:hover .logo__text,
+  &:hover .logo__stars--glasses,
+  &:hover .logo__stars--text
+  {
+    fill: $pink;
+  }
+
+  &:active .logo__glasses,
+  &:active .logo__text,
+  &:active .logo__stars--glasses,
+  &:active .logo__stars--text
+  {
+    opacity: .7;
+
+    fill: #fff;
+  }
+
+  &__glasses
+  {
+    display: none;
+
+    @media (min-width: $screen-md)
+    {
+      display: inline-block;
+
+      margin-right: 8px;
+
+      fill: #fff;
+    }
+
+    @media (min-width: $screen-lg)
+    {
+      display: none;
+    }
+  }
+
+  &__text
+  {
+    fill: #fff;
+
+    @media (min-width: $screen-lg)
+    {
+      display: none;
+    }
+  }
+
+  &__stars
+  {
+    display: none;
+
+    @media (min-width: $screen-lg)
+    {
+      display: inline-block;
+
+      fill: $pink;
+    }
+
+    &--glasses,
+    &--text
+    {
+      @media (min-width: $screen-lg)
+      {
+        fill: #fff;
+      }
+    }
+
+    &--stars
+    {
+      @media (min-width: $screen-lg)
+      {
+        fill: $pink;
+      }
+    }
+  }
+
+  &--glasses
+  {
+    position: relative;
+    top: 0;
+    left: 0;
+
+    @media (min-width: $screen-md)
+    {
+      top: -6px;
+
+      width: 180px;
+
+      text-align: left;
+    }
+
+    @media (min-width: $screen-lg)
+    {
+      left: 0;
+    }
+
+    &:hover .logo__stars--stars
+    {
+      fill: $pink;
+    }
+
+    &:active .logo__text
+    {
+      fill: $blue;
+    }
+
+    &:active .logo__glasses
+    {
+      fill: $pink;
+    }
+
+    &:active .logo__stars--glasses
+    {
+      opacity: .7;
+
+      fill: $pink;
+    }
+
+    &:active .logo__stars--text
+    {
+      opacity: .7;
+
+      fill: $blue;
+    }
+
+    .logo__text
+    {
+      fill: $blue;
+    }
+
+    .logo__glasses
+    {
+      display: inline-block;
+
+      margin-right: 8px;
+
+      fill: $pink;
+
+      @media (min-width: $screen-lg)
+      {
+        display: none;
+      }
+    }
+
+    .logo__stars
+    {
+      &--glasses
+      {
+        @media (min-width: $screen-lg)
+        {
+          fill: $pink;
+        }
+      }
+
+      &--text,
+      &--stars
+      {
+        @media (min-width: $screen-lg)
+        {
+          fill: $blue;
+        }
+      }
+    }
+  }
+}

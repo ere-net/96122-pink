@@ -1,0 +1,49 @@
+.slider-controls
+{
+  position: absolute;
+  top: 30px;
+  left: 0;
+
+  display: none;
+
+  width: 100%;
+
+  @media (min-width: $screen-lg)
+  {
+    display: block;
+  }
+
+  a
+  {
+    text-decoration: none;
+  }
+
+  &__toggle
+  {
+    position: absolute;
+
+    fill: fade_out($blue, .7);
+
+    &:hover
+    {
+      fill: fade_out($blue, .4);
+    }
+
+    &:active
+    {
+      fill: fade_out($blue, .9);
+    }
+
+    &--left
+    {
+      top: 0;
+      left: 0;
+    }
+
+    &--right
+    {
+      top: 0;
+      right: 0;
+    }
+  }
+}

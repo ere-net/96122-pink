@@ -1,0 +1,18 @@
+.blog
+{
+  padding: 12px 20px 0;
+
+  background-color: #fff;
+
+  @media (min-width: $screen-md)
+  {
+    padding: 12px 0 0;
+  }
+
+  @media (min-width: $screen-lg)
+  {
+    width: $screen-lg;
+    margin: 0 auto;
+    padding: 56px 0 0;
+  }
+}

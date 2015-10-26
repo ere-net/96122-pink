@@ -1,0 +1,148 @@
+.contacts
+{
+  position: relative;
+
+  text-align: center;
+
+  &__inner
+  {
+    position: relative;
+
+    padding: 43px 20px 0;
+
+    background-color: #fff;
+
+    @media (min-width: $screen-md)
+    {
+      padding: 44px 20px 0;
+    }
+
+    @media (min-width: $screen-lg)
+    {
+      padding: 64px 0 0;
+    }
+  }
+
+  &__list
+  {
+    display: flex;
+    flex-direction: column;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+
+    @media (min-width: $screen-md)
+    {
+      flex-direction: row;
+
+      padding-top: 4px;
+
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+
+    @media (min-width: $screen-lg)
+    {
+      width: $screen-lg;
+      margin: 0 auto;
+      padding: 4px 10px 0;
+    }
+  }
+
+  &__item
+  {
+    @media (min-width: $screen-md)
+    {
+      width: 290px;
+    }
+
+    &--tel
+    {
+      @media (min-width: $screen-lg)
+      {
+        order: 1;
+      }
+    }
+
+    &--mail
+    {
+      @media (min-width: $screen-lg)
+      {
+        order: 3;
+      }
+    }
+
+    &--address
+    {
+      @media (min-width: $screen-lg)
+      {
+        order: 2;
+      }
+    }
+
+    &:not(:last-child)
+    {
+      margin-bottom: 22px;
+
+      @media (min-width: $screen-md)
+      {
+        margin-bottom: 47px;
+      }
+
+      @media (min-width: $screen-lg)
+      {
+        margin-bottom: 31px;
+      }
+    }
+
+    a:hover
+    {
+      text-decoration: underline;
+
+      color: $blue;
+    }
+
+    a:active
+    {
+      text-decoration: none;
+
+      color: fade_out($blue, .7);
+    }
+  }
+
+  &__item-title
+  {
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 1.2;
+
+    display: block;
+
+    color: $blue;
+
+    @media (min-width: $screen-md)
+    {
+      padding-bottom: 8px;
+    }
+
+    @media (min-width: $screen-lg)
+    {
+      padding-bottom: 25px;
+    }
+  }
+
+  &__item-text
+  {
+    font-size: 2.4rem;
+    font-weight: 400;
+    line-height: 1.2;
+
+    display: block;
+
+    text-decoration: none;
+
+    color: $pink;
+  }
+}
